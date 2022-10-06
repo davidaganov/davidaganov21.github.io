@@ -15,7 +15,7 @@ export default function Navbar() {
         <li className="navbar__item">
           <span>02.</span>
           <a
-            href="#skils"
+            href="#skills"
             className="navbar__link inline-link inline-link--white"
           >
             {" "}
