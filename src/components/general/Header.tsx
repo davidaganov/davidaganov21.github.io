@@ -1,7 +1,11 @@
-export default function TheHeader() {
+import Navbar from "./Navbar"
+
+export default function Header() {
   return (
     <header className="header">
       <div className="header__inner inner">
+        <Navbar />
+
         <div className="header__content">
           <p className="header__subtitle">Hello, my name is</p>
           <h1 className="header__title">

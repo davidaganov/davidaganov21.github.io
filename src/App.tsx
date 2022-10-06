@@ -1,9 +1,9 @@
-import TheHeader from "./components/TheHeader"
+import Header from "./components/general/Header"
 
 export default function App() {
   return (
     <div className="wrapper">
-      <TheHeader />
+      <Header />
     </div>
   )
 }

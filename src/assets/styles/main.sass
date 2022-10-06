@@ -2,7 +2,8 @@
 @import "./__reset", "./__variables"
 
 //---- Components
-@import "../../components/TheHeader"
+@import "../../components/general/Header"
+@import "../../components/general/Navbar"
 
 html, body
   height: 100%
@@ -45,9 +46,9 @@ p, li, a
 .inline-link
   display: inline-block
   padding: 0 .1rem
-  color: var(--color-accent)
   border: 1px solid transparent
   border-radius: 3px
+  transition: all .3s
   &::after
     content: ""
     display: block
@@ -55,9 +56,26 @@ p, li, a
     height: 1px
     position: relative
     bottom: 0.2rem
-    background-color: var(--color-accent)
     transition: .3s
-  &:hover::after
+
+  &:hover:not(:focus-visible)::after
     width: 100%
-  &:focus-visible
-    border: 1px solid var(--color-accent)
+
+  &:not(&--white)
+    color: var(--color-accent)
+    &::after
+      background-color: var(--color-accent)
+    &:focus-visible
+      border: 1px solid var(--color-accent)
+      &:hover
+        background-color: var(--color-accent)
+        color: var(--color-black)
+  &--white
+    color: var(--color-white)
+    &::after
+      background-color: var(--color-white)
+    &:focus-visible
+      border: 1px solid var(--color-white)
+      &:hover
+        background-color: var(--color-white)
+        color: var(--color-black)
