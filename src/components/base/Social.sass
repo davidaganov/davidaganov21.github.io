@@ -1,13 +1,13 @@
 .social
-  @media (min-width: $medium-min)
+  @media (min-width: $middle-min)
     position: fixed
     bottom: 5rem
     left: 0
-  @media (max-width: $medium-max)
+  @media (max-width: $middle-max)
     display: flex
     align-items: center
   &__item
-    @media (min-width: $medium-min)
+    @media (min-width: $middle-min)
       position: relative
       display: flex
       align-items: center
@@ -22,7 +22,7 @@
         height: .1rem
         left: 0
         background-color: var(--color-white-700)
-    @media (max-width: $medium-max)
+    @media (max-width: $middle-max)
       &:not(:last-of-type)
         margin-right: 1rem
   &__link
@@ -33,7 +33,7 @@
     transition: all .3s
     &:hover
       color: var(--color-white)
-    @media (min-width: $medium-min)
+    @media (min-width: $middle-min)
       margin-left: 3rem
       z-index: 1
       &:hover

@@ -10,6 +10,11 @@
 @import "../../components/base/Button"
 @import "../../components/base/Social"
 
+//---- Blocks
+@import "../../components/blocks/About"
+@import "../../components/blocks/Skills"
+@import "../../components/blocks/Work"
+
 html, body
   height: 100%
   font-family: var(--main-font)
@@ -38,7 +43,7 @@ p, li, a
 
 //---- Container
 .inner
-  max-width: $extra-large-min
+  max-width: 90rem
   margin-left: auto
   margin-right: auto
   @media (max-width: $extra-large-max) and (min-width: $extra-small-min)
@@ -47,6 +52,21 @@ p, li, a
   @media (max-width: $extra-small-max)
     padding-left: 1rem
     padding-right: 1rem
+
+.section-title
+  a
+    font: inherit
+    color: var(--color-white)
+  span
+    font: normal 2.5rem/3rem var(--main-font)
+    color: var(--color-accent)
+  &::after
+    content: " #"
+    color: var(--color-white-700)
+    font-weight: normal
+    opacity: 0
+  &:hover::after
+    opacity: 1
 
 .inline-link
   display: inline-block
@@ -61,7 +81,6 @@ p, li, a
     position: relative
     bottom: .2rem
     transition: .3s
-
   &:hover:not(:focus-visible)::after
     width: 100%
 
@@ -74,6 +93,7 @@ p, li, a
       &:hover
         background-color: var(--color-accent)
         color: var(--color-black)
+
   &--white
     color: var(--color-white)
     &::after
