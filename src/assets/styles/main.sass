@@ -54,19 +54,30 @@ p, li, a
     padding-right: 1rem
 
 .section-title
+  position: relative
+  padding-left: 6rem
+  &::before
+    position: absolute
+    display: block
+    content: ""
+    bottom: 1.5rem
+    left: 0
+    width: 5rem
+    height: .1rem
+    background-color: var(--color-accent)
   a
     font: inherit
     color: var(--color-white)
+    &::after
+      content: " #"
+      color: var(--color-white-700)
+      font-weight: normal
+      opacity: 0
+    &:hover::after
+      opacity: 1
   span
     font: normal 2.5rem/3rem var(--main-font)
     color: var(--color-accent)
-  &::after
-    content: " #"
-    color: var(--color-white-700)
-    font-weight: normal
-    opacity: 0
-  &:hover::after
-    opacity: 1
 
 .inline-link
   display: inline-block

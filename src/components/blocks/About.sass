@@ -1,1 +1,26 @@
 .about
+  &__content
+    display: flex
+    justify-content: space-between
+    margin-top: 3rem
+
+  &__left
+    width: 50%
+    color: var(--color-white-700)
+    p:not(:last-of-type)
+      margin-bottom: 2rem
+    a
+
+  &__picture
+    position: relative
+    width: 30rem
+    height: 30rem
+    background-color: var(--color-accent)
+    &::after
+      position: absolute
+      content: ""
+      width: 100%
+      height: 100%
+      border: .2rem solid var(--color-accent)
+      right: -1rem
+      top: -1rem
