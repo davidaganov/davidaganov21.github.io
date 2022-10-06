@@ -1,0 +1,38 @@
+.header
+  &__inner
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
+
+  &__content
+    @media (min-width: $middle-min)
+      max-width: 65%
+
+  &__title
+    margin-top: 1rem
+    color: var(--color-white-700)
+    strong
+      display: block
+      color: var(--color-white)
+
+  &__subtitle
+    color: var(--color-accent)
+
+  &__description
+    position: relative
+    margin-top: 2rem
+    color: var(--color-white-700)
+    @media (min-width: $medium-min)
+      max-width: 600px
+      padding-left: 2rem
+    @media (max-width: $medium-max)
+      padding-left: 1rem
+    &::before
+      position: absolute
+      content: ""
+      width: 1px
+      height: 100%
+      top: 0
+      left: 0
+      background-color: var(--color-accent)

@@ -1,0 +1,63 @@
+//---- Base
+@import "./__reset", "./__variables"
+
+//---- Components
+@import "../../components/TheHeader"
+
+html, body
+  height: 100%
+  font-family: var(--main-font)
+html
+  font-size: 62.5%
+body
+  display: flex
+  flex-direction: column
+  background-color: var(--color-black)
+
+h1
+  @media (min-width: $medium-min)
+    font: bold 5.5rem/6rem var(--main-font)
+  @media (max-width: $medium-max)
+    font: bold 4rem/4.5rem var(--main-font)
+h2
+  font: bold 3.5rem/4rem var(--main-font)
+h3
+  font: bold 2.5rem/3rem var(--main-font)
+
+p, li, a
+  @media (min-width: $medium-min)
+    font: normal 1.8rem/2.6rem var(--main-font)
+  @media (max-width: $medium-max)
+    font: normal 1.6rem/2.4rem var(--main-font)
+
+//---- Container
+.inner
+  max-width: $extra-large-min
+  margin-left: auto
+  margin-right: auto
+  @media (max-width: $extra-large-max) and (min-width: $extra-small-min)
+    padding-left: 20px
+    padding-right: 20px
+  @media (max-width: $extra-small-max)
+    padding-left: 10px
+    padding-right: 10px
+
+.inline-link
+  display: inline-block
+  padding: 0 .1rem
+  color: var(--color-accent)
+  border: 1px solid transparent
+  border-radius: 3px
+  &::after
+    content: ""
+    display: block
+    width: 0
+    height: 1px
+    position: relative
+    bottom: 0.2rem
+    background-color: var(--color-accent)
+    transition: .3s
+  &:hover::after
+    width: 100%
+  &:focus-visible
+    border: 1px solid var(--color-accent)
