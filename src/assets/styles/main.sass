@@ -42,24 +42,24 @@ p, li, a
   margin-left: auto
   margin-right: auto
   @media (max-width: $extra-large-max) and (min-width: $extra-small-min)
-    padding-left: 20px
-    padding-right: 20px
+    padding-left: 2rem
+    padding-right: 2rem
   @media (max-width: $extra-small-max)
-    padding-left: 10px
-    padding-right: 10px
+    padding-left: 1rem
+    padding-right: 1rem
 
 .inline-link
   display: inline-block
   padding: 0 .2rem
-  border: 1px solid transparent
+  border: .1rem solid transparent
   transition: all .3s
   &::after
     content: ""
     display: block
     width: 0
-    height: 1px
+    height: .1rem
     position: relative
-    bottom: 0.2rem
+    bottom: .2rem
     transition: .3s
 
   &:hover:not(:focus-visible)::after
@@ -70,7 +70,7 @@ p, li, a
     &::after
       background-color: var(--color-accent)
     &:focus-visible
-      border: 1px solid var(--color-accent)
+      border: .1rem solid var(--color-accent)
       &:hover
         background-color: var(--color-accent)
         color: var(--color-black)
@@ -79,7 +79,7 @@ p, li, a
     &::after
       background-color: var(--color-white)
     &:focus-visible
-      border: 1px solid var(--color-white)
+      border: .1rem solid var(--color-white)
       &:hover
         background-color: var(--color-white)
         color: var(--color-black)
