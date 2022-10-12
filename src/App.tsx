@@ -9,9 +9,11 @@ export default function App() {
     <div className="wrapper">
       <Header />
       <main>
-        <About />
-        <Skills />
-        {/* <Work /> */}
+        <div className="main-wrapper">
+          <About />
+          <Skills />
+          {/* <Work /> */}
+        </div>
       </main>
       <Footer />
     </div>
