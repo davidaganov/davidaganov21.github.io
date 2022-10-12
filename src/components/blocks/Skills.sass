@@ -1,8 +1,10 @@
 .skills
   @media (min-width: $middle-min)
-    margin-top: 14rem
+    margin-top: 11rem
+    padding-top: 3rem
   @media (max-width: $middle-max)
-    margin-top: 6rem
+    margin-top: 4.5rem
+    padding-top: 1.5rem
 
   &__accordion
     margin-top: 6rem
@@ -34,7 +36,7 @@
       display: flex
       align-items: center
       justify-content: right
-      font: bold 2rem var(--main-font)
+      font: bold 2.4rem var(--main-font)
       cursor: pointer
       &::before, &::after
         display: inline-block
@@ -58,7 +60,7 @@
     position: relative
     display: flex
     flex-direction: column
-    margin: 3rem 1.8rem 2rem 0
+    margin: 3rem 2rem 2rem 0
     padding-right: 2.5rem
     text-align: right
     &::after
@@ -71,12 +73,12 @@
       background-color: var(--color-accent)
   &__content
     &-title
-      font: 600 1.8rem var(--main-font)
+      font: 600 2rem var(--main-font)
     &:not(:last-of-type)
       margin-bottom: 1.5rem
 
   &__list-nested
   &__item
     margin-top: .5rem
-    font: normal 1.6rem var(--main-font)
+    font: normal 1.8rem var(--main-font)
     color: var(--color-white-700)
