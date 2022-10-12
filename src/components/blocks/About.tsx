@@ -52,7 +52,11 @@ export default function About() {
               Вот несколько технологий, с которыми я недавно работал: */}
           </div>
           <div className="about__right">
-            <div className="about__picture"></div>
+            <img
+              className="about__picture"
+              src={require("../../assets/images/about-pic.png")}
+              alt=""
+            />
           </div>
         </div>
       </div>
