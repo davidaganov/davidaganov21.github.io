@@ -1,6 +1,6 @@
 import Header from "./components/general/Header"
 import About from "./components/blocks/About"
-// import Skills from "./components/blocks/Skills"
+import Skills from "./components/blocks/Skills"
 // import Work from "./components/blocks/Work"
 import Footer from "./components/general/Footer"
 
@@ -10,8 +10,8 @@ export default function App() {
       <Header />
       <main>
         <About />
-        {/* <Skills />
-        <Work /> */}
+        <Skills />
+        {/* <Work /> */}
       </main>
       <Footer />
     </div>
