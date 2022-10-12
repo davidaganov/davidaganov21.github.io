@@ -55,17 +55,17 @@ p, li, a
 
 .section-title
   position: relative
-  padding-left: 6rem
   &::before
     position: absolute
     display: block
     content: ""
     bottom: 1.5rem
-    left: 0
     width: 5rem
     height: .1rem
     background-color: var(--color-accent)
   a
+    display: flex
+    align-items: baseline
     font: inherit
     color: var(--color-white)
     &::after
@@ -78,6 +78,29 @@ p, li, a
   span
     font: normal 2.5rem/3rem var(--main-font)
     color: var(--color-accent)
+
+.section-ltr
+  .section-title
+    padding-left: 6rem
+    &::before
+      left: 0
+    a::after
+      margin-left: 1rem
+    span
+      margin-right: 1rem
+
+.section-rtl
+  .section-title
+    padding-right: 6rem
+    text-align: right
+    &::before
+      right: 0
+    a
+      flex-direction: row-reverse
+      &::after
+        margin-right: 1rem
+    span
+      margin-left: 1rem
 
 .inline-link
   display: inline-block

@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section
-      className="about"
+      className="about section-ltr"
       id="about"
     >
       <div className="about__inner inner">
