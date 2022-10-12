@@ -32,7 +32,7 @@ export default function Header() {
           </p>
           <Button
             classes="header__btn"
-            value="Button"
+            value="Contact me"
           />
         </div>
       </div>
