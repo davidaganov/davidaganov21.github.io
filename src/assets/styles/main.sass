@@ -9,6 +9,8 @@
 //---- Base
 @import "../../components/base/Button"
 @import "../../components/base/Social"
+@import "../../components/base/Card"
+@import "../../components/base/CardSkeleton"
 
 //---- Blocks
 @import "../../components/blocks/About"
@@ -32,6 +34,7 @@ h1
     font: bold 4rem/4.5rem var(--main-font)
 h2
   font: bold 3.5rem/4rem var(--second-font)
+  text-transform: uppercase
 h3
   font: bold 2.5rem/3rem var(--main-font)
 
@@ -44,11 +47,10 @@ p, li, a
 .main-wrapper
   max-width: 110rem
   width: 100%
-  margin: 15rem auto 3rem
+  margin: 1rem auto 3rem
   padding: 5rem 0
-  // background-color: #0c1e38
-  background: linear-gradient(142deg, rgba(12,30,56,1) 0%, rgba(48,32,61,1) 100%)
-  border-top: 10px solid #b87eef
+  background: linear-gradient(142deg, #0c1e38 0%, #30203d 100%)
+  border-top: 1rem solid #b87eef
 
 .inner
   max-width: 90rem
@@ -61,54 +63,58 @@ p, li, a
     padding-left: 1rem
     padding-right: 1rem
 
-.section-title
-  position: relative
-  &::before
-    position: absolute
-    display: block
-    content: ""
-    bottom: 1.5rem
-    width: 5rem
-    height: .1rem
-    background-color: var(--color-accent)
-  a
-    display: flex
-    align-items: baseline
-    font: inherit
-    color: var(--color-white)
-    &::after
-      content: " #"
-      color: var(--color-white-700)
-      font-weight: normal
-      opacity: 0
-    &:hover::after
-      opacity: 1
-  span
-    font: normal 2.5rem/3rem var(--second-font)
-    color: var(--color-accent)
-
-.section-ltr
-  .section-title
-    padding-left: 6rem
+.section
+  &-title
+    position: relative
     &::before
-      left: 0
-    a::after
-      margin-left: 1rem
-    span
-      margin-right: 1rem
-
-.section-rtl
-  .section-title
-    padding-right: 6rem
-    text-align: right
-    &::before
-      right: 0
+      position: absolute
+      display: block
+      content: ""
+      bottom: 1.5rem
+      width: 5rem
+      height: .1rem
+      background-color: var(--color-accent)
     a
-      flex-direction: row-reverse
+      display: flex
+      align-items: baseline
+      font: inherit
+      color: var(--color-white)
       &::after
-        margin-right: 1rem
+        content: " #"
+        color: var(--color-white-700)
+        font-weight: normal
+        opacity: 0
+      &:hover::after
+        opacity: 1
+      &:focus-visible::after
+        color: var(--color-accent)
+        opacity: 1
     span
-      margin-left: 1rem
+      font: normal 2.5rem/3rem var(--second-font)
+      color: var(--color-accent)
+
+  &-ltr
+    .section-title
+      padding-left: 6rem
+      &::before
+        left: 0
+      a::after
+        margin-left: 1rem
+      span
+        margin-right: 1rem
+
+  &-rtl
+    .section-title
+      padding-right: 6rem
+      text-align: right
+      &::before
+        right: 0
+      a
+        flex-direction: row-reverse
+        &::after
+          margin-right: 1rem
+      span
+        margin-left: 1rem
 
 .inline-link
   display: inline-block
