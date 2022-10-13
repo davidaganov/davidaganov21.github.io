@@ -31,6 +31,7 @@ export default function Header() {
             </a>
           </p>
           <Button
+            link="#footer"
             classes="header__btn"
             value="Contact me"
           />

@@ -2,7 +2,10 @@ import Social from "../base/Social"
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer
+      className="footer"
+      id="footer"
+    >
       <div className="footer__inner inner">
         <p className="footer__author">Created by David Aganov</p>
         <Social classes="footer__social" />

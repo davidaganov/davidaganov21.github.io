@@ -1,10 +1,16 @@
-export default function Button({ value, classes }: { value: string; classes: string }) {
+interface Button {
+  link: string
+  value: string
+  classes: string
+}
+
+export default function Button({ value, classes, link }: Button) {
   return (
-    <button
+    <a
+      href={link}
       className={`btn ${classes}`}
-      type="button"
     >
       {value}
-    </button>
+    </a>
   )
 }

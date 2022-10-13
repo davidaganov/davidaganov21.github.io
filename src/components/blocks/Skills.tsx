@@ -72,6 +72,7 @@ export default function Skills() {
           classParentString="skills-item"
           transitionTime={200}
           key={id}
+          tabIndex={0}
         >
           <ul className="skills__list">{items}</ul>
         </Collapsible>
