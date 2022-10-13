@@ -13,7 +13,7 @@ export default function Header() {
             <strong>David Aganov</strong>I build things for the web
           </h1>
           <p className="header__description">
-            I’m middle frontend developer. I like to educate new technologies and try new things in
+            I’m middle frontend developer. I like to learn new technologies and try new things in
             every possible way. At the moment I’m working in mobile games studio{" "}
             <a
               className="header__link inline-link"

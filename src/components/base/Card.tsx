@@ -19,6 +19,8 @@ export default function Card({ name, description, html_url, topics }: Repos) {
         <a
           href={html_url}
           className="project__link inline-link"
+          target="_blank"
+          rel="noreferrer"
         >
           Go to repository
         </a>

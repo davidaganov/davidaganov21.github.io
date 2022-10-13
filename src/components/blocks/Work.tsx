@@ -68,7 +68,7 @@ export default function Work() {
             <Button
               link="https://github.com/davidaganov21?tab=repositories"
               classes="work__btn"
-              value="Go To Github"
+              value="Open GitHub"
             />
           ) : null}
         </div>
