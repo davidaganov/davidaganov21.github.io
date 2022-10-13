@@ -33,6 +33,12 @@
     transition: all .3s
     &:hover
       color: var(--color-white)
+    &:focus-visible
+      color: var(--color-white)
+      box-shadow: 0 0 0 .1rem var(--color-white)
+      &:hover
+        background-color: var(--color-white)
+        color: var(--color-black)
     @media (min-width: $middle-min)
       margin-left: 3rem
       z-index: 1
