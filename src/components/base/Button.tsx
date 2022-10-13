@@ -1,10 +1,6 @@
-interface Button {
-  link: string
-  value: string
-  classes: string
-}
+import { Btn } from "../../interfaces"
 
-export default function Button({ value, classes, link }: Button) {
+export default function Button({ value, classes, link }: Btn) {
   return (
     <a
       href={link}

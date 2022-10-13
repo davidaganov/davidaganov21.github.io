@@ -6,3 +6,9 @@ export interface Repos {
   topics: string[]
   language: string
 }
+
+export interface Btn {
+  link: string
+  value: string
+  classes: string
+}
