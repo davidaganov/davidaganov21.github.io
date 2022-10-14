@@ -16,8 +16,15 @@
     justify-content: center
 
   &__item
-    &:not(:last-of-type)
-      margin-right: 5rem
+    @media (min-width: $small-min)
+      &:not(:last-of-type)
+        margin-right: 5rem
+      span
+        margin-right: .7rem
+    @media (max-width: $small-max)
+      &:not(:last-of-type)
+        margin-right: 3rem
+      span
+        margin-right: .5rem
     span
-      margin-right: .7rem
       color: var(--color-accent)

@@ -33,8 +33,11 @@ h1
   @media (max-width: $medium-max)
     font: bold 4rem/4.5rem var(--main-font)
 h2
-  font: bold 3.5rem/4rem var(--second-font)
   text-transform: uppercase
+  @media (min-width: $small-min)
+    font: bold 3.5rem/4rem var(--second-font)
+  @media (max-width: $small-max)
+    font: bold 2.5rem/3rem var(--second-font)
 h3
   font: bold 2.5rem/3rem var(--main-font)
 
@@ -70,10 +73,13 @@ p, li, a
       position: absolute
       display: block
       content: ""
-      bottom: 1.5rem
       width: 5rem
       height: .1rem
       background-color: var(--color-accent)
+      @media (min-width: $small-min)
+        bottom: 1.5rem
+      @media (max-width: $small-max)
+        bottom: 1.2rem
     a
       display: flex
       align-items: baseline
@@ -90,8 +96,11 @@ p, li, a
         color: var(--color-accent)
         opacity: 1
     span
-      font: normal 2.5rem/3rem var(--second-font)
       color: var(--color-accent)
+      @media (min-width: $small-min)
+        font: normal 2.5rem/3rem var(--second-font)
+      @media (max-width: $small-max)
+        font: normal 2rem/2.5rem var(--second-font)
 
   &-ltr
     .section-title
