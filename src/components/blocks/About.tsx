@@ -13,48 +13,35 @@ export default function About() {
 
         <div className="about__content">
           <div className="about__left">
+            <img
+              className="about__picture"
+              src={require("../../assets/images/avatar.png")}
+              alt=""
+            />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis tenetur libero
-              deserunt, animi quas veritatis facilis illo numquam sed itaque accusantium rem dolore
-              harum magnam{" "}
-              <a
-                href="#"
-                className="inline-link"
-              >
-                ducimus nulla
-              </a>{" "}
-              maxime voluptas! Praesentium.
+              I started getting interested in web development back in 2016, then I watched a lot of
+              YouTube videos about development, found free courses on the Internet and tried to
+              create my own sites.
             </p>
             <p>
-              Ipsum,{" "}
-              <a
-                href="#"
-                className="inline-link"
-              >
-                exercitationem
-              </a>{" "}
-              nobis, mollitia aliquid harum saepe veritatis eius modi, consectetur vel quisquam
-              voluptatem perferendis tempora?{" "}
-              <a
-                href="#"
-                className="inline-link"
-              >
-                Optio
-              </a>{" "}
-              voluptatum explicabo pariatur veniam ducimus.
+              Years later and after completing my studies, I was lucky enough to connect my life
+              with my hobby and get a job as a <strong>junior frontend developer</strong> in a
+              company developing mobile games and individual projects.
             </p>
-            {/* Привет! Меня зовут Бриттани, и мне нравится создавать вещи, которые живут в Интернете. Мой интерес к веб-разработке начался еще в 2012 году, когда я решил попробовать редактировать собственные темы Tumblr — оказалось, что создание пользовательской кнопки для реблога научило меня многому в HTML и CSS!
-
-              Перенесемся на сегодняшний день, и я имел честь работать в рекламное агентство, стартап, огромная корпорация, а также студенческая дизайн-студия. В настоящее время мое основное внимание сосредоточено на создании доступных, инклюзивных продуктов и цифрового опыта вУточнениедля самых разных клиентов.
-
-              я тоже недавно запустил курс который охватывает все, что вам нужно для создания веб-приложения с API Spotify с использованием Node & React.
-
-              Вот несколько технологий, с которыми я недавно работал: */}
+            <p>
+              During the year and a half spent in this company, I learned a lot. My main activity
+              was the development of products on the <strong>Nuxt.js</strong> and creating multiple
+              landing pages.
+            </p>
+            <p>
+              The company also gave me the opportunity to take courses on <strong>React</strong> and{" "}
+              <strong>React Native</strong> development.
+            </p>
           </div>
           <div className="about__right">
             <img
               className="about__picture"
-              src={require("../../assets/images/about-pic.png")}
+              src={require("../../assets/images/avatar.png")}
               alt=""
             />
           </div>
