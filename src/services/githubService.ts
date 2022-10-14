@@ -18,6 +18,7 @@ const useGithubService = () => {
         return { id, name, description, html_url, topics, language: language.toLowerCase() }
       })
       .filter(item => item.name !== "davidaganov21.github.io")
+      .sort(() => Math.random() - 0.5)
   }
 
   return { loading, error, clearError, getRepos }
