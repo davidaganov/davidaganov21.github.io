@@ -25,11 +25,11 @@ export default function Navbar() {
         <li className="navbar__item">
           <span>03.</span>
           <a
-            href="#work"
+            href="#projects"
             className="navbar__link inline-link inline-link--white"
           >
             {" "}
-            Work
+            Projects
           </a>
         </li>
       </ul>
