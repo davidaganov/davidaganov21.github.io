@@ -1,5 +1,6 @@
 import Collapsible from "react-collapsible"
 import { v4 as uuidv4 } from "uuid"
+import { SkillItems } from "../../interfaces"
 
 export default function Skills() {
   const data = [
@@ -41,9 +42,7 @@ export default function Skills() {
     }
   ]
 
-  const renderSkills = (
-    arr: { id: string; title: string; list: { id: string; title: string; tag: string[] }[] }[]
-  ) => {
+  const renderSkills = (arr: SkillItems[]) => {
     const categories = arr.map(({ id, title, list }) => {
       const items = list.map(({ id, title, tag }) => {
         const tags = tag.map((skill) => {
