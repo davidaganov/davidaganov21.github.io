@@ -7,7 +7,14 @@ export default function Footer() {
       id="footer"
     >
       <div className="footer__inner inner">
-        <p className="footer__author">Created by David Aganov</p>
+        <a
+          href="https://github.com/davidaganov21/davidaganov21.github.io"
+          className="footer__author inline-link inline-link--white"
+        >
+          Developed & Designed&nbsp;
+          <br />
+          by David Aganov
+        </a>
         <Social classes="footer__social" />
         <a
           className="footer__email inline-link inline-link--white"
