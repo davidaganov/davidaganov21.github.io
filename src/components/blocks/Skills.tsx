@@ -70,7 +70,8 @@ export default function Skills() {
         <Collapsible
           trigger={title}
           classParentString="skills-item"
-          transitionTime={200}
+          transitionTime={350}
+          easing={"ease-in-out"}
           key={id}
           tabIndex={0}
         >
