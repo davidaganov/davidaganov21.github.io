@@ -48,17 +48,17 @@ export default function Work() {
   return (
     <section
       className="work section-ltr"
-      id="work"
+      id="projects"
     >
       <div className="work__inner inner">
         <h2 className="work__title section-title">
-          <a href="#work">
+          <a href="#projects">
             <span>03.</span> Projects
           </a>
         </h2>
 
         <div className="work__body">
-          <p className="work__block-title">GitHub Repositories</p>
+          {/* <p className="work__block-title">GitHub Repositories</p> */}
 
           {errorMessage}
           {spinner}
