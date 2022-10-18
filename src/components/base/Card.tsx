@@ -13,7 +13,7 @@ export default function Card({ name, description, html_url, topics }: Repos) {
 
   return (
     <li className="work__project project">
-      <h4 className="project__title">{name.replace(/[.\-/\\\s]/g, " ")}</h4>
+      <h3 className="project__title">{name.replace(/[.\-/\\\s]/g, " ")}</h3>
       <p className="project__description">{description}</p>
       <div className="project__bottom">
         <a

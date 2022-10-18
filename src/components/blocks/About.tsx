@@ -16,7 +16,9 @@ export default function About() {
             <img
               className="about__picture"
               src={require("../../assets/images/avatar.png")}
-              alt=""
+              alt="My avatar"
+              width="350"
+              height="350"
             />
             <p>
               I started getting interested in web development back in 2016, when I watched a lot of
