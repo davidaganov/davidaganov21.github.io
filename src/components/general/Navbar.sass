@@ -13,7 +13,11 @@
 
   &__menu
     display: flex
-    justify-content: center
+    @media (min-width: $small-min)
+      justify-content: center
+    @media (max-width: $small-max)
+      width: 100%
+      justify-content: space-between
 
   &__item
     @media (min-width: $small-min)

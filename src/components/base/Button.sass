@@ -1,12 +1,17 @@
 .btn
   display: inline-block
-  padding: 1rem 6.5rem
   border: .1rem solid var(--color-accent)
   color: var(--color-accent)
-  font: normal 2rem/2.5rem var(--second-font)
   text-transform: uppercase
   transition: all .3s
   cursor: pointer
+  @media (min-width: $small-min)
+    padding: 1rem 6.5rem
+    font: normal 2rem/2.5rem var(--second-font)
+  @media (max-width: $small-max)
+    padding: 1rem 3.5rem
+    font: normal 1.6rem/2.1rem var(--second-font)
+
   &:hover
     background-color: var(--color-accent-300)
   &:focus-visible

@@ -5,7 +5,16 @@
     align-items: center
     margin: 3rem 0
   &__author
-    color: var(--color-white-700)
+    text-align: center
+    color: var(--color-white-700) !important
+    &:hover
+      color: var(--color-white) !important
+    @media (min-width: $middle-min)
+      margin-bottom: .5rem
+    @media (min-width: $extra-small-min)
+      br
+        display: none
+
   &__social
     @media (max-width: $middle-max)
       margin: 1rem 0
