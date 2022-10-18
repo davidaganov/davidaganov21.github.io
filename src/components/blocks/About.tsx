@@ -19,16 +19,23 @@ export default function About() {
               alt=""
             />
             <p>
-              I started interesting web-developing long time ago. It was 2016. At that moment I was watching YT-videos about developing, searching free courses in the internet and was trying create my own sites.
+              I started getting interested in web development back in 2016, when I watched a lot of
+              YouTube videos about development, looked for free courses on the Internet and tried to
+              create my own sites.
             </p>
             <p>
-              In some years I finally completed my studies. I was lucky and found a way for connecting my hobby with my life and got a job as junior frontend developer in the mobile games developing studio.
+              Years later and after completing my studies, I was lucky to connect my life with my
+              hobby and get a job as a junior frontend developer in a company developing mobile
+              games and individual projects.
             </p>
             <p>
-              In year and a half which I spend in this company I learned a lot. My main activity was the development of products in <strong>Nuxt.js</strong> and creating multiple landing pages.
+              During the year and a half spent in this company, I learned a lot. My main activity
+              was development of products with <strong>Nuxt.js</strong> framework and creation of
+              many landing pages.
             </p>
             <p>
-              Also my company gave me a chance to educate on <strong>React</strong> and <strong>React Native</strong> development courses.
+              The company also gave me the opportunity to take courses on <strong>React</strong> and{" "}
+              <strong>React Native</strong> development.
             </p>
           </div>
           <div className="about__right">
