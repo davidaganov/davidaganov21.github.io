@@ -1,6 +1,7 @@
 import Collapsible from "react-collapsible"
 import { v4 as uuidv4 } from "uuid"
-import { SkillItems } from "../../interfaces"
+import { SkillProps } from "../../interfaces"
+import Title from "../base/Title"
 
 export default function Skills() {
   const data = [
@@ -42,7 +43,7 @@ export default function Skills() {
     }
   ]
 
-  const renderSkills = (arr: SkillItems[]) => {
+  const renderSkills = (arr: SkillProps[]) => {
     const categories = arr.map(({ id, title, list }) => {
       const items = list.map(({ id, title, tag }) => {
         const tags = tag.map((skill) => {
@@ -88,11 +89,13 @@ export default function Skills() {
       id="skills"
     >
       <div className="skills__inner inner">
-        <h2 className="skills__title section-title">
-          <a href="#skills">
-            <span>02.</span> My Skills
-          </a>
-        </h2>
+        <Title
+          classes="skills__title"
+          number={2}
+          link="#skills"
+          title="My Skills"
+          direction="rtl"
+        />
 
         {renderSkills(data)}
       </div>

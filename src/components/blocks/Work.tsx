@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 
-import { Repos } from "../../interfaces"
+import { CardProps } from "../../interfaces"
 import useGithubService from "../../services/githubService"
 import Button from "../base/Button"
 import Card from "../base/Card"
 import CardSkeleton from "../base/CardSkeleton"
 
 export default function Work() {
-  const [reposList, setReposList] = useState<Repos[]>([])
+  const [reposList, setReposList] = useState<CardProps[]>([])
   const [reposLoading, setReposLoading] = useState(false)
 
   const { loading, error, getRepos } = useGithubService()
@@ -21,12 +21,12 @@ export default function Work() {
     getRepos().then(onReposLoaded)
   }
 
-  const onReposLoaded = (newRepos: Repos[]) => {
+  const onReposLoaded = (newRepos: CardProps[]) => {
     setReposList([...reposList, ...newRepos])
     setReposLoading(false)
   }
 
-  const renderItems = (arr: Repos[]) => {
+  const renderItems = (arr: CardProps[]) => {
     const items = arr
       .map((item) => {
         return (

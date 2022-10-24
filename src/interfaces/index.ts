@@ -1,4 +1,4 @@
-export interface SkillItems {
+export interface SkillProps {
   id: string;
   title: string;
   list: {
@@ -8,7 +8,7 @@ export interface SkillItems {
   }[]
 }
 
-export interface Repos {
+export interface CardProps {
   id: number
   name: string
   description: string
@@ -17,8 +17,20 @@ export interface Repos {
   language: string
 }
 
-export interface Btn {
+export interface SocialProps {
+  classes: string
+}
+
+export interface ButtonProps {
   link: string
   value: string
   classes: string
+}
+
+export interface TitleProps {
+  classes: string
+  number: number
+  title: string
+  link?: string
+  direction?: string
 }

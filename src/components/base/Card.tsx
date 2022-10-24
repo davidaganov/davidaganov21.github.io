@@ -1,6 +1,6 @@
-import { Repos } from "../../interfaces"
+import { CardProps } from "../../interfaces"
 
-export default function Card({ name, description, html_url, topics }: Repos) {
+export default function Card({ name, description, html_url, topics }: CardProps) {
   const renderTags = (tags: string[]) => {
     const items = tags.map((tag, i) => {
       return <li key={i}>{tag}</li>

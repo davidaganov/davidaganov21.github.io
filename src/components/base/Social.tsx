@@ -1,4 +1,6 @@
-export default function Social({ classes }: { classes: string }) {
+import { SocialProps } from "../../interfaces"
+
+export default function Social({ classes }: SocialProps) {
   return (
     <ul className={`social ${classes}`}>
       <li className="social__item">
