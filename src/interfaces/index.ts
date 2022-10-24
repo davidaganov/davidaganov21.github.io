@@ -14,6 +14,7 @@ export interface CardProps {
   description: string
   html_url: string
   topics: string[]
+  homepage: string
   language: string
 }
 
