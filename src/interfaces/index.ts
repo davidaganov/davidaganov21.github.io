@@ -29,8 +29,8 @@ export interface ButtonProps {
 
 export interface TitleProps {
   classes: string
-  number: number
   title: string
-  link?: string
+  link: string
+  number?: number
   direction?: string
 }
