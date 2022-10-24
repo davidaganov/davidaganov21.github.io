@@ -1,38 +1,28 @@
+import data from "../../data"
+
 export default function Navbar() {
-  return (
-    <nav className="navbar">
-      <ul className="navbar__menu">
-        <li className="navbar__item">
-          <span>01.</span>
+  const renderMenu = () => {
+    const items = data.menu.map(({ id, number, link, title }) => {
+      return (
+        <li
+          className="navbar__item"
+          key={id}
+        >
+          <span>0{number}.</span>
           <a
-            href="#about"
+            href={link}
             className="navbar__link inline-link inline-link--white"
           >
-            {" "}
-            About
+            {title}
           </a>
         </li>
-        <li className="navbar__item">
-          <span>02.</span>
-          <a
-            href="#skills"
-            className="navbar__link inline-link inline-link--white"
-          >
-            {" "}
-            Skills
-          </a>
-        </li>
-        <li className="navbar__item">
-          <span>03.</span>
-          <a
-            href="#projects"
-            className="navbar__link inline-link inline-link--white"
-          >
-            {" "}
-            Projects
-          </a>
-        </li>
-      </ul>
-    </nav>
-  )
+      )
+    })
+
+    return <ul className="navbar__menu">{items}</ul>
+  }
+
+  const menu = renderMenu()
+
+  return <nav className="navbar">{menu}</nav>
 }

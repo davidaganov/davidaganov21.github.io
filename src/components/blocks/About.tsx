@@ -1,6 +1,22 @@
 import Title from "../base/Title"
+import data from "../../data"
 
 export default function About() {
+  const renderItems = () => {
+    const items = data.about.map((item, i) => {
+      return (
+        <p
+          key={i}
+          dangerouslySetInnerHTML={{ __html: item }}
+        />
+      )
+    })
+
+    return <>{items}</>
+  }
+
+  const items = renderItems()
+
   return (
     <section
       className="about"
@@ -23,25 +39,7 @@ export default function About() {
               width="350"
               height="350"
             />
-            <p>
-              I started getting interested in web development back in 2016, when I watched a lot of
-              YouTube videos about development, looked for free courses on the Internet and tried to
-              create my own sites.
-            </p>
-            <p>
-              Years later and after completing my studies, I was lucky to connect my life with my
-              hobby and get a job as a junior frontend developer in a company developing mobile
-              games and individual projects.
-            </p>
-            <p>
-              During the year and a half spent in this company, I learned a lot. My main activity
-              was development of products with <strong>Nuxt.js</strong> framework and creation of
-              many landing pages.
-            </p>
-            <p>
-              The company also gave me the opportunity to take courses on <strong>React</strong> and{" "}
-              <strong>React Native</strong> development.
-            </p>
+            {items}
           </div>
           <div className="about__right">
             <img

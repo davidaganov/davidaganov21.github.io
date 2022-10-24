@@ -1,48 +1,9 @@
 import Collapsible from "react-collapsible"
-import { v4 as uuidv4 } from "uuid"
 import { SkillProps } from "../../interfaces"
 import Title from "../base/Title"
+import data from "../../data"
 
 export default function Skills() {
-  const data = [
-    {
-      id: uuidv4(),
-      title: "HTML",
-      list: [
-        { id: uuidv4(), title: "Template Engine", tag: ["PUG"] },
-        { id: uuidv4(), title: "Native", tag: ["HTML5"] }
-      ]
-    },
-    {
-      id: uuidv4(),
-      title: "CSS",
-      list: [
-        { id: uuidv4(), title: "Preprocessors", tag: ["SASS/SCSS", "Less"] },
-        { id: uuidv4(), title: "Frameworks", tag: ["Bootstrap", "Tailwind"] },
-        { id: uuidv4(), title: "Native", tag: ["CSS3"] }
-      ]
-    },
-    {
-      id: uuidv4(),
-      title: "JavaScript",
-      list: [
-        { id: uuidv4(), title: "Frameworks", tag: ["Nuxt.js", "Vue.js"] },
-        { id: uuidv4(), title: "Library", tag: ["React", "React Native", "JQuery"] },
-        { id: uuidv4(), title: "Native", tag: ["JavaScript / TypeScript"] }
-      ]
-    },
-    {
-      id: uuidv4(),
-      title: "Other",
-      list: [
-        { id: uuidv4(), title: "CMS", tag: ["Wordpress"] },
-        { id: uuidv4(), title: "Design", tag: ["Figma", "Adobe Photoshop"] },
-        { id: uuidv4(), title: "3D", tag: ["Blender", "Maya"] },
-        { id: uuidv4(), title: "OS", tag: ["Windows", "Mac OS"] }
-      ]
-    }
-  ]
-
   const renderSkills = (arr: SkillProps[]) => {
     const categories = arr.map(({ id, title, list }) => {
       const items = list.map(({ id, title, tag }) => {
@@ -97,7 +58,7 @@ export default function Skills() {
           direction="rtl"
         />
 
-        {renderSkills(data)}
+        {renderSkills(data.skills)}
       </div>
     </section>
   )
