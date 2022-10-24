@@ -1,15 +1,18 @@
+import Title from "../base/Title"
+
 export default function About() {
   return (
     <section
-      className="about section-ltr"
+      className="about"
       id="about"
     >
       <div className="about__inner inner">
-        <h2 className="about__title section-title">
-          <a href="#about">
-            <span>01.</span> About Me
-          </a>
-        </h2>
+        <Title
+          classes="about__title"
+          number={1}
+          link="#about"
+          title="About Me"
+        />
 
         <div className="about__content">
           <div className="about__left">
