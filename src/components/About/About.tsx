@@ -47,7 +47,9 @@ export const About = (): JSX.Element => {
             <img
               className={styles.picture}
               src={require("../../assets/images/avatar.png")}
-              alt=""
+              alt="My avatar"
+              width="350"
+              height="350"
             />
           </div>
         </div>
