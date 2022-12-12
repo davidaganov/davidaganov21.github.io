@@ -44,20 +44,24 @@ p, li, a
   border-top: 1rem solid #b87eef
 
 .inline-link
+  position: relative
   display: inline-block
   padding: 0 .2rem
   border: .1rem solid transparent
   transition: all .3s
   &::after
     content: ""
-    display: block
-    width: 0
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
     height: .1rem
-    position: relative
-    bottom: .1rem
-    transition: .3s
+    transform-origin: right bottom
+    transform: scaleX(0)
+    transition: transform .3s ease 0s
   &:hover:not(:focus-visible)::after
-    width: 100%
+    transform-origin: left bottom
+    transform: scaleX(1)
 
   &:not(&--white)
     color: var(--color-accent)
