@@ -1,0 +1,71 @@
+.header
+  position: relative
+  height: 100vh
+  max-height: 108rem
+  min-height: 60rem
+
+.inner
+  position: relative
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  position: relative
+  margin: auto 0
+
+.blobs
+  position: absolute
+  z-index: -1
+  color: var(--color-accent)
+  opacity: .15
+  @media (min-width: 1000px)
+    top: -30px
+    left: -30px
+  @media (max-width: 999px)
+    top: -20px
+    left: -10px
+  @media (min-width: 576px)
+    width: 400px
+  @media (max-width: 575px)
+    width: 320px
+
+.title
+  margin-top: 1rem
+  color: var(--color-white-700)
+  strong
+    display: block
+    color: var(--color-white)
+
+.subtitle
+  color: var(--color-accent)
+  font-family: var(--second-font)
+  text-transform: uppercase
+
+.description
+  position: relative
+  margin-top: 2rem
+  color: var(--color-white-700)
+  @media (min-width: 769px)
+    max-width: 60rem
+    padding-left: 2rem
+  @media (max-width: 768px)
+    max-width: 50rem
+    padding-left: 1rem
+  &::before
+    position: absolute
+    content: ""
+    width: .1rem
+    height: 100%
+    top: 0
+    left: 0
+    background-color: var(--color-accent)
+
+.link-icon
+  width: 1.8rem
+  height: 1.8rem
+  margin: 0 .5rem -.2rem 0
+  opacity: .8
+
+.btn
+  margin-top: 4.5rem

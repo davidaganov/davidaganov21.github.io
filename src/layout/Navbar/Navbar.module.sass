@@ -1,0 +1,34 @@
+.navbar
+  position: absolute
+  display: flex
+  align-items: center
+  width: 100%
+  margin: 2rem 0
+  left: 0
+  top: 0
+  @media (max-width: 1599px) and (min-width: 375px)
+    padding: 0 2rem
+  @media (max-width: 374px)
+    padding: 0 1rem
+
+.menu
+  display: flex
+  @media (min-width: 576px)
+    justify-content: center
+  @media (max-width: 575px)
+    width: 100%
+    justify-content: space-between
+
+.item
+  @media (min-width: 576px)
+    &:not(:last-of-type)
+      margin-right: 5rem
+    span
+      margin-right: .7rem
+  @media (max-width: 575px)
+    &:not(:last-of-type)
+      margin-right: 3rem
+    span
+      margin-right: .5rem
+  span
+    color: var(--color-accent)

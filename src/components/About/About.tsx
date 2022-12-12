@@ -1,7 +1,9 @@
-import Title from "../base/Title"
+import styles from "./About.module.sass"
+
+import { Title } from "../"
 import data from "../../data"
 
-export default function About() {
+export const About = (): JSX.Element => {
   const renderItems = () => {
     const items = data.about.map((item, i) => {
       return (
@@ -19,21 +21,21 @@ export default function About() {
 
   return (
     <section
-      className="about"
+      className={styles.about}
       id="about"
     >
-      <div className="about__inner inner">
+      <div className="inner">
         <Title
-          classes="about__title"
           number={1}
           link="#about"
           title="About Me"
+          direction="ltr"
         />
 
-        <div className="about__content">
-          <div className="about__left">
+        <div className={styles.content}>
+          <div className={styles.left}>
             <img
-              className="about__picture"
+              className={styles.picture}
               src={require("../../assets/images/avatar.png")}
               alt="My avatar"
               width="350"
@@ -41,9 +43,9 @@ export default function About() {
             />
             {items}
           </div>
-          <div className="about__right">
+          <div className={styles.right}>
             <img
-              className="about__picture"
+              className={styles.picture}
               src={require("../../assets/images/avatar.png")}
               alt=""
             />

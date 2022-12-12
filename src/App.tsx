@@ -1,8 +1,5 @@
-import Header from "./components/general/Header"
-import About from "./components/blocks/About"
-import Skills from "./components/blocks/Skills"
-import Work from "./components/blocks/Work"
-import Footer from "./components/general/Footer"
+import { Header, Footer } from "./layout/"
+import { About, Skills, Work } from "./components/"
 
 export default function App() {
   return (

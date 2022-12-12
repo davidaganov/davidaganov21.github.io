@@ -1,15 +1,17 @@
-import Button from "../base/Button"
-import Navbar from "./Navbar"
+import { Navbar } from "../"
+import { Button } from "../../components/"
+import styles from "./Header.module.sass"
+import cn from "classnames"
 
-export default function Header() {
+export const Header = (): JSX.Element => {
   return (
-    <header className="header">
-      <div className="header__inner inner">
+    <header className={styles.header}>
+      <div className={cn(styles.inner, "inner")}>
         <Navbar />
 
-        <div className="header__content">
+        <div className={styles.content}>
           <svg
-            className="header__blobs"
+            className={styles.blobs}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 634 554"
@@ -21,19 +23,20 @@ export default function Header() {
               clipRule="evenodd"
             />
           </svg>
-          <p className="header__subtitle">Hello, my name is</p>
-          <h1 className="header__title">
+          <p className={styles.subtitle}>Hello, my name is</p>
+          <h1 className={styles.title}>
             <strong>David Aganov</strong>I build things for the web
           </h1>
-          <p className="header__description">
+          <p className={styles.description}>
             I’m frontend developer. I like to learn new technologies and try new things in every
             possible way. At the moment I’m working in mobile games studio{" "}
             <a
-              className="header__link inline-link"
+              className="inline-link"
               href="https://www.linkedin.com/company/sabgames/mycompany/"
+              aria-label="The company I work for is SAB Games"
             >
               <svg
-                className="header__link-icon"
+                className={styles["link-icon"]}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -45,9 +48,10 @@ export default function Header() {
           </p>
           <Button
             link="#footer"
-            classes="header__btn"
-            value="Contact me"
-          />
+            className={styles.btn}
+          >
+            Contact me
+          </Button>
         </div>
       </div>
     </header>

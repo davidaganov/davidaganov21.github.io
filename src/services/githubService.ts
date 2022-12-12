@@ -1,5 +1,5 @@
 import { useHttp } from "../hooks/http.hook"
-import { CardProps } from "../interfaces"
+import { RepoProps } from "../interfaces"
 
 const useGithubService = () => {
   const { loading, request, error, clearError } = useHttp()
@@ -11,7 +11,7 @@ const useGithubService = () => {
     return _transformProjects(res)
   }
 
-  const _transformProjects = (items: CardProps[]) => {
+  const _transformProjects = (items: RepoProps[]) => {
     return items
       .map((item) => {
         const { id, name, description, html_url, topics, homepage, language } = item

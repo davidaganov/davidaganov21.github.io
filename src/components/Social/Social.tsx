@@ -1,12 +1,17 @@
-import { SocialProps } from "../../interfaces"
+import { SocialProps } from "./Social.props"
+import styles from "./Social.module.sass"
+import cn from "classnames"
 
-export default function Social({ classes }: SocialProps) {
+export const Social = ({ className, ...props }: SocialProps): JSX.Element => {
   return (
-    <ul className={`social ${classes}`}>
-      <li className="social__item">
+    <ul
+      className={cn(styles.social, className)}
+      {...props}
+    >
+      <li className={styles.item}>
         <a
           href="https://github.com/davidaganov21"
-          className="social__link"
+          className={styles.link}
           aria-label="Github profile"
         >
           <svg
@@ -25,10 +30,10 @@ export default function Social({ classes }: SocialProps) {
           </svg>
         </a>
       </li>
-      <li className="social__item">
+      <li className={styles.item}>
         <a
           href="https://www.linkedin.com/in/david-aganov/"
-          className="social__link"
+          className={styles.link}
           aria-label="Linkedin profile"
         >
           <svg
