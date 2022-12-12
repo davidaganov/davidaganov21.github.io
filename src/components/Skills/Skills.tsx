@@ -14,8 +14,8 @@ export const Skills = (): JSX.Element => {
         <Collapsible
           trigger={title}
           classParentString={styles.item}
-          triggerElementProps={{ id: `skill-${id}` }}
-          contentElementId={`skill-${id}`}
+          triggerElementProps={{ id: `trigger-${id}` }}
+          contentElementId={`content-${id}`}
           transitionTime={350}
           easing={"ease-in-out"}
           key={id}
