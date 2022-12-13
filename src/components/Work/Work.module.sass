@@ -10,6 +10,7 @@
   display: flex
   flex-direction: column
   align-items: center
+  width: 100%
   @media (min-width: 769px)
     margin-top: 4rem
   @media (max-width: 768px)
@@ -26,6 +27,29 @@
   @media (min-width: 769px)
     display: grid
     grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+
+.tags
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem 2rem
+  width: 100%
+  margin-bottom: 2.5rem
+
+.tag
+  padding: 0 .6rem .2rem .5rem
+  text-transform: uppercase
+  font: normal 1.7rem var(--second-font)
+  border-style: solid
+  border-width: .1rem
+  color: var(--color-white-700)
+  transition: all .2s
+  cursor: pointer
+  &:not(.tagActive)
+    border-color: var(--color-white-700)
+  &.tagActive, &:hover, &:focus-visible
+    border-color: var(--color-accent)
+    color: var(--color-accent)
 
 .error
   margin: 4rem 0 2rem
@@ -34,3 +58,25 @@
 
 .btn
   margin-top: 2rem
+
+.skeleton
+  position: relative
+  height: 23rem
+  margin: 1rem
+  border: .1rem solid var(--color-accent)
+  box-shadow: .1rem .1rem 0 .1rem var(--color-accent)
+  background-color: #0c1e38
+  overflow: hidden
+  &::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(90deg, #0c1e38 0, var(--color-accent-300) 14rem, #0c1e38 18rem)
+    background-size: cover
+    animation: shine-lines 1.5s infinite linear
+    @keyframes shine-lines
+      0%
+        left: -50%
+      100%
+        left: 100%

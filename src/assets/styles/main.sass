@@ -7,15 +7,18 @@ html, body
 html
   scroll-behavior: smooth
   font-size: 62.5%
+  @media (min-width: 576px)
+    @supports (scrollbar-width: thin)
+      scrollbar-color: var(--color-accent) var(--color-black)
+      scrollbar-width: thin
+    @supports not (scrollbar-width: thin)
+      ::-webkit-scrollbar
+        width: .5rem
+      ::-webkit-scrollbar-track
+        background-color: var(--color-black)
+      ::-webkit-scrollbar-thumb
+        background-color: var(--color-accent)
+        box-shadow: 0 -100vh 0 100vh #835ea7, 0 0 15px 5px var(--color-black)
 body
   display: flex
   flex-direction: column
-
-@media (min-width: 576px)
-  ::-webkit-scrollbar
-    width: .5rem
-  ::-webkit-scrollbar-track
-    background-color: var(--color-black)
-  ::-webkit-scrollbar-thumb
-    background-color: var(--color-accent)
-    box-shadow: 0 -100vh 0 100vh #835ea7, 0 0 15px 5px black
