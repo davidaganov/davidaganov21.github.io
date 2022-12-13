@@ -10,19 +10,10 @@ export const Header = (): JSX.Element => {
         <Navbar />
 
         <div className={styles.content}>
-          <svg
-            className={styles.blobs}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 634 554"
-          >
-            <path
-              fill="currentColor"
-              fillRule="evenodd"
-              d="M289.4 2.95c72.45 8.71 123.66 63.2 179.4 110.3 64.2 54.28 152.38 96.05 163.35 179.4 11.67 88.63-36.81 181.03-108.94 233.82-65.56 47.98-152.6 18.72-233.82 17.05-78.28-1.6-165.23 24.83-224.4-26.47C3.85 464.02.8 373.6.08 292.65c-.73-81.9 3.01-170.45 60.9-228.42C118.88 6.24 208.03-6.83 289.39 2.95Z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <div className={cn(styles.blob, styles.first)}></div>
+          <div className={cn(styles.blob, styles.second)}></div>
+          <div className={cn(styles.blob, styles.third)}></div>
+
           <p className={styles.subtitle}>Hello, my name is</p>
           <h1 className={styles.title}>
             <strong>David Aganov</strong>I build things for the web
