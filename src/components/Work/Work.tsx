@@ -72,14 +72,16 @@ export const Work = (): JSX.Element => {
   const renderItems = (tag?: string) => {
     filterRepos(tag)
 
-    const items = sortRepos.map((item) => {
-      return (
-        <Card
-          key={item.id}
-          card={item}
-        />
-      )
-    })
+    const items = sortRepos
+      .map((item) => {
+        return (
+          <Card
+            key={item.id}
+            card={item}
+          />
+        )
+      })
+      .slice(0, 6)
 
     return <ul className={styles.projects}>{items}</ul>
   }
