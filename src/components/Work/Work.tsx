@@ -122,7 +122,6 @@ export const Work = (): JSX.Element => {
     >
       <div className="inner">
         <Title
-          className={styles.title}
           number={3}
           link="#projects"
           title="Projects"
