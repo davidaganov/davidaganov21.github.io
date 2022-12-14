@@ -32,24 +32,38 @@
 .tags
   display: flex
   flex-wrap: wrap
-  gap: 1rem 2rem
+  gap: 1rem
   width: 100%
   margin-bottom: 2.5rem
+
+  input
+    &:focus-visible + .tag
+      color: var(--color-accent)
+    &:focus-visible + .tagActive
+      color: tomato
+      border-color: tomato
 
 .tag
   padding: 0 .6rem .2rem .5rem
   text-transform: uppercase
-  font: normal 1.7rem var(--second-font)
   border-style: solid
   border-width: .1rem
   color: var(--color-white-700)
   transition: all .2s
   cursor: pointer
-  &:not(.tagActive)
-    border-color: var(--color-white-700)
-  &.tagActive, &:hover, &:focus-visible
+  @media (min-width: 576px)
+    font: normal 1.7rem var(--second-font)
+  @media (max-width: 575px)
+    font: normal 1.4rem var(--second-font)
+  &:hover
+    border-color: var(--color-white)
+    color: var(--color-white)
+  &.tagActive
     border-color: var(--color-accent)
     color: var(--color-accent)
+    &:hover
+      border-color: tomato
+      color: tomato
 
 .error
   margin: 4rem 0 2rem

@@ -30,14 +30,10 @@ export const Work = (): JSX.Element => {
   const filterRepos = (tag?: string) => {
     const repos: RepoProps[] = []
     sortRepos.map((repo) => {
-      if (tag) {
-        if (repo.topics.filter((topic) => topic === tag).length === 1) {
-          sortRepos = []
-          repos.push(repo)
-        }
-      } else {
-        repos.push(repo)
-      }
+      const selectTag = repo.topics.filter((topic) => topic === tag).length
+
+      if (tag) selectTag && repos.push(repo)
+      else repos.push(repo)
     })
 
     sortRepos = repos
@@ -53,45 +49,55 @@ export const Work = (): JSX.Element => {
     })
 
     const tags = topics.map((tag) => (
-      <li key={tag}>
-        <button
+      <label
+        htmlFor={`tag-${tag}`}
+        key={tag}
+      >
+        <input
+          // onClick={() => setFilter(tag)}
+          className="visually-hidden"
+          type="checkbox"
+          name="tag"
+          id={`tag-${tag}`}
+          value={tag}
+          checked={tag === selectTag}
+          onChange={() => setFilter(tag)}
+        />
+        <span
           className={cn(styles.tag, {
             [styles.tagActive]: tag === selectTag
           })}
-          type="button"
-          onClick={() => setFilter(tag)}
         >
           {tag}
-        </button>
-      </li>
+        </span>
+      </label>
     ))
 
-    return <ul className={styles.tags}>{tags}</ul>
+    return (
+      <fieldset className={styles.tags}>
+        <legend className="visually-hidden">Sort projects by tags</legend>
+        {tags}
+      </fieldset>
+    )
   }
 
   const renderItems = (tag?: string) => {
     filterRepos(tag)
 
-    const items = sortRepos
-      .map((item) => {
-        return (
-          <Card
-            key={item.id}
-            card={item}
-          />
-        )
-      })
-      .slice(0, 6)
+    const items = sortRepos.slice(0, 6).map((item) => {
+      return (
+        <Card
+          key={item.id}
+          card={item}
+        />
+      )
+    })
 
     return <ul className={styles.projects}>{items}</ul>
   }
 
   const setFilter = (tag: string) => {
-    if (tag === selectTag) {
-      setSelectTag("")
-    } else {
-      setSelectTag(tag)
-    }
+    tag === selectTag ? setSelectTag("") : setSelectTag(tag)
     projects = renderItems(tag)
   }
 
@@ -112,7 +118,6 @@ export const Work = (): JSX.Element => {
   const errorMessage = error ? <h3 className={styles.error}>Repositories not found</h3> : null
   const spinner = loading && !reposLoading ? <CardSkeleton /> : null
   const tags = renderTags()
-
   let projects = renderItems(selectTag)
 
   return (
@@ -132,7 +137,7 @@ export const Work = (): JSX.Element => {
           {errorMessage}
 
           <div style={{ width: "100%" }}>
-            {tags}
+            <form id="selectTags">{tags}</form>
 
             {spinner}
             {projects}
