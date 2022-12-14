@@ -1,5 +1,6 @@
 .title
   position: relative
+  color: var(--color-white)
   &::before
     position: absolute
     display: block
@@ -11,21 +12,27 @@
       bottom: 1.5rem
     @media (max-width: 575px)
       bottom: 1.2rem
+  &:hover a
+    opacity: 1
+  &:focus-visible a
+    color: var(--color-accent)
+    opacity: 1
+
   a
-    display: flex
-    align-items: baseline
+    margin: 0 1rem
     font: inherit
-    color: var(--color-white)
-    &::after
-      content: " #"
-      color: var(--color-white-700)
-      font-weight: normal
-      opacity: 0
-    &:hover::after
-      opacity: 1
-    &:focus-visible::after
-      color: var(--color-accent)
-      opacity: 1
+    font-weight: normal
+    text-transform: uppercase
+    color: var(--color-white-700)
+    opacity: 0
+    @media (min-width: 576px)
+      font: bold 3.5rem/4rem var(--second-font)
+    @media (max-width: 575px)
+      font: bold 2.5rem/3rem var(--second-font)
+
+  h2
+    display: inline-block
+
   span
     color: var(--color-accent)
     @media (min-width: 576px)
@@ -37,19 +44,9 @@
   padding-left: 6rem
   &::before
     left: 0
-  a::after
-    margin-left: 1rem
-  span
-    margin-right: 1rem
 
 .rtl
   padding-right: 6rem
   text-align: right
   &::before
     right: 0
-  a
-    flex-direction: row-reverse
-    &::after
-      margin-right: 1rem
-  span
-    margin-left: 1rem
