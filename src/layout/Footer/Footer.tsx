@@ -13,6 +13,8 @@ export const Footer = (): JSX.Element => {
         <a
           href="https://github.com/davidaganov21/davidaganov21.github.io"
           className={cn(styles.author, "inline-link inline-link--white")}
+          target="_blank"
+          rel="noreferrer"
         >
           Developed & Designed&nbsp;
           <br />

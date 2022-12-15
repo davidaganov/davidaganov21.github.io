@@ -5,14 +5,37 @@ import Collapsible from "react-collapsible"
 import { Title } from "../"
 import data from "../../data"
 
+import { ReactComponent as HTMLIcon } from "./html.svg"
+import { ReactComponent as CSSIcon } from "./css.svg"
+import { ReactComponent as JSIcon } from "./js.svg"
+import { ReactComponent as OtherIcon } from "./other.svg"
+
 export const Skills = (): JSX.Element => {
   const { skills } = data
+
+  const setIcon = (title: string) => {
+    switch (title) {
+      case "HTML":
+        return <HTMLIcon />
+      case "CSS":
+        return <CSSIcon />
+      case "JavaScript":
+        return <JSIcon />
+      default:
+        return <OtherIcon />
+    }
+  }
 
   const buildSkills = () => {
     const categories = skills.map(({ id, title, list }) => {
       return (
         <Collapsible
-          trigger={title}
+          trigger={
+            <h3>
+              {title}
+              {setIcon(title)}
+            </h3>
+          }
           classParentString={styles.item}
           triggerElementProps={{ id: `trigger-${id}` }}
           contentElementId={`content-${id}`}
@@ -36,7 +59,7 @@ export const Skills = (): JSX.Element => {
           className={styles.content}
           key={id}
         >
-          <h3 className={styles.title}>{title}</h3>
+          <p className={styles.title}>{title}</p>
           <ul className={styles.listNested}>{buildTags(tag)}</ul>
         </li>
       )

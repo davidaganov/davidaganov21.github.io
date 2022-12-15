@@ -144,7 +144,9 @@ export const Work = (): JSX.Element => {
 
           {!error ? (
             <Button
-              link="https://github.com/davidaganov21?tab=repositories"
+              href="https://github.com/davidaganov21?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
               className={styles.btn}
             >
               Open GitHub

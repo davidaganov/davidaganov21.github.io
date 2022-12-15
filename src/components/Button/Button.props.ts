@@ -1,7 +1,6 @@
-import { HTMLAttributes, DetailedHTMLProps, ReactNode } from "react"
+import { DetailedHTMLProps, ReactNode, HTMLProps } from "react"
 
 export interface ButtonProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> {
+  extends DetailedHTMLProps<HTMLProps<HTMLAnchorElement>, HTMLAnchorElement> {
   children: ReactNode
-  link: string
 }

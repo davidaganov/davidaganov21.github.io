@@ -38,7 +38,7 @@ export const Header = (): JSX.Element => {
             </a>
           </p>
           <Button
-            link="#footer"
+            href="#footer"
             className={styles.btn}
           >
             Contact me
