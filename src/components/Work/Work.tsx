@@ -54,7 +54,6 @@ export const Work = (): JSX.Element => {
         key={tag}
       >
         <input
-          // onClick={() => setFilter(tag)}
           className="visually-hidden"
           type="checkbox"
           name="tag"

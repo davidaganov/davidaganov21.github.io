@@ -14,9 +14,6 @@
       bottom: 1.2rem
   &:hover a
     opacity: 1
-  &:focus-visible a
-    color: var(--color-accent)
-    opacity: 1
 
   a
     margin: 0 1rem
@@ -29,6 +26,9 @@
       font: bold 3.5rem/4rem var(--second-font)
     @media (max-width: 575px)
       font: bold 2.5rem/3rem var(--second-font)
+    &:focus-visible
+      color: var(--color-accent)
+      opacity: 1
 
   h2
     display: inline-block
