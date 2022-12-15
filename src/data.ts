@@ -36,9 +36,9 @@ export default {
       id: uuidv4(),
       title: "JavaScript",
       list: [
-        { id: uuidv4(), title: "Frameworks", tag: ["Nuxt.js", "Vue.js"] },
+        { id: uuidv4(), title: "Frameworks", tag: ["Nuxt.js", "Vue.js", "Next.js"] },
         { id: uuidv4(), title: "Library", tag: ["React", "React Native", "JQuery"] },
-        { id: uuidv4(), title: "Native", tag: ["JavaScript / TypeScript"] }
+        { id: uuidv4(), title: "Native", tag: ["JavaScript", "TypeScript"] }
       ]
     },
     {
