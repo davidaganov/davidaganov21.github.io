@@ -11,10 +11,7 @@
   flex-direction: column
   align-items: center
   width: 100%
-  @media (min-width: 769px)
-    margin-top: 4rem
-  @media (max-width: 768px)
-    margin-top: 2rem
+  margin-top: 4rem
 
 .title
   margin-top: 2rem
@@ -32,16 +29,19 @@
 .tags
   display: flex
   flex-wrap: wrap
-  gap: 1rem
   width: 100%
   margin-bottom: 2.5rem
-
+  @media (min-width: 576px)
+    gap: 1rem
+  @media (max-width: 575px)
+    gap: 1.5rem
   input
     &:focus-visible + .tag
       color: var(--color-accent)
-    &:focus-visible + .tagActive
-      color: tomato
-      border-color: tomato
+    @media (min-width: 576px)
+      &:focus-visible + .tagActive
+        color: tomato
+        border-color: tomato
 
 .tag
   padding: 0 .6rem .2rem .5rem
@@ -54,16 +54,17 @@
   @media (min-width: 576px)
     font: normal 1.7rem var(--second-font)
   @media (max-width: 575px)
-    font: normal 1.4rem var(--second-font)
+    font: normal 1.5rem var(--second-font)
   &:hover
     border-color: var(--color-white)
     color: var(--color-white)
   &.tagActive
     border-color: var(--color-accent)
     color: var(--color-accent)
-    &:hover
-      border-color: tomato
-      color: tomato
+    @media (min-width: 576px)
+      &:hover
+        border-color: tomato
+        color: tomato
 
 .error
   margin: 4rem 0 2rem
@@ -71,7 +72,7 @@
   color: var(--color-white)
 
 .btn
-  margin-top: 2rem
+  margin-top: 4rem
 
 .skeleton
   position: relative

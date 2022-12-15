@@ -37,7 +37,6 @@
     display: flex
     align-items: center
     justify-content: right
-    font: bold 2.4rem var(--main-font)
     color: var(--color-white)
     cursor: pointer
     &::before, &::after
@@ -59,6 +58,10 @@
     &:focus-visible
       color: var(--color-accent)
       text-decoration: underline
+    @media (min-width: 576px)
+      font: bold 2.4rem var(--main-font)
+    @media (max-width: 575px)
+      font: bold 2rem var(--main-font)
   .is-open::before
     transform: rotate(45deg) !important
 
