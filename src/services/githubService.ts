@@ -15,9 +15,17 @@ const useGithubService = () => {
     return items
       .map((item) => {
         const { id, name, description, html_url, topics, homepage, language } = item
-        return { id, name, description, html_url, topics, homepage, language: language.toLowerCase() }
+        return {
+          id,
+          name,
+          description,
+          html_url,
+          topics,
+          homepage,
+          language: language.toLowerCase()
+        }
       })
-      .filter(item => item.name !== "davidaganov21.github.io")
+      .filter((item) => item.name !== "davidaganov21.github.io")
       .sort(() => Math.random() - 0.5)
   }
 

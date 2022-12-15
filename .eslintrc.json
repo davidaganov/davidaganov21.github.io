@@ -17,7 +17,9 @@
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
+    "prettier/prettier": ["error"],
     "react/react-in-jsx-scope": "off",
+    "react/display-name": "off",
     "camelcase": "off",
     "no-duplicate-imports": "error"
   },
