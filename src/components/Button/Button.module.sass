@@ -1,20 +1,22 @@
 .btn
   display: inline-block
-  border: 0.1rem solid var(--color-accent)
+  border: 0.2rem solid var(--color-accent)
   color: var(--color-accent)
-  text-transform: uppercase
   transition: all 0.3s
   cursor: pointer
 
   &:hover
-    background-color: var(--color-accent-300)
+    // background-color: var(--color-accent-300)
+    transform: translateY(-.15rem)
+    box-shadow: .25rem .25rem 0 .01rem var(--color-accent)
+
   &:focus-visible
     background-color: var(--color-accent)
     color: var(--color-white)
 
   @media (min-width: 576px)
-    padding: 1rem 6.5rem
-    font: normal 2rem/2.5rem var(--second-font)
+    padding: 1.5rem 6.5rem
+    font: 400 1.4rem/1.9rem var(--second-font)
   @media (max-width: 575px)
-    padding: 1rem 3.5rem
-    font: normal 1.6rem/2.1rem var(--second-font)
+    padding: 1.5rem 3.5rem
+    font: 400 1rem/1.5rem var(--second-font)
