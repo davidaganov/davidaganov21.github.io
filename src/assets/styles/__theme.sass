@@ -48,24 +48,27 @@ p, li, a
   padding: 0 .2rem
   border: .1rem solid transparent
   transition: all .3s
-  &::after
-    content: ""
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    height: .1rem
-    transform-origin: right bottom
-    transform: scaleX(0)
-    transition: transform .3s ease 0s
-  &:hover:not(:focus-visible)::after
-    transform-origin: left bottom
-    transform: scaleX(1)
+  @media (min-width: 576px)
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: .1rem
+      transform-origin: right bottom
+      transform: scaleX(0)
+      transition: transform .3s ease 0s
+    &:hover:not(:focus-visible)::after
+      transform-origin: left bottom
+      transform: scaleX(1)
+    &:not(&--white)::after
+      background-color: var(--color-accent)
+    &--white::after
+      background-color: var(--color-white)
 
   &:not(&--white)
     color: var(--color-accent)
-    &::after
-      background-color: var(--color-accent)
     &:focus-visible
       border: .1rem solid var(--color-accent)
       &:hover
@@ -74,13 +77,8 @@ p, li, a
 
   &--white
     color: var(--color-white)
-    &::after
-      background-color: var(--color-white)
     &:focus-visible
       border: .1rem solid var(--color-white)
       &:hover
         background-color: var(--color-white)
         color: var(--color-black)
-
-.is-open::before
-  transform: rotate(45deg) !important
