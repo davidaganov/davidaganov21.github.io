@@ -1,11 +1,17 @@
 //---- Base
 @import "./__reset", "./__variables", "./__theme.sass"
 
+@font-face
+  font-family: "BarcadeBrawlRegular"
+  src: local("BarcadeBrawlRegular"), url("../fonts/BarcadeBrawlRegular.ttf") format("truetype")
+  font-weight: 400
+
 html, body
   height: 100%
   font-family: var(--main-font)
 html
   scroll-behavior: smooth
+  scrollbar-gutter: stable
   font-size: 62.5%
   @media (min-width: 576px)
     @supports (scrollbar-width: thin)
@@ -20,10 +26,9 @@ html
         background-color: var(--color-accent)
         box-shadow: 0 -100vh 0 100vh #835ea7, 0 0 15px 5px var(--color-black)
 
-@font-face
-  font-family: "BarcadeBrawlRegular"
-  src: local("BarcadeBrawlRegular"), url("../fonts/BarcadeBrawlRegular.ttf") format("truetype")
-  font-weight: 400
+*::selection
+  background-color: var(--color-accent)
+  color: var(--color-white)
 
 #root
   height: 100%
