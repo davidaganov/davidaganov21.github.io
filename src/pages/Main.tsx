@@ -1,7 +1,7 @@
-import { Header, Footer } from "./layout/"
-import { About, Skills, Work } from "./components/"
+import { Header, Footer } from "../layout"
+import { About, Skills, Work } from "../components"
 
-export default function App() {
+export default function Main() {
   return (
     <div className="wrapper">
       <Header />

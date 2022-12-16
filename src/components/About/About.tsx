@@ -1,6 +1,6 @@
 import styles from "./About.module.sass"
 
-import { Title } from "../"
+import { Button, Title } from "../"
 import data from "../../data"
 
 export const About = (): JSX.Element => {
@@ -42,6 +42,12 @@ export const About = (): JSX.Element => {
               height="350"
             />
             {items}
+            <Button
+              to="/about"
+              className={styles.btn}
+            >
+              Read more
+            </Button>
           </div>
           <div className={styles.right}>
             <img

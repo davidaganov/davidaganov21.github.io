@@ -2,12 +2,19 @@ import { Navbar } from "../"
 import { Button } from "../../components/"
 import styles from "./Header.module.sass"
 import cn from "classnames"
+import { navLink } from "../../interfaces"
 
 export const Header = (): JSX.Element => {
+  const list: navLink[] = [
+    { tag: "a", link: "#about", title: "About" },
+    { tag: "a", link: "#skills", title: "Skills" },
+    { tag: "a", link: "#projects", title: "Projects" }
+  ]
+
   return (
     <header className={styles.header}>
       <div className={cn(styles.inner, "inner")}>
-        <Navbar />
+        <Navbar list={list} />
 
         <div className={styles.content}>
           <div className={cn(styles.blob, styles.first)}></div>

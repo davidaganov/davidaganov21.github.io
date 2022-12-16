@@ -1,12 +1,6 @@
 import { v4 as uuidv4 } from "uuid"
 
 export default {
-  menu: [
-    { id: uuidv4(), number: 1, link: "#about", title: "About" },
-    { id: uuidv4(), number: 2, link: "#skills", title: "Skills" },
-    { id: uuidv4(), number: 3, link: "#projects", title: "Projects" }
-  ],
-
   about: [
     "I started getting interested in web development back in 2016, when I watched a lot of YouTube videos about development, looked for free courses on the Internet and tried to create my own sites.",
     "Years later and after completing my studies, I was lucky to connect my life with my hobby and get a job as a junior frontend developer in a company developing mobile games and individual projects.",

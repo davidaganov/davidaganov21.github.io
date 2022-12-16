@@ -1,3 +1,9 @@
+export interface navLink {
+  tag: "a" | "route"
+  link: string
+  title: string
+}
+
 export interface RepoProps {
   id: string
   name: string

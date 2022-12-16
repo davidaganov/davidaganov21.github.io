@@ -1,6 +1,8 @@
 export * from "./About/About"
 export * from "./Skills/Skills"
 export * from "./Work/Work"
+export * from "./ErrorMessage/ErrorMessage"
+export * from "./Links/Links"
 
 export * from "./Button/Button"
 export * from "./Title/Title"
