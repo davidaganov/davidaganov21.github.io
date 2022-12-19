@@ -4,7 +4,7 @@ import cn from "classnames"
 import { navLink } from "../../interfaces"
 import { Link } from "react-router-dom"
 
-export const Navbar = ({ single, list }: NavbarProps): JSX.Element => {
+export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => {
   const buildLink = ({ tag, title, link }: navLink) => {
     switch (tag) {
       case "a":
@@ -45,6 +45,7 @@ export const Navbar = ({ single, list }: NavbarProps): JSX.Element => {
       <nav
         className={styles.navbar}
         role="navigation"
+        {...props}
       >
         <ul className={styles.menu}>{items}</ul>
       </nav>
@@ -55,7 +56,10 @@ export const Navbar = ({ single, list }: NavbarProps): JSX.Element => {
 
   if (single) {
     return (
-      <header className={styles.header}>
+      <header
+        className={styles.header}
+        {...props}
+      >
         <div className={cn(styles.inner, "inner")}>{menu}</div>
       </header>
     )

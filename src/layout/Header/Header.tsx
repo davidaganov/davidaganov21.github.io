@@ -1,18 +1,18 @@
+import { useTranslation } from "react-i18next"
+import { HeaderProps } from "./Header.props"
 import { Navbar } from "../"
 import { Button } from "../../components/"
 import styles from "./Header.module.sass"
 import cn from "classnames"
-import { navLink } from "../../interfaces"
 
-export const Header = (): JSX.Element => {
-  const list: navLink[] = [
-    { tag: "a", link: "#about", title: "About" },
-    { tag: "a", link: "#skills", title: "Skills" },
-    { tag: "a", link: "#projects", title: "Projects" }
-  ]
+export const Header = ({ list, ...props }: HeaderProps): JSX.Element => {
+  const { t } = useTranslation()
 
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      {...props}
+    >
       <div className={cn(styles.inner, "inner")}>
         <Navbar list={list} />
 
@@ -21,13 +21,13 @@ export const Header = (): JSX.Element => {
           <div className={cn(styles.blob, styles.second)}></div>
           <div className={cn(styles.blob, styles.third)}></div>
 
-          <p className={styles.subtitle}>Hello, my name is</p>
+          <p className={styles.subtitle}>{t("header.subtitle")}</p>
           <h1 className={styles.title}>
-            <strong>David Aganov</strong>I build things for the web
+            <strong>{t("header.name")}</strong>
+            {t("header.slogan")}
           </h1>
           <p className={styles.description}>
-            I’m frontend developer. I like to learn new technologies and try new things in every
-            possible way. At the moment I’m working in mobile games studio{" "}
+            {t("header.description") + " "}
             <a
               className="inline-link"
               href="https://www.linkedin.com/company/sabgames/mycompany/"
@@ -48,7 +48,7 @@ export const Header = (): JSX.Element => {
             href="#footer"
             className={styles.btn}
           >
-            Contact me
+            {t("header.contact")}
           </Button>
         </div>
       </div>

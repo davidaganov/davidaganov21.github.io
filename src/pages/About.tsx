@@ -1,15 +1,15 @@
+import { useTranslation } from "react-i18next"
 import { Navbar, Footer } from "../layout"
 import { Links } from "../components"
-import { navLink } from "../interfaces"
 
 export default function About() {
-  const list: navLink[] = [{ tag: "route", link: "/", title: "Home" }]
+  const { t } = useTranslation()
 
   return (
     <div className="wrapper">
       <Navbar
         single={true}
-        list={list}
+        list={t("navbar.about", { returnObjects: true })}
       />
       <main>
         <Links />

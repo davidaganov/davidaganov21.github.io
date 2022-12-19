@@ -1,0 +1,49 @@
+{
+  "en": {
+    "translation": {
+      "header": {
+        "name": "David Aganov",
+        "subtitle": "Hello, my name is",
+        "slogan": "I build things for the web",
+        "description": "I’m frontend developer. I like to learn new technologies and try new things in every possible way. At the moment I’m working in mobile games studio",
+        "contact": "Contact me"
+      },
+      "navbar": {
+        "home": [
+          { "tag": "a", "link": "#about", "title": "About" },
+          { "tag": "a", "link": "#skills", "title": "Skills" },
+          { "tag": "a", "link": "#projects", "title": "Projects" }
+        ],
+        "about": [{ "tag": "route", "link": "/", "title": "Home" }],
+        "error": [
+          { "tag": "route", "link": "/", "title": "Home" },
+          { "tag": "route", "link": "/about", "title": "About" }
+        ]
+      }
+    }
+  },
+
+  "ru": {
+    "translation": {
+      "header": {
+        "name": "Давид Аганов",
+        "subtitle": "Привет, меня зовут",
+        "slogan": "Я создаю что-то в интернете",
+        "description": "Я фронтенд-разработчик. Мне нравится изучать технологии и постоянно пробовать что-то новое. На данный момент я работаю в студии мобильных игр",
+        "contact": "Связаться со мной"
+      },
+      "navbar": {
+        "home": [
+          { "tag": "a", "link": "#about", "title": "Обо мне" },
+          { "tag": "a", "link": "#skills", "title": "Скиллы" },
+          { "tag": "a", "link": "#projects", "title": "Проекты" }
+        ],
+        "about": [{ "tag": "route", "link": "/", "title": "Главная" }],
+        "error": [
+          { "tag": "route", "link": "/", "title": "Главная" },
+          { "tag": "route", "link": "/about", "title": "Обо мне" }
+        ]
+      }
+    }
+  }
+}

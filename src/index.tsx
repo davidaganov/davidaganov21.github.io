@@ -6,6 +6,7 @@ import Main from "./pages/Main"
 import About from "./pages/About"
 import ErrorPage from "./pages/ErrorPage"
 
+import "./services/i18n"
 import "./assets/styles/main.sass"
 
 const router = createHashRouter([
