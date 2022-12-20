@@ -1,0 +1,29 @@
+.form
+  @media (max-width: 768px)
+    z-index: 1
+
+.switcher
+  display: flex
+  gap: .6rem
+  @media (max-width: 768px)
+    justify-content: flex-end
+    margin-top: 5rem
+  input:focus-visible ~ .btn
+    background-color: var(--color-accent)
+    color: var(--color-white)
+
+.btn
+  display: block
+  border: 0.2rem solid var(--color-accent)
+  color: var(--color-accent)
+  transition: all 0.3s
+  cursor: pointer
+  @media (min-width: 769px)
+    font: 400 1rem/1.5rem var(--second-font)
+    padding: .5rem 1rem
+  @media (max-width: 768px)
+    font: 400 1.5rem/2rem var(--second-font)
+    padding: 1rem 3rem
+  &:hover
+    transform: translateY(-.15rem)
+    box-shadow: .2rem .2rem 0 .01rem var(--color-accent)

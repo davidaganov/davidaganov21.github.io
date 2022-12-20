@@ -5,36 +5,118 @@
   position: relative
 
 .navbar
-  position: absolute
-  display: flex
-  align-items: center
-  width: 100%
-  margin: 2rem 0
-  left: 0
   top: 0
-  @media (max-width: 1599px) and (min-width: 375px)
+  display: flex
+  @media (max-width: 1599px) and (min-width: 769px)
     padding: 0 2rem
-  @media (max-width: 374px)
-    padding: 0 1rem
+  @media (min-width: 769px)
+    position: absolute
+    align-items: center
+    justify-content: space-between
+    gap: 1.5rem
+    width: 100%
+    margin: 2rem 0
+    left: 0
+  @media (max-width: 768px)
+    position: fixed
+    flex-direction: column
+    width: 85%
+    height: 100%
+    padding: 1.5rem 2rem
+    background-color: var(--color-black)
+    border-left: 1rem solid var(--color-accent)
+    transition: all .4s
+    z-index: 2
+    &:not(.opened)
+      right: -100%
+    &.opened
+      right: 0
+
+.burger, .close
+  @media (min-width: 769px)
+    display: none
+
+.burger
+  @media (max-width: 768px)
+    position: absolute
+    top: 2rem
+    right: 2rem
+    width: 4rem
+    height: 4rem
+    color: var(--color-white)
+    transition: all .2s
+    cursor: pointer
+    &:focus-visible
+      color: var(--color-accent)
+      box-shadow: 0 0 0 .2rem var(--color-accent)
+
+.close
+  @media (max-width: 768px)
+    position: absolute
+    display: grid
+    place-items: center
+    width: 4rem
+    height: 4rem
+    color: var(--color-white)
+    border: .2rem solid var(--color-white)
+    left: 2rem
+    top: 2rem
+    cursor: pointer
+    transition: all .2s
+    z-index: 2
+    &:focus-visible
+      background-color: var(--color-white)
+      color: var(--color-black)
 
 .menu
   display: flex
-  @media (min-width: 576px)
+  @media (min-width: 769px)
     justify-content: center
-  @media (max-width: 575px)
-    width: 100%
-    justify-content: space-between
+  @media (max-width: 768px)
+    flex-direction: column
+    margin-bottom: auto
+    z-index: 1
 
 .item
-  @media (min-width: 576px)
+  @media (min-width: 769px)
     &:not(:last-of-type)
       margin-right: 5rem
-    span
-      margin-right: .7rem
-  @media (max-width: 575px)
-    &:not(:last-of-type)
-      margin-right: 3rem
-    span
-      margin-right: .5rem
+  @media (max-width: 768px)
+    display: flex
+    flex-direction: row-reverse
+    justify-content: flex-start
+    align-items: center
   span
     color: var(--color-accent)
+    @media (min-width: 769px)
+      margin-right: .7rem
+    @media (max-width: 768px)
+      display: block
+      width: 6rem
+      height: .3rem
+      margin-left: 2rem
+      background-color: var(--color-accent)
+      font-size: .01rem
+
+.link
+  @media (max-width: 768px)
+    font: 400 2.8rem var(--main-font)
+
+.backdrop
+  @media (min-width: 769px)
+    display: none
+  @media (max-width: 768px)
+    position: fixed
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background-color: rgb(10, 25, 47, .6)
+    transition: all .3s
+    cursor: pointer
+    z-index: 1
+    &:not(.opened)
+      opacity: 0
+      pointer-events: none
+    &.opened
+      opacity: 1

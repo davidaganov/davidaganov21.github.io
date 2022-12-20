@@ -1,18 +1,26 @@
+import { useState } from "react"
 import { NavbarProps } from "./Navbar.props"
 import styles from "./Navbar.module.sass"
 import cn from "classnames"
+
 import { navLink } from "../../interfaces"
 import { Link } from "react-router-dom"
 import { LanguageSwitcher } from "../../components"
 
+import { ReactComponent as BurgerIcon } from "./burger.svg"
+import { ReactComponent as CloseIcon } from "./close.svg"
+
 export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => {
+  const [opened, setOpened] = useState<boolean>(false)
+
   const buildLink = ({ tag, title, link }: navLink) => {
     switch (tag) {
       case "a":
         return (
           <a
             href={link}
-            className="inline-link inline-link--white"
+            className={cn(styles.link, "inline-link inline-link--white")}
+            onClick={() => setOpened(false)}
           >
             {title}
           </a>
@@ -21,7 +29,8 @@ export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => 
         return (
           <Link
             to={link}
-            className="inline-link inline-link--white"
+            className={cn(styles.link, "inline-link inline-link--white")}
+            onClick={() => setOpened(false)}
           >
             {title}
           </Link>
@@ -43,14 +52,46 @@ export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => 
     })
 
     return (
-      <nav
-        className={styles.navbar}
-        role="navigation"
-        {...props}
-      >
-        <ul className={styles.menu}>{items}</ul>
-        <LanguageSwitcher />
-      </nav>
+      <>
+        <button
+          className={styles.burger}
+          type="button"
+          onClick={() => setOpened(!opened)}
+          tabIndex={opened ? -1 : 0}
+          aria-label="Open navbar"
+          aria-expanded={opened}
+        >
+          <BurgerIcon />
+        </button>
+        <nav
+          className={cn(styles.navbar, {
+            [styles.opened]: opened
+          })}
+          role="navigation"
+          {...props}
+        >
+          <button
+            className={styles.close}
+            type="button"
+            aria-label="Close navbar"
+            onClick={() => setOpened(false)}
+            tabIndex={opened ? 1 : -1}
+          >
+            <CloseIcon />
+          </button>
+          <ul className={styles.menu}>{items}</ul>
+          <LanguageSwitcher />
+        </nav>
+        <button
+          className={cn(styles.backdrop, {
+            [styles.opened]: opened
+          })}
+          type="button"
+          aria-hidden={true}
+          tabIndex={-1}
+          onClick={() => setOpened(false)}
+        />
+      </>
     )
   }
 

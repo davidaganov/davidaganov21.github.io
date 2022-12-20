@@ -22,7 +22,7 @@ const useGithubService = () => {
           html_url,
           topics,
           homepage,
-          language: language.toLowerCase()
+          language
         }
       })
       .filter((item) => item.name !== "davidaganov21.github.io")
