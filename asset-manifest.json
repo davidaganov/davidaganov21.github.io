@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.172610ce.css",
-    "main.js": "/static/js/main.9c592ff8.js",
+    "main.css": "/static/css/main.a957064c.css",
+    "main.js": "/static/js/main.530d8f61.js",
     "static/media/BarcadeBrawlRegular.ttf": "/static/media/BarcadeBrawlRegular.73895ecd83170778cce0.ttf",
     "static/media/avatar.png": "/static/media/avatar.2db46975cfbfe9115f8a.png",
     "static/media/ua-BRAND-bold.otf": "/static/media/ua-BRAND-bold.baeeee179efa981202cb.otf",
     "static/media/ua-BRAND-regular.otf": "/static/media/ua-BRAND-regular.bfcad137a1a0ea9faabe.otf",
     "index.html": "/index.html",
-    "static/media/github.svg": "/static/media/github.b91aff673ca6e82625bd008eb42df6d1.svg",
+    "static/media/github.svg": "/static/media/github.407cb21c4040e9823345c5e860de4e34.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.af41967d17036467c6926220c912f4a7.svg",
     "static/media/other.svg": "/static/media/other.c6bc131167b5f8bc1847f2fc3a95026c.svg",
     "static/media/js.svg": "/static/media/js.8a2e45fb7182224f55682d856ade1e65.svg",
     "static/media/css.svg": "/static/media/css.787bcf094079c3d32f87c102b06f9011.svg",
     "static/media/html.svg": "/static/media/html.26e5b14bc4873b272c70f51c2a676d74.svg",
-    "main.172610ce.css.map": "/static/css/main.172610ce.css.map",
-    "main.9c592ff8.js.map": "/static/js/main.9c592ff8.js.map"
+    "static/media/burger.svg": "/static/media/burger.21797a96af3ae80de2c46d085c1a3203.svg",
+    "static/media/close.svg": "/static/media/close.f75a22568d3eb06071fad4f1b60b8ba0.svg",
+    "main.a957064c.css.map": "/static/css/main.a957064c.css.map",
+    "main.530d8f61.js.map": "/static/js/main.530d8f61.js.map"
   },
   "entrypoints": [
-    "static/css/main.172610ce.css",
-    "static/js/main.9c592ff8.js"
+    "static/css/main.a957064c.css",
+    "static/js/main.530d8f61.js"
   ]
 }
