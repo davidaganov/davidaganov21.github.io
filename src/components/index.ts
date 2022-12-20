@@ -1,9 +1,10 @@
 export * from "./About/About"
 export * from "./Skills/Skills"
-export * from "./Work/Work"
+export * from "./Projects/Projects"
 export * from "./ErrorMessage/ErrorMessage"
 export * from "./Links/Links"
 
+export * from "./LanguageSwitcher/LanguageSwitcher"
 export * from "./Button/Button"
 export * from "./Title/Title"
 export * from "./Card/Card"

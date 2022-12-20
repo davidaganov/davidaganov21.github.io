@@ -3,8 +3,13 @@ import styles from "./Social.module.sass"
 import cn from "classnames"
 import { ReactComponent as GithubIcon } from "./github.svg"
 import { ReactComponent as LinkedinIcon } from "./linkedin.svg"
+import { useTranslation } from "react-i18next"
 
 export const Social = ({ className, ...props }: SocialProps): JSX.Element => {
+  const { t } = useTranslation()
+  const github_aria = t("contacts.github")
+  const linkedin_aria = t("contacts.linkedin")
+
   return (
     <ul
       className={cn(styles.social, className)}
@@ -14,7 +19,7 @@ export const Social = ({ className, ...props }: SocialProps): JSX.Element => {
         <a
           href="https://github.com/davidaganov21"
           className={styles.link}
-          aria-label="Github profile"
+          aria-label={github_aria}
           target="_blank"
           rel="noreferrer"
         >
@@ -27,7 +32,7 @@ export const Social = ({ className, ...props }: SocialProps): JSX.Element => {
           className={styles.link}
           target="_blank"
           rel="noreferrer"
-          aria-label="Linkedin profile"
+          aria-label={linkedin_aria}
         >
           <LinkedinIcon />
         </a>

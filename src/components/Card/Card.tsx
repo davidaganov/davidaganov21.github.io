@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import { CardProps } from "./Card.props"
 import styles from "./Card.module.sass"
 import cn from "classnames"
@@ -5,6 +6,8 @@ import cn from "classnames"
 export const Card = ({ card, className }: CardProps): JSX.Element => {
   const { name, description, html_url, topics, homepage } = card
   const clearName = name.replace(/[.\-/\\\s]/g, " ")
+
+  const { t } = useTranslation()
 
   const renderTags = () => {
     const items = topics.map((tag, i) => {
@@ -24,7 +27,7 @@ export const Card = ({ card, className }: CardProps): JSX.Element => {
           rel="noreferrer"
           aria-label={`Live demo ${clearName}`}
         >
-          Live demo
+          {t("projects.go_demo")}
         </a>
       )
     }
@@ -45,7 +48,7 @@ export const Card = ({ card, className }: CardProps): JSX.Element => {
           rel="noreferrer"
           aria-label={`Go to the repository ${clearName}`}
         >
-          Go to repository
+          {t("projects.go_repo")}
         </a>
         {demo}
         {tags}

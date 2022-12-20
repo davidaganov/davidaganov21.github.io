@@ -3,6 +3,7 @@ import styles from "./Navbar.module.sass"
 import cn from "classnames"
 import { navLink } from "../../interfaces"
 import { Link } from "react-router-dom"
+import { LanguageSwitcher } from "../../components"
 
 export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => {
   const buildLink = ({ tag, title, link }: navLink) => {
@@ -48,6 +49,7 @@ export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => 
         {...props}
       >
         <ul className={styles.menu}>{items}</ul>
+        <LanguageSwitcher />
       </nav>
     )
   }

@@ -1,15 +1,18 @@
+import { useTranslation } from "react-i18next"
 import styles from "./About.module.sass"
 
 import { Button, Title } from "../"
-import data from "../../data"
 
 export const About = (): JSX.Element => {
+  const { t } = useTranslation()
+
   const renderItems = () => {
-    const items = data.about.map((item, i) => {
+    const descripton = Object.keys(t("about.description", { returnObjects: true }))
+    const items = descripton.map((i) => {
       return (
         <p
           key={i}
-          dangerouslySetInnerHTML={{ __html: item }}
+          dangerouslySetInnerHTML={{ __html: t(`about.description.${i}`) }}
         />
       )
     })
@@ -28,7 +31,7 @@ export const About = (): JSX.Element => {
         <Title
           number={1}
           link="#about"
-          title="About Me"
+          title={t("about.title")}
           direction="ltr"
         />
 
@@ -46,7 +49,7 @@ export const About = (): JSX.Element => {
               to="/about"
               className={styles.btn}
             >
-              Read more
+              {t("about.more")}
             </Button>
           </div>
           <div className={styles.right}>

@@ -1,9 +1,9 @@
+import { v4 as uuidv4 } from "uuid"
+import { useTranslation } from "react-i18next"
+import Collapsible from "react-collapsible"
 import styles from "./Skills.module.sass"
 import cn from "classnames"
-
-import Collapsible from "react-collapsible"
 import { Title } from "../"
-import data from "../../data"
 
 import { ReactComponent as HTMLIcon } from "./html.svg"
 import { ReactComponent as CSSIcon } from "./css.svg"
@@ -11,7 +11,7 @@ import { ReactComponent as JSIcon } from "./js.svg"
 import { ReactComponent as OtherIcon } from "./other.svg"
 
 export const Skills = (): JSX.Element => {
-  const { skills } = data
+  const { t } = useTranslation()
 
   const setIcon = (title: string) => {
     switch (title) {
@@ -27,6 +27,10 @@ export const Skills = (): JSX.Element => {
   }
 
   const buildSkills = () => {
+    const skills = Object.values(t("skills.data", { returnObjects: true })).map((item) => {
+      return { ...item, id: uuidv4() }
+    })
+
     const categories = skills.map(({ id, title, list }) => {
       return (
         <Collapsible
@@ -88,7 +92,7 @@ export const Skills = (): JSX.Element => {
         <Title
           number={2}
           link="#skills"
-          title="My Skills"
+          title={t("skills.title")}
           direction="rtl"
         />
 

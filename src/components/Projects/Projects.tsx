@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
-import styles from "./Work.module.sass"
+import { useTranslation } from "react-i18next"
+import styles from "./Projects.module.sass"
 import cn from "classnames"
 
 import useGithubService from "../../services/githubService"
 import { RepoProps } from "../../interfaces"
-import { Title, Button, Card } from "../"
+import { Title, Button, Card } from ".."
 
 export const Work = (): JSX.Element => {
   const [reposList, setReposList] = useState<RepoProps[]>([])
@@ -12,6 +13,8 @@ export const Work = (): JSX.Element => {
   const [selectTag, setSelectTag] = useState<string>("")
   const { loading, error, getRepos } = useGithubService()
   let sortRepos = reposList
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (reposList.length === 0) onRequest(true)
@@ -128,7 +131,7 @@ export const Work = (): JSX.Element => {
         <Title
           number={3}
           link="#projects"
-          title="Projects"
+          title={t("projects.title")}
           direction="ltr"
         />
 
@@ -149,7 +152,7 @@ export const Work = (): JSX.Element => {
               rel="noreferrer"
               className={styles.btn}
             >
-              Open GitHub
+              {t("projects.go_github")}
             </Button>
           ) : null}
         </div>

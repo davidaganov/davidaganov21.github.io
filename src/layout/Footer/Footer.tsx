@@ -1,8 +1,11 @@
 import cn from "classnames"
 import styles from "./Footer.module.sass"
 import { Social } from "../../components/"
+import { useTranslation } from "react-i18next"
 
 export const Footer = (): JSX.Element => {
+  const { t } = useTranslation()
+
   return (
     <footer
       className={styles.footer}
@@ -16,9 +19,9 @@ export const Footer = (): JSX.Element => {
           target="_blank"
           rel="noreferrer"
         >
-          Developed & Designed&nbsp;
+          {t("contacts.description")}&nbsp;
           <br />
-          by David Aganov
+          {t("contacts.author")}
         </a>
         <Social className={styles.social} />
         <a

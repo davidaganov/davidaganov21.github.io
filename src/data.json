@@ -19,6 +19,65 @@
           { "tag": "route", "link": "/", "title": "Home" },
           { "tag": "route", "link": "/about", "title": "About" }
         ]
+      },
+      "about": {
+        "title": "About me",
+        "description": [
+          "I started getting interested in web development back in 2016, when I watched a lot of YouTube videos about development, looked for free courses on the Internet and tried to create my own sites.",
+          "Years later and after completing my studies, I was lucky to connect my life with my hobby and get a job as a junior frontend developer in a company developing mobile games and individual projects.",
+          "During the year and a half spent in this company, I learned a lot. My main activity was development of products with <strong>Nuxt.js</strong> framework and creation of many landing pages.",
+          "The company also gave me the opportunity to take courses on <strong>React</strong> and <strong>React Native</strong> development."
+        ],
+        "more": "Read more"
+      },
+      "skills": {
+        "title": "My Skills",
+        "data": [
+          {
+            "title": "HTML",
+            "list": [
+              { "id": 1, "title": "Template Engine", "tag": ["PUG"] },
+              { "id": 2, "title": "Other", "tag": ["HTML5"] }
+            ]
+          },
+          {
+            "title": "CSS",
+            "list": [
+              { "id": 1, "title": "Preprocessors", "tag": ["SASS/SCSS", "Less"] },
+              { "id": 2, "title": "Frameworks", "tag": ["Bootstrap", "Tailwind"] },
+              { "id": 3, "title": "Other", "tag": ["CSS3"] }
+            ]
+          },
+          {
+            "title": "JavaScript",
+            "list": [
+              { "id": 1, "title": "Frameworks", "tag": ["Nuxt.js", "Vue.js", "Next.js"] },
+              { "id": 2, "title": "Library", "tag": ["React", "React Native", "JQuery"] },
+              { "id": 3, "title": "Other", "tag": ["JavaScript", "TypeScript"] }
+            ]
+          },
+          {
+            "title": "Other",
+            "list": [
+              { "id": 1, "title": "CMS", "tag": ["Wordpress"] },
+              { "id": 2, "title": "Design", "tag": ["Figma", "Adobe Photoshop"] },
+              { "id": 3, "title": "3D", "tag": ["Blender", "Maya"] },
+              { "id": 4, "title": "OS", "tag": ["Windows", "Mac OS"] }
+            ]
+          }
+        ]
+      },
+      "projects": {
+        "title": "Projects",
+        "go_repo": "Go to repository",
+        "go_demo": "Live demo",
+        "go_github": "Open github"
+      },
+      "contacts": {
+        "description": "Developed & Designed",
+        "author": "by David Aganov",
+        "github": "Go to Github profile",
+        "linkedin": "Go to Linkedin profile"
       }
     }
   },
@@ -43,6 +102,65 @@
           { "tag": "route", "link": "/", "title": "Главная" },
           { "tag": "route", "link": "/about", "title": "Обо мне" }
         ]
+      },
+      "about": {
+        "title": "Обо мне",
+        "description": [
+          "Я начал увлекаться веб-разработкой ещё в 2016 году, тогда я смотрел множество ютуб-роликов про разработку, находил бесплатные курсы в интернете и пытался создавать свои сайты.",
+          "Спустя годы и закончив обучение, мне повезло связать свою жизнь со своим хобби и устроиться на работу junior frontend-разработчиком в компанию разрабатывающую мобильные игры и отдельные проекты.",
+          "За полтора года проведенные в этой компании я научился многому. Основной вид моей деятельности была разработка продуктов на фреймворке <strong>Nuxt.js</strong> и создание множества лэндингов.",
+          "Так же компания предоставляла мне возможность обучаться на курсах по <strong>React</strong> и <strong>React Native</strong> разработке."
+        ],
+        "more": "Читать больше"
+      },
+      "skills": {
+        "title": "Мои навыки",
+        "data": [
+          {
+            "title": "HTML",
+            "list": [
+              { "id": 1, "title": "Шаблонизаторы", "tag": ["PUG"] },
+              { "id": 2, "title": "Другое", "tag": ["HTML5"] }
+            ]
+          },
+          {
+            "title": "CSS",
+            "list": [
+              { "id": 1, "title": "Препроцессоры", "tag": ["SASS/SCSS", "Less"] },
+              { "id": 2, "title": "Фреймворки", "tag": ["Bootstrap", "Tailwind"] },
+              { "id": 3, "title": "Другое", "tag": ["CSS3"] }
+            ]
+          },
+          {
+            "title": "JavaScript",
+            "list": [
+              { "id": 1, "title": "Фреймворки", "tag": ["Nuxt.js", "Vue.js", "Next.js"] },
+              { "id": 2, "title": "Библиотеки", "tag": ["React", "React Native", "JQuery"] },
+              { "id": 3, "title": "Другое", "tag": ["JavaScript", "TypeScript"] }
+            ]
+          },
+          {
+            "title": "Разное",
+            "list": [
+              { "id": 1, "title": "CMS", "tag": ["Wordpress"] },
+              { "id": 2, "title": "Дизайн", "tag": ["Figma", "Adobe Photoshop"] },
+              { "id": 3, "title": "3D", "tag": ["Blender", "Maya"] },
+              { "id": 4, "title": "OС", "tag": ["Windows", "Mac OS"] }
+            ]
+          }
+        ]
+      },
+      "projects": {
+        "title": "Проекты",
+        "go_repo": "Открыть репозиторий",
+        "go_demo": "Демо",
+        "go_github": "Открыть гитхаб"
+      },
+      "contacts": {
+        "description": "Разработка & Дизайн",
+        "author": "от Давида Аганова",
+        "github": "Открыть Гитхаб профиль",
+        "linkedin": "Открыть Linkedin профиль"
       }
     }
   }
