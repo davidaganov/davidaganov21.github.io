@@ -5,6 +5,7 @@ import cn from "classnames"
 
 import { navLink } from "../../interfaces"
 import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 import { LanguageSwitcher } from "../../components"
 
 import { ReactComponent as BurgerIcon } from "./burger.svg"
@@ -38,6 +39,16 @@ export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => 
           >
             {title}
           </Link>
+        )
+      case "hashlink":
+        return (
+          <HashLink
+            to={`/${link}`}
+            className={cn(styles.link, "inline-link inline-link--white")}
+            onClick={() => setOpened(false)}
+          >
+            {title}
+          </HashLink>
         )
     }
   }

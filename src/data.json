@@ -15,9 +15,9 @@
           "en": "English"
         },
         "home": [
-          { "tag": "a", "link": "#about", "title": "About" },
-          { "tag": "a", "link": "#skills", "title": "Skills" },
-          { "tag": "a", "link": "#projects", "title": "Projects" }
+          { "tag": "hashlink", "link": "#about", "title": "About" },
+          { "tag": "hashlink", "link": "#skills", "title": "Skills" },
+          { "tag": "hashlink", "link": "#projects", "title": "Projects" }
         ],
         "about": [{ "tag": "route", "link": "/", "title": "Home" }],
         "error": [
@@ -104,9 +104,9 @@
           "en": "Английский"
         },
         "home": [
-          { "tag": "a", "link": "#about", "title": "Обо мне" },
-          { "tag": "a", "link": "#skills", "title": "Скиллы" },
-          { "tag": "a", "link": "#projects", "title": "Проекты" }
+          { "tag": "hashlink", "link": "#about", "title": "Обо мне" },
+          { "tag": "hashlink", "link": "#skills", "title": "Скиллы" },
+          { "tag": "hashlink", "link": "#projects", "title": "Проекты" }
         ],
         "about": [{ "tag": "route", "link": "/", "title": "Главная" }],
         "error": [
