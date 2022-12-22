@@ -25,7 +25,7 @@ export const Card = ({ card, className }: CardProps): JSX.Element => {
           className={cn(styles.link, styles["link--live"], "inline-link")}
           target="_blank"
           rel="noreferrer"
-          aria-label={`Live demo ${clearName}`}
+          aria-label={`${t("projects.go_demo")} ${clearName}`}
         >
           {t("projects.go_demo")}
         </a>
@@ -46,7 +46,7 @@ export const Card = ({ card, className }: CardProps): JSX.Element => {
           className={cn(styles.link, "inline-link")}
           target="_blank"
           rel="noreferrer"
-          aria-label={`Go to the repository ${clearName}`}
+          aria-label={`${t("projects.go_repo")} ${clearName}`}
         >
           {t("projects.go_repo")}
         </a>

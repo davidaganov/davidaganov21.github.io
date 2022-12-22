@@ -77,7 +77,7 @@ export const Work = (): JSX.Element => {
 
     return (
       <fieldset className={styles.tags}>
-        <legend className="visually-hidden">Sort projects by tags</legend>
+        <legend className="visually-hidden">{t("projects.sort")}</legend>
         {tags}
       </fieldset>
     )

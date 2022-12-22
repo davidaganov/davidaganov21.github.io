@@ -9,6 +9,11 @@
         "contact": "Contact me"
       },
       "navbar": {
+        "selectLang": {
+          "title": "Select language",
+          "ru": "Russian",
+          "en": "English"
+        },
         "home": [
           { "tag": "a", "link": "#about", "title": "About" },
           { "tag": "a", "link": "#skills", "title": "Skills" },
@@ -69,6 +74,7 @@
       },
       "projects": {
         "title": "Projects",
+        "sort": "Sort projects by tags",
         "go_repo": "Go to repository",
         "go_demo": "Live demo",
         "go_github": "Open github"
@@ -92,6 +98,11 @@
         "contact": "Связаться со мной"
       },
       "navbar": {
+        "selectLang": {
+          "title": "Выбрать язык",
+          "ru": "Русский",
+          "en": "Английский"
+        },
         "home": [
           { "tag": "a", "link": "#about", "title": "Обо мне" },
           { "tag": "a", "link": "#skills", "title": "Скиллы" },
@@ -152,13 +163,14 @@
       },
       "projects": {
         "title": "Проекты",
+        "sort": "Сортировать проекты по тегам",
         "go_repo": "Открыть репозиторий",
         "go_demo": "Демо",
         "go_github": "Открыть гитхаб"
       },
       "contacts": {
         "description": "Разработка & Дизайн",
-        "author": "от Давида Аганова",
+        "author": "- Давид Аганов",
         "github": "Открыть Гитхаб профиль",
         "linkedin": "Открыть Linkedin профиль"
       }
