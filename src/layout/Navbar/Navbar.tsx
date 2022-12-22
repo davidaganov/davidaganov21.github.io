@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { NavbarProps } from "./Navbar.props"
 import styles from "./Navbar.module.sass"
 import cn from "classnames"
@@ -12,6 +12,10 @@ import { ReactComponent as CloseIcon } from "./close.svg"
 
 export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => {
   const [opened, setOpened] = useState<boolean>(false)
+
+  useEffect(() => {
+    opened ? document.body.classList.add("no-scroll") : document.body.classList.remove("no-scroll")
+  }, [opened])
 
   const buildLink = ({ tag, title, link }: navLink) => {
     switch (tag) {
