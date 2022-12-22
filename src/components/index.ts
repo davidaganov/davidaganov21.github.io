@@ -2,7 +2,7 @@ export * from "./About/About"
 export * from "./Skills/Skills"
 export * from "./Projects/Projects"
 export * from "./ErrorMessage/ErrorMessage"
-export * from "./Links/Links"
+export * from "./Document/Document"
 
 export * from "./LanguageSwitcher/LanguageSwitcher"
 export * from "./Button/Button"

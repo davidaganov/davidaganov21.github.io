@@ -1,6 +1,14 @@
 {
   "en": {
     "translation": {
+      "resume": {
+        "name": "David Aganov",
+        "job": "Frontend-developer",
+        "phone": "+998331576723",
+        "email": "davidaganov21@gmail.com",
+        "website": "https://aganov.dev",
+        "location": "Uzbekistan, Tashkent"
+      },
       "header": {
         "name": "David Aganov",
         "subtitle": "Hello, my name is",
@@ -90,6 +98,14 @@
 
   "ru": {
     "translation": {
+      "resume": {
+        "name": "Давид Аганов",
+        "job": "Фронтэнд-разработчик",
+        "phone": "+998331576723",
+        "email": "davidaganov21@gmail.com",
+        "website": "https://aganov.dev",
+        "location": "Узбекистан, Ташкент"
+      },
       "header": {
         "name": "Давид Аганов",
         "subtitle": "Привет, меня зовут",
