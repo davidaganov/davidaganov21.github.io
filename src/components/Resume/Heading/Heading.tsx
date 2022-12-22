@@ -38,7 +38,7 @@ export function Heading() {
   const data = {
     name: t("resume.name"),
     job: t("resume.job"),
-    phone: t("resume.number"),
+    phone: t("resume.phone"),
     email: t("resume.email"),
     website: t("resume.website"),
     location: t("resume.location")
