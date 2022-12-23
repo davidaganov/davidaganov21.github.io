@@ -1,68 +1,70 @@
 import { StyleSheet, Link, View, Text } from "@react-pdf/renderer"
-import { useTranslation } from "react-i18next"
 
 import { IconText } from "../IconText/IconText"
+
+interface HeadingProps {
+  name: string
+  job: string
+  phone: string
+  email: string
+  website: string
+  location: string
+}
 
 const styles = StyleSheet.create({
   container: {
     position: "relative",
-    paddingBottom: 16,
+    paddingBottom: 20,
     flexDirection: "row"
   },
   name: {
+    marginBottom: 5,
     textTransform: "uppercase",
-    fontSize: 20,
-    fontFamily: "ua-brand",
-    fontWeight: "bold"
+    fontSize: 15,
+    fontFamily: "Barcade-Brawl",
+    fontWeight: "bold",
+    color: "#0a192f"
   },
   subTitle: {
     fontSize: 12,
-    marginTop: 4,
+    marginTop: 6,
     fontFamily: "ua-brand",
     fontWeight: "bold",
-    color: "#6d4e89"
+    color: "#995aa4"
   },
   infoContainer: {
     flexDirection: "row",
-    marginTop: 12
+    marginTop: 20
   },
   link: {
-    marginRight: 16,
+    marginRight: 12,
     textDecoration: "none"
   }
 })
 
-export function Heading() {
-  const { t } = useTranslation()
-
-  const data = {
-    name: t("resume.name"),
-    job: t("resume.job"),
-    phone: t("resume.phone"),
-    email: t("resume.email"),
-    website: t("resume.website"),
-    location: t("resume.location")
-  }
-
-  const { name, job, phone, email, website, location } = data
-
+export const Heading = ({
+  name,
+  job,
+  phone,
+  email,
+  website,
+  location
+}: HeadingProps): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={{ margin: 1 }}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.subTitle}>{job}</Text>
         <View style={styles.infoContainer}>
-          {phone ? (
-            <Link
-              src={`tel:${phone}`}
-              style={styles.link}
-            >
-              <IconText
-                text={phone}
-                iconName="call"
-              />
-            </Link>
-          ) : null}
+          <Link
+            src={`tel:${phone}`}
+            style={styles.link}
+          >
+            <IconText
+              text={phone}
+              iconName="call"
+            />
+          </Link>
           <Link
             src={`mailto:${email}`}
             style={styles.link}

@@ -2,12 +2,79 @@
   "en": {
     "translation": {
       "resume": {
-        "name": "David Aganov",
-        "job": "Frontend Developer",
-        "phone": "+998331576723",
-        "email": "davidaganov21@gmail.com",
-        "website": "https://aganov.dev",
-        "location": "Uzbekistan, Tashkent"
+        "titles": {
+          "jobs": "Work Experience",
+          "about": "About me",
+          "technologies": "Technologies",
+          "languages": "Languages",
+          "social": "Social"
+        },
+        "header": {
+          "name": "David Aganov",
+          "job": "Frontend Developer",
+          "phone": "+998331576723",
+          "email": "davidaganov21@gmail.com",
+          "website": "https://aganov.dev",
+          "location": "Uzbekistan, Tashkent"
+        },
+        "jobs": [
+          {
+            "id": 1,
+            "title": "Frontend Developer",
+            "company": "SAB Games",
+            "companyUrl": "https://www.linkedin.com/company/sabgames/mycompany/",
+            "location": "Tashkent",
+            "startAt": "2021-05-17",
+            "current": "In Progress",
+            "description": "My main activity was development of products with Nuxt.js framework and creation of many landing pages. The company also gave me the opportunity to take courses on React and React Native development."
+          },
+          {
+            "id": 2,
+            "title": "Frontend Developer",
+            "company": "Freelance",
+            "location": "Remote",
+            "startAt": "2019-09-01",
+            "endAt": "2021-05-17",
+            "description": "After college, I took up the study of web development, created websites for my friends, was fond of 3D modeling and from time to time I managed to take small orders."
+          }
+        ],
+        "about": "I started getting interested in web development back in 2016, when I watched a lot of YouTube videos about development, looked for free courses on the Internet and tried to create my own sites. Years later and after completing my studies, I was lucky to connect my life with my hobby and get a job as a frontend developer.",
+        "tech": [
+          {
+            "id": 1,
+            "title": "JavaScript",
+            "tags": ["Nuxt.js", "Vue.js", "React.js", "TypeScript"]
+          },
+          {
+            "id": 2,
+            "title": "HTML",
+            "tags": ["PUG", "HTML5"]
+          },
+          {
+            "id": 3,
+            "title": "CSS",
+            "tags": ["SASS/SCSS", "Less", "Bootstrap", "Tailwind"]
+          },
+          {
+            "id": 4,
+            "title": "Other",
+            "tags": ["Wordpress", "Figma", "Photoshop", "Blender"]
+          }
+        ],
+        "languages": [
+          {
+            "id": 1,
+            "name": "Russian",
+            "scoreLabel": "Native",
+            "score": 5
+          },
+          {
+            "id": 2,
+            "name": "English",
+            "scoreLabel": "Basic",
+            "score": 2
+          }
+        ]
       },
       "header": {
         "name": "David Aganov",
@@ -37,11 +104,12 @@
         "title": "About me",
         "description": [
           "I started getting interested in web development back in 2016, when I watched a lot of YouTube videos about development, looked for free courses on the Internet and tried to create my own sites.",
-          "Years later and after completing my studies, I was lucky to connect my life with my hobby and get a job as a junior frontend developer in a company developing mobile games and individual projects.",
+          "Years later and after completing my studies, I was lucky to connect my life with my hobby and get a job as a frontend developer in a company developing mobile games and individual projects.",
           "During the year and a half spent in this company, I learned a lot. My main activity was development of products with <strong>Nuxt.js</strong> framework and creation of many landing pages.",
           "The company also gave me the opportunity to take courses on <strong>React</strong> and <strong>React Native</strong> development."
         ],
-        "more": "Read more"
+        "download": "Download CV",
+        "loading": "Loading..."
       },
       "skills": {
         "title": "My Skills",
@@ -99,12 +167,79 @@
   "ru": {
     "translation": {
       "resume": {
-        "name": "Давид Аганов",
-        "job": "Фронтэнд разработчик",
-        "phone": "+998331576723",
-        "email": "davidaganov21@gmail.com",
-        "website": "https://aganov.dev",
-        "location": "Узбекистан, Ташкент"
+        "titles": {
+          "jobs": "Опыт работы",
+          "about": "Обо мне",
+          "technologies": "Технологии",
+          "languages": "Знание языков",
+          "social": "Социальные сети"
+        },
+        "header": {
+          "name": "Давид Аганов",
+          "job": "Фронтэнд разработчик",
+          "phone": "+998331576723",
+          "email": "davidaganov21@gmail.com",
+          "website": "https://aganov.dev",
+          "location": "Узбекистан, Ташкент"
+        },
+        "jobs": [
+          {
+            "id": 1,
+            "title": "Фронтэнд разработчик",
+            "company": "SAB Games",
+            "companyUrl": "https://www.linkedin.com/company/sabgames/mycompany/",
+            "location": "Ташкент",
+            "startAt": "2021-05-17",
+            "current": "По сей день",
+            "description": "Основной вид моей деятельности была разработка продуктов на фреймворке Nuxt.js и создание множества лэндингов. Так же компания предоставляла мне возможность обучаться на курсах по React и React Native разработке"
+          },
+          {
+            "id": 2,
+            "title": "Фронтэнд разработчик",
+            "company": "Фриланс",
+            "location": "Удалённо",
+            "startAt": "2019-09-01",
+            "endAt": "2021-05-17",
+            "description": "После колледжа я плотно взялся за изучение веб-разработки, создавал сайты своим друзьям, увлекался 3D-моделированием и время от времени получалось брать небольшие заказы."
+          }
+        ],
+        "about": "Я начал увлекаться веб-разработкой ещё в 2016 году, тогда я смотрел множество ютуб-роликов про разработку, находил бесплатные курсы в интернете и пытался создавать свои сайты. Спустя годы и закончив обучение, мне повезло связать свою жизнь со своим хобби и устроиться на работу фронтэнд разработчиком.",
+        "tech": [
+          {
+            "id": 1,
+            "title": "JavaScript",
+            "tags": ["Nuxt.js", "Vue.js", "React.js", "TypeScript"]
+          },
+          {
+            "id": 2,
+            "title": "CSS",
+            "tags": ["SASS/SCSS", "Less", "Bootstrap", "Tailwind"]
+          },
+          {
+            "id": 3,
+            "title": "HTML",
+            "tags": ["PUG", "HTML5"]
+          },
+          {
+            "id": 4,
+            "title": "Разное",
+            "tags": ["Wordpress", "Figma", "Photoshop", "Blender"]
+          }
+        ],
+        "languages": [
+          {
+            "id": 1,
+            "name": "Русский",
+            "scoreLabel": "Родной",
+            "score": 5
+          },
+          {
+            "id": 2,
+            "name": "Английский",
+            "scoreLabel": "Базовый",
+            "score": 2
+          }
+        ]
       },
       "header": {
         "name": "Давид Аганов",
@@ -134,7 +269,7 @@
         "title": "Обо мне",
         "description": [
           "Я начал увлекаться веб-разработкой ещё в 2016 году, тогда я смотрел множество ютуб-роликов про разработку, находил бесплатные курсы в интернете и пытался создавать свои сайты.",
-          "Спустя годы и закончив обучение, мне повезло связать свою жизнь со своим хобби и устроиться на работу junior frontend-разработчиком в компанию разрабатывающую мобильные игры и отдельные проекты.",
+          "Спустя годы и закончив обучение, мне повезло связать свою жизнь со своим хобби и устроиться на работу фронтэнд разработчиком в компанию разрабатывающую мобильные игры и отдельные проекты.",
           "За полтора года проведенные в этой компании я научился многому. Основной вид моей деятельности была разработка продуктов на фреймворке <strong>Nuxt.js</strong> и создание множества лэндингов.",
           "Так же компания предоставляла мне возможность обучаться на курсах по <strong>React</strong> и <strong>React Native</strong> разработке."
         ],
@@ -175,7 +310,9 @@
               { "id": 4, "title": "OС", "tag": ["Windows", "Mac OS"] }
             ]
           }
-        ]
+        ],
+        "download": "Скачать резюме",
+        "loading": "Загрузка..."
       },
       "projects": {
         "title": "Проекты",

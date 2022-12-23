@@ -1,7 +1,9 @@
 import { Text, View, StyleSheet } from "@react-pdf/renderer"
-import { Icon, IconName } from "../Icon/Icon"
+import { Icon, IconName } from "../"
 
 export interface IconTextProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  style?: any
   text: string
   iconName: IconName
 }
@@ -13,15 +15,15 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: "ua-brand",
-    fontSize: 8,
+    fontSize: 9,
     marginLeft: 4,
-    color: "#6d4e89"
+    color: "#0a192f"
   }
 })
 
-export function IconText({ text, iconName }: IconTextProps) {
+export const IconText = ({ style, text, iconName }: IconTextProps): JSX.Element => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <Icon
         size={10}
         name={iconName}

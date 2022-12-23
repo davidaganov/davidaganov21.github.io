@@ -26,7 +26,21 @@
     align-items: center
 
 .btn
+  display: inline-block
   margin-top: 4rem
+  border: 0.2rem solid var(--color-accent)
+  color: var(--color-accent)
+  transition: all 0.3s
+  cursor: pointer
+  @media (min-width: 576px)
+    padding: 1.5rem 6.5rem
+    font: 400 1.4rem/1.9rem var(--second-font)
+  @media (max-width: 575px)
+    padding: 1.5rem 3.5rem
+    font: 400 1rem/1.5rem var(--second-font)
+  &:hover
+    transform: translateY(-.15rem)
+    box-shadow: .2rem .2rem 0 .01rem var(--color-accent)
 
 .right
   @media (max-width: 999px)
