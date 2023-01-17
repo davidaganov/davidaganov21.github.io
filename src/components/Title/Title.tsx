@@ -7,9 +7,15 @@ export const Title = ({
   className,
   link,
   number,
-  direction,
+  direction = "ltr",
   ...props
 }: TitleProps): JSX.Element => {
+  const renderNumber = () => {
+    return number ? <span aria-hidden="true">0{number}.</span> : null
+  }
+
+  const numberTitle = renderNumber()
+
   return (
     <div
       className={cn(styles.title, className, {
@@ -20,7 +26,7 @@ export const Title = ({
     >
       {direction === "ltr" && (
         <h2>
-          <span aria-hidden="true">0{number}.</span> {title}
+          {numberTitle} {title}
         </h2>
       )}
       <a
@@ -31,7 +37,7 @@ export const Title = ({
       </a>
       {direction === "rtl" && (
         <h2>
-          {title} <span aria-hidden="true">0{number}.</span>
+          {title} {numberTitle}
         </h2>
       )}
     </div>

@@ -132,7 +132,6 @@ export const Work = (): JSX.Element => {
           number={3}
           link="#projects"
           title={t("projects.title")}
-          direction="ltr"
         />
 
         <div className={styles.body}>

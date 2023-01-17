@@ -1,10 +1,7 @@
-import { PDFDownloadLink } from "@react-pdf/renderer"
 import { useTranslation } from "react-i18next"
 import styles from "./About.module.sass"
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Button, Title } from "../"
-import { Resume } from "../Resume/Resume"
+import { Title, DownloadResume } from "../"
 
 export const About = (): JSX.Element => {
   const { t } = useTranslation()
@@ -35,7 +32,6 @@ export const About = (): JSX.Element => {
           number={1}
           link="#about"
           title={t("about.title")}
-          direction="ltr"
         />
 
         <div className={styles.content}>
@@ -48,18 +44,7 @@ export const About = (): JSX.Element => {
               height="350"
             />
             {items}
-            <PDFDownloadLink
-              document={<Resume />}
-              fileName="resume.pdf"
-            >
-              {({ loading }) =>
-                loading ? (
-                  <p className={styles.btn}>{t("about.loading")}</p>
-                ) : (
-                  <button className={styles.btn}>{t("about.download")}</button>
-                )
-              }
-            </PDFDownloadLink>
+            <DownloadResume />
           </div>
           <div className={styles.right}>
             <img

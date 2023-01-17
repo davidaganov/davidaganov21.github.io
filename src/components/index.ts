@@ -6,6 +6,7 @@ export * from "./Document/Document"
 
 export * from "./LanguageSwitcher/LanguageSwitcher"
 export * from "./Button/Button"
+export * from "./DownloadResume/DownloadResume"
 export * from "./Title/Title"
 export * from "./Card/Card"
 export * from "./Social/Social"

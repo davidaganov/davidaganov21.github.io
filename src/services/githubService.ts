@@ -14,15 +14,14 @@ const useGithubService = () => {
   const _transformProjects = (items: RepoProps[]) => {
     return items
       .map((item) => {
-        const { id, name, description, html_url, topics, homepage, language } = item
+        const { id, name, description, html_url, topics, homepage } = item
         return {
           id,
           name,
           description,
           html_url,
           topics,
-          homepage,
-          language
+          homepage
         }
       })
       .filter((item) => item.name !== "davidaganov21.github.io")

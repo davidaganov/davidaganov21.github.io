@@ -11,5 +11,4 @@ export interface RepoProps {
   html_url: string
   topics: string[]
   homepage: string
-  language: string
 }
