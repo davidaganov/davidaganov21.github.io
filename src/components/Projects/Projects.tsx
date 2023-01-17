@@ -11,14 +11,18 @@ export const Work = (): JSX.Element => {
   const [reposList, setReposList] = useState<RepoProps[]>([])
   const [reposLoading, setReposLoading] = useState(false)
   const [selectTag, setSelectTag] = useState<string>("")
-  const { loading, error, getRepos } = useGithubService()
-  let sortRepos = reposList
+  const [sortRepos, setSortRepos] = useState<RepoProps[]>([])
 
+  const { loading, error, getRepos } = useGithubService()
   const { t } = useTranslation()
 
   useEffect(() => {
-    if (reposList.length === 0) onRequest(true)
+    onRequest(true)
   }, [])
+
+  useEffect(() => {
+    setSortRepos(reposList.filter((item) => item.topics.some((i) => [selectTag].includes(i))))
+  }, [selectTag])
 
   const onRequest = (initial: boolean) => {
     initial ? setReposLoading(false) : setReposLoading(true)
@@ -26,20 +30,8 @@ export const Work = (): JSX.Element => {
   }
 
   const onReposLoaded = (newRepos: RepoProps[]) => {
-    setReposList([...reposList, ...newRepos])
+    setReposList(newRepos)
     setReposLoading(false)
-  }
-
-  const filterRepos = (tag?: string) => {
-    const repos: RepoProps[] = []
-    sortRepos.map((repo) => {
-      const selectTag = repo.topics.filter((topic) => topic === tag).length
-
-      if (tag) selectTag && repos.push(repo)
-      else repos.push(repo)
-    })
-
-    sortRepos = repos
   }
 
   const renderTags = () => {
@@ -63,7 +55,7 @@ export const Work = (): JSX.Element => {
           id={`tag-${tag}`}
           value={tag}
           checked={tag === selectTag}
-          onChange={() => setFilter(tag)}
+          onChange={() => setSelectTag(tag === selectTag ? "" : tag)}
         />
         <span
           className={cn(styles.tag, {
@@ -83,10 +75,9 @@ export const Work = (): JSX.Element => {
     )
   }
 
-  const renderItems = (tag?: string) => {
-    filterRepos(tag)
-
-    const items = sortRepos.slice(0, 6).map((item) => {
+  const renderItems = () => {
+    const repos = sortRepos.length === 0 ? reposList : sortRepos
+    const items = repos.slice(0, 6).map((item) => {
       return (
         <Card
           key={item.id}
@@ -96,11 +87,6 @@ export const Work = (): JSX.Element => {
     })
 
     return <ul className={styles.projects}>{items}</ul>
-  }
-
-  const setFilter = (tag: string) => {
-    tag === selectTag ? setSelectTag("") : setSelectTag(tag)
-    projects = renderItems(tag)
   }
 
   const CardSkeleton = () => {
@@ -120,7 +106,7 @@ export const Work = (): JSX.Element => {
   const errorMessage = error ? <h3 className={styles.error}>Repositories not found</h3> : null
   const spinner = loading && !reposLoading ? <CardSkeleton /> : null
   const tags = renderTags()
-  let projects = renderItems(selectTag)
+  const projects = renderItems()
 
   return (
     <section
