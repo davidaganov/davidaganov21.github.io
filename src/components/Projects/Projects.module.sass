@@ -26,43 +26,6 @@
   @media (min-width: 769px)
     grid-template-columns: repeat(2, 1fr)
 
-.tags
-  display: flex
-  flex-wrap: wrap
-  gap: 1rem 1.5rem
-  width: 100%
-  margin-bottom: 2.5rem
-  input
-    &:focus-visible + .tag
-      color: var(--color-accent)
-    @media (min-width: 576px)
-      &:focus-visible + .tagActive
-        color: tomato
-        border-color: tomato
-  label
-    min-height: 26px
-
-.tag
-  display: block
-  padding: .7rem 1rem
-  text-transform: uppercase
-  border-style: solid
-  border-width: .2rem
-  color: var(--color-white-500)
-  font: normal 1rem var(--second-font)
-  transition: all .2s
-  cursor: pointer
-  &:hover
-    border-color: var(--color-white)
-    color: var(--color-white)
-  &.tagActive
-    border-color: var(--color-accent)
-    color: var(--color-accent)
-    @media (min-width: 576px)
-      &:hover
-        border-color: tomato
-        color: tomato
-
 .error
   margin: 4rem 0 2rem
   font: normal 3rem var(--main-font)

@@ -6,9 +6,9 @@ const data = {
   id: "1",
   name: "Test",
   description: "Description project",
-  html_url: "https://aganov.dev",
+  html_url: "repo",
   topics: ["first", "second"],
-  homepage: "https://aganov.dev"
+  homepage: "demo"
 }
 
 describe("Card component", () => {
@@ -18,9 +18,21 @@ describe("Card component", () => {
     expect(screen.getByText(/test/i)).toBeInTheDocument()
   })
 
-  // it("Card snapshot", () => {
-  //   const title = render(<Card card={data} />)
+  it("There is a link to live demo", () => {
+    render(<Card card={data} />)
 
-  //   expect(title).toMatchSnapshot()
-  // })
+    expect(screen.getAllByRole("link")).toHaveLength(2)
+  })
+
+  it("No link to live demo", () => {
+    render(<Card card={{ ...data, homepage: "" }} />)
+
+    expect(screen.getAllByRole("link")).toHaveLength(1)
+  })
+
+  it("Card snapshot", () => {
+    const card = render(<Card card={data} />)
+
+    expect(card).toMatchSnapshot()
+  })
 })

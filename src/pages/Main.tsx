@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { Header, Footer } from "../layout"
-import { About, Skills, Work } from "../components"
+import { About, Skills, Projects } from "../components"
 
 export default function Main() {
   const { t } = useTranslation()
@@ -12,7 +12,7 @@ export default function Main() {
         <div className="main-wrapper">
           <About />
           <Skills />
-          <Work />
+          <Projects />
         </div>
       </main>
       <Footer />

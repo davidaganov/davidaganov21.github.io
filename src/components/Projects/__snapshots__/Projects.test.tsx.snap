@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects component Projects snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="work"
+        id="projects"
+      >
+        <div
+          class="inner"
+        >
+          <div
+            class="title ltr"
+          >
+            <h2>
+              <span
+                aria-hidden="true"
+              >
+                0
+                3
+                .
+              </span>
+               
+              projects.title
+            </h2>
+            <a
+              aria-label="projects.title"
+              href="#projects"
+            >
+              #
+            </a>
+          </div>
+          <div
+            class="body"
+          >
+            <ul
+              class="projects"
+            >
+              <li
+                class="skeleton"
+              />
+              <li
+                class="skeleton"
+              />
+              <li
+                class="skeleton"
+              />
+              <li
+                class="skeleton"
+              />
+              <li
+                class="skeleton"
+              />
+              <li
+                class="skeleton"
+              />
+            </ul>
+            <div
+              class="container"
+            >
+              <form
+                id="selectTags"
+              >
+                <fieldset
+                  class="tags"
+                >
+                  <legend
+                    class="visually-hidden"
+                  >
+                    projects.sort
+                  </legend>
+                </fieldset>
+              </form>
+              <ul
+                class="projects"
+              />
+            </div>
+            <a
+              class="btn btn"
+              href="https://github.com/davidaganov21?tab=repositories"
+              rel="noreferrer"
+              target="_blank"
+            >
+              projects.go_github
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="work"
+      id="projects"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="title ltr"
+        >
+          <h2>
+            <span
+              aria-hidden="true"
+            >
+              0
+              3
+              .
+            </span>
+             
+            projects.title
+          </h2>
+          <a
+            aria-label="projects.title"
+            href="#projects"
+          >
+            #
+          </a>
+        </div>
+        <div
+          class="body"
+        >
+          <ul
+            class="projects"
+          >
+            <li
+              class="skeleton"
+            />
+            <li
+              class="skeleton"
+            />
+            <li
+              class="skeleton"
+            />
+            <li
+              class="skeleton"
+            />
+            <li
+              class="skeleton"
+            />
+            <li
+              class="skeleton"
+            />
+          </ul>
+          <div
+            class="container"
+          >
+            <form
+              id="selectTags"
+            >
+              <fieldset
+                class="tags"
+              >
+                <legend
+                  class="visually-hidden"
+                >
+                  projects.sort
+                </legend>
+              </fieldset>
+            </form>
+            <ul
+              class="projects"
+            />
+          </div>
+          <a
+            class="btn btn"
+            href="https://github.com/davidaganov21?tab=repositories"
+            rel="noreferrer"
+            target="_blank"
+          >
+            projects.go_github
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
