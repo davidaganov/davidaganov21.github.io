@@ -3,14 +3,6 @@ import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { Repos } from "./Repos"
 
-jest.mock("@react-pdf/renderer", () => {
-  return {
-    PDFDownloadLink: jest.fn(() => null),
-    Font: { register: jest.fn(() => null) },
-    StyleSheet: { create: jest.fn(() => null) }
-  }
-})
-
 const data = [
   {
     id: "1",
@@ -37,7 +29,7 @@ describe("Repos component", () => {
     render(<Repos repos={data} />)
 
     expect(screen.getAllByRole("checkbox")).toHaveLength(topics_qty)
-    expect(screen.getAllByText(/repos/)).toHaveLength(data.length)
+    expect(screen.getAllByRole("heading")).toHaveLength(data.length)
   })
 
   it("Sorting repositories is working", () => {

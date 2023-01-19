@@ -150,7 +150,7 @@
       },
       "projects": {
         "title": "Projects",
-        "sort": "Sort projects by tags",
+        "sort": "Sort projects by tag",
         "go_repo": "Go to repository",
         "go_demo": "Live demo",
         "go_github": "Open github"
@@ -315,7 +315,7 @@
       },
       "projects": {
         "title": "Проекты",
-        "sort": "Сортировать проекты по тегам",
+        "sort": "Сортировать проекты по тегу",
         "go_repo": "Открыть репозиторий",
         "go_demo": "Демо",
         "go_github": "Открыть гитхаб"

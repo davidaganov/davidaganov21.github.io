@@ -12,7 +12,7 @@ Object {
           class="item"
         >
           <a
-            aria-label="contacts.github"
+            aria-label="Go to Github profile"
             class="link"
             href="https://github.com/davidaganov21"
             rel="noreferrer"
@@ -27,7 +27,7 @@ Object {
           class="item"
         >
           <a
-            aria-label="contacts.linkedin"
+            aria-label="Go to Linkedin profile"
             class="link"
             href="https://www.linkedin.com/in/david-aganov/"
             rel="noreferrer"
@@ -49,7 +49,7 @@ Object {
         class="item"
       >
         <a
-          aria-label="contacts.github"
+          aria-label="Go to Github profile"
           class="link"
           href="https://github.com/davidaganov21"
           rel="noreferrer"
@@ -64,7 +64,7 @@ Object {
         class="item"
       >
         <a
-          aria-label="contacts.linkedin"
+          aria-label="Go to Linkedin profile"
           class="link"
           href="https://www.linkedin.com/in/david-aganov/"
           rel="noreferrer"

@@ -1,8 +1,6 @@
 const config = {
   verbose: true,
-  moduleNameMapper: {
-    "react-i18next": "<rootDir>/__mocks__/react-i18next.ts"
-  }
+  setupFiles: ["<rootDir>/src/setupTests.ts"]
 }
 
 module.exports = config

@@ -16,13 +16,16 @@ Object {
           >
             <legend
               class="visually-hidden"
+              id="sortLabel"
             >
-              projects.sort
+              Sort projects by tags
             </legend>
             <label
               for="tag-vue"
             >
               <input
+                aria-labelledby="sortLabel tag-vue"
+                aria-selected="false"
                 class="visually-hidden"
                 id="tag-vue"
                 name="tag"
@@ -39,6 +42,8 @@ Object {
               for="tag-typescript"
             >
               <input
+                aria-labelledby="sortLabel tag-typescript"
+                aria-selected="false"
                 class="visually-hidden"
                 id="tag-typescript"
                 name="tag"
@@ -55,6 +60,8 @@ Object {
               for="tag-react"
             >
               <input
+                aria-labelledby="sortLabel tag-react"
+                aria-selected="false"
                 class="visually-hidden"
                 id="tag-react"
                 name="tag"
@@ -89,22 +96,22 @@ Object {
               class="bottom"
             >
               <a
-                aria-label="projects.go_repo First repos"
+                aria-label="Go to repository First repos"
                 class="link inline-link"
                 href="repo"
                 rel="noreferrer"
                 target="_blank"
               >
-                projects.go_repo
+                Go to repository
               </a>
               <a
-                aria-label="projects.go_demo First repos"
+                aria-label="Live demo First repos"
                 class="link link--live inline-link"
                 href="demo"
                 rel="noreferrer"
                 target="_blank"
               >
-                projects.go_demo
+                Live demo
               </a>
               <ul
                 class="tags"
@@ -135,13 +142,13 @@ Object {
               class="bottom"
             >
               <a
-                aria-label="projects.go_repo Second repos"
+                aria-label="Go to repository Second repos"
                 class="link inline-link"
                 href="repo"
                 rel="noreferrer"
                 target="_blank"
               >
-                projects.go_repo
+                Go to repository
               </a>
               <ul
                 class="tags"
@@ -168,13 +175,16 @@ Object {
         >
           <legend
             class="visually-hidden"
+            id="sortLabel"
           >
-            projects.sort
+            Sort projects by tags
           </legend>
           <label
             for="tag-vue"
           >
             <input
+              aria-labelledby="sortLabel tag-vue"
+              aria-selected="false"
               class="visually-hidden"
               id="tag-vue"
               name="tag"
@@ -191,6 +201,8 @@ Object {
             for="tag-typescript"
           >
             <input
+              aria-labelledby="sortLabel tag-typescript"
+              aria-selected="false"
               class="visually-hidden"
               id="tag-typescript"
               name="tag"
@@ -207,6 +219,8 @@ Object {
             for="tag-react"
           >
             <input
+              aria-labelledby="sortLabel tag-react"
+              aria-selected="false"
               class="visually-hidden"
               id="tag-react"
               name="tag"
@@ -241,22 +255,22 @@ Object {
             class="bottom"
           >
             <a
-              aria-label="projects.go_repo First repos"
+              aria-label="Go to repository First repos"
               class="link inline-link"
               href="repo"
               rel="noreferrer"
               target="_blank"
             >
-              projects.go_repo
+              Go to repository
             </a>
             <a
-              aria-label="projects.go_demo First repos"
+              aria-label="Live demo First repos"
               class="link link--live inline-link"
               href="demo"
               rel="noreferrer"
               target="_blank"
             >
-              projects.go_demo
+              Live demo
             </a>
             <ul
               class="tags"
@@ -287,13 +301,13 @@ Object {
             class="bottom"
           >
             <a
-              aria-label="projects.go_repo Second repos"
+              aria-label="Go to repository Second repos"
               class="link inline-link"
               href="repo"
               rel="noreferrer"
               target="_blank"
             >
-              projects.go_repo
+              Go to repository
             </a>
             <ul
               class="tags"

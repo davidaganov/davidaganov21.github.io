@@ -1,105 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card component Card snapshot 1`] = `
+exports[`Error Message component Error Message snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <li
-        class="project"
+      <section
+        id="error-message"
       >
-        <h3
-          class="title"
-        >
-          Test
-        </h3>
-        <p
-          class="description"
-        >
-          Description project
-        </p>
         <div
-          class="bottom"
+          class="inner"
         >
-          <a
-            aria-label="Go to repository Test"
-            class="link inline-link"
-            href="repo"
-            rel="noreferrer"
-            target="_blank"
+          <h2
+            class="title"
           >
-            Go to repository
-          </a>
-          <a
-            aria-label="Live demo Test"
-            class="link link--live inline-link"
-            href="demo"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Live demo
-          </a>
-          <ul
-            class="tags"
-          >
-            <li>
-              first
-            </li>
-            <li>
-              second
-            </li>
-          </ul>
+            Error 404
+          </h2>
         </div>
-      </li>
+      </section>
     </div>
   </body>,
   "container": <div>
-    <li
-      class="project"
+    <section
+      id="error-message"
     >
-      <h3
-        class="title"
-      >
-        Test
-      </h3>
-      <p
-        class="description"
-      >
-        Description project
-      </p>
       <div
-        class="bottom"
+        class="inner"
       >
-        <a
-          aria-label="Go to repository Test"
-          class="link inline-link"
-          href="repo"
-          rel="noreferrer"
-          target="_blank"
+        <h2
+          class="title"
         >
-          Go to repository
-        </a>
-        <a
-          aria-label="Live demo Test"
-          class="link link--live inline-link"
-          href="demo"
-          rel="noreferrer"
-          target="_blank"
-        >
-          Live demo
-        </a>
-        <ul
-          class="tags"
-        >
-          <li>
-            first
-          </li>
-          <li>
-            second
-          </li>
-        </ul>
+          Error 404
+        </h2>
       </div>
-    </li>
+    </section>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

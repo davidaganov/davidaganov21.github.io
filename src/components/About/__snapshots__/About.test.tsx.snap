@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component About snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="about"
+        id="about"
+      >
+        <div
+          class="inner"
+        >
+          <div
+            class="title ltr"
+          >
+            <h2>
+              <span
+                aria-hidden="true"
+              >
+                0
+                1
+                .
+              </span>
+               
+              About me
+            </h2>
+            <a
+              aria-label="About me"
+              href="#about"
+            >
+              #
+            </a>
+          </div>
+          <div
+            class="content"
+          >
+            <div
+              class="left"
+            >
+              <img
+                alt="My avatar"
+                class="picture"
+                height="350"
+                src="avatar.png"
+                width="350"
+              />
+              <p>
+                I started getting interested in web development back in 2016, when I watched a lot of YouTube videos about development, looked for free courses on the Internet and tried to create my own sites.
+              </p>
+              <p>
+                Years later and after completing my studies, I was lucky to connect my life with my hobby and get a job as a frontend developer in a company developing mobile games and individual projects.
+              </p>
+              <p>
+                During the year and a half spent in this company, I learned a lot. My main activity was development of products with 
+                <strong>
+                  Nuxt.js
+                </strong>
+                 framework and creation of many landing pages.
+              </p>
+              <p>
+                The company also gave me the opportunity to take courses on 
+                <strong>
+                  React
+                </strong>
+                 and 
+                <strong>
+                  React Native
+                </strong>
+                 development.
+              </p>
+            </div>
+            <div
+              class="right"
+            >
+              <img
+                alt="My avatar"
+                class="picture"
+                height="350"
+                src="avatar.png"
+                width="350"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="about"
+      id="about"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="title ltr"
+        >
+          <h2>
+            <span
+              aria-hidden="true"
+            >
+              0
+              1
+              .
+            </span>
+             
+            About me
+          </h2>
+          <a
+            aria-label="About me"
+            href="#about"
+          >
+            #
+          </a>
+        </div>
+        <div
+          class="content"
+        >
+          <div
+            class="left"
+          >
+            <img
+              alt="My avatar"
+              class="picture"
+              height="350"
+              src="avatar.png"
+              width="350"
+            />
+            <p>
+              I started getting interested in web development back in 2016, when I watched a lot of YouTube videos about development, looked for free courses on the Internet and tried to create my own sites.
+            </p>
+            <p>
+              Years later and after completing my studies, I was lucky to connect my life with my hobby and get a job as a frontend developer in a company developing mobile games and individual projects.
+            </p>
+            <p>
+              During the year and a half spent in this company, I learned a lot. My main activity was development of products with 
+              <strong>
+                Nuxt.js
+              </strong>
+               framework and creation of many landing pages.
+            </p>
+            <p>
+              The company also gave me the opportunity to take courses on 
+              <strong>
+                React
+              </strong>
+               and 
+              <strong>
+                React Native
+              </strong>
+               development.
+            </p>
+          </div>
+          <div
+            class="right"
+          >
+            <img
+              alt="My avatar"
+              class="picture"
+              height="350"
+              src="avatar.png"
+              width="350"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

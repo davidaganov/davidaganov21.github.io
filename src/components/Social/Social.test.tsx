@@ -6,7 +6,7 @@ describe("Social component", () => {
   it("Social renders", () => {
     render(<Social />)
 
-    expect(screen.getByRole("list"))
+    expect(screen.getAllByRole("link")).toHaveLength(2)
   })
 
   it("Social set user class", () => {
