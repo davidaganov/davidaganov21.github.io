@@ -27,34 +27,35 @@ export const Repos = ({ repos }: ReposProps): JSX.Element => {
     })
 
     const tags = topics.map((tag) => (
-      <label
-        htmlFor={`tag-${tag}`}
+      <button
         key={tag}
+        id={`tag-${tag}`}
+        type="button"
+        className={cn(styles.tag, {
+          [styles.tagActive]: tag === selectTag
+        })}
+        aria-selected={tag === selectTag}
+        aria-labelledby={`sortLabel tag-${tag}`}
+        onClick={() => setSelectTag(tag === selectTag ? "" : tag)}
+        role="option"
       >
-        <input
-          className="visually-hidden"
-          type="checkbox"
-          name="tag"
-          id={`tag-${tag}`}
-          value={tag}
-          checked={tag === selectTag}
-          onChange={() => setSelectTag(tag === selectTag ? "" : tag)}
-        />
-        <span
-          className={cn(styles.tag, {
-            [styles.tagActive]: tag === selectTag
-          })}
-        >
-          {tag}
-        </span>
-      </label>
+        {tag}
+      </button>
     ))
 
     return (
-      <fieldset className={styles.tags}>
-        <legend className="visually-hidden">{t("projects.sort")}</legend>
+      <div
+        className={styles.tags}
+        role="listbox"
+      >
+        <span
+          className="visually-hidden"
+          id="sortLabel"
+        >
+          {t("projects.sort")}
+        </span>
         {tags}
-      </fieldset>
+      </div>
     )
   }
 
@@ -77,7 +78,7 @@ export const Repos = ({ repos }: ReposProps): JSX.Element => {
 
   return (
     <div className={styles.container}>
-      <form id="selectTags">{tags}</form>
+      {tags}
       {projects}
     </div>
   )

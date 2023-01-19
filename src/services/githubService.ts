@@ -25,7 +25,8 @@ const useGithubService = () => {
         }
       })
       .filter((item) => item.name !== "davidaganov21.github.io")
-      .sort(() => Math.random() - 0.5)
+      .filter((item) => item.description)
+      .filter((item) => item.topics.length !== 0)
   }
 
   return { loading, error, clearError, getRepos }
