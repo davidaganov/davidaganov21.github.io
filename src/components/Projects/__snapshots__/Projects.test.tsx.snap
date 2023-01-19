@@ -61,20 +61,17 @@ Object {
             <div
               class="container"
             >
-              <form
-                id="selectTags"
+              <div
+                class="tags"
+                role="listbox"
               >
-                <fieldset
-                  class="tags"
+                <span
+                  class="visually-hidden"
+                  id="sortLabel"
                 >
-                  <legend
-                    class="visually-hidden"
-                    id="sortLabel"
-                  >
-                    Sort projects by tags
-                  </legend>
-                </fieldset>
-              </form>
+                  Sort projects by tag
+                </span>
+              </div>
               <ul
                 class="projects"
               />
@@ -149,20 +146,17 @@ Object {
           <div
             class="container"
           >
-            <form
-              id="selectTags"
+            <div
+              class="tags"
+              role="listbox"
             >
-              <fieldset
-                class="tags"
+              <span
+                class="visually-hidden"
+                id="sortLabel"
               >
-                <legend
-                  class="visually-hidden"
-                  id="sortLabel"
-                >
-                  Sort projects by tags
-                </legend>
-              </fieldset>
-            </form>
+                Sort projects by tag
+              </span>
+            </div>
             <ul
               class="projects"
             />

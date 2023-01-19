@@ -28,20 +28,20 @@ describe("Repos component", () => {
   it("Repos renders", () => {
     render(<Repos repos={data} />)
 
-    expect(screen.getAllByRole("checkbox")).toHaveLength(topics_qty)
+    expect(screen.getAllByRole("option")).toHaveLength(topics_qty)
     expect(screen.getAllByRole("heading")).toHaveLength(data.length)
   })
 
   it("Sorting repositories is working", () => {
     render(<Repos repos={data} />)
 
-    expect(screen.getByText(/First repos/)).toBeInTheDocument()
-    expect(screen.getByText(/Second repos/)).toBeInTheDocument()
+    expect(screen.getByText(/first/gi)).toBeInTheDocument()
+    expect(screen.getByText(/second/gi)).toBeInTheDocument()
 
-    userEvent.click(screen.getByDisplayValue("react"))
+    userEvent.click(screen.getByRole("option", { name: /react/gi }))
 
-    expect(screen.queryByText(/First repos/)).toBeNull()
-    expect(screen.queryByText(/Second repos/)).toBeInTheDocument()
+    expect(screen.queryByText(/first/gi)).toBeNull()
+    expect(screen.queryByText(/second/gi)).toBeInTheDocument()
   })
 
   it("Repos snapshot", () => {

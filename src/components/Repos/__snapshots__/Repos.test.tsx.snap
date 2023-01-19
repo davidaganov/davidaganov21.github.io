@@ -8,74 +8,47 @@ Object {
       <div
         class="container"
       >
-        <form
-          id="selectTags"
+        <div
+          class="tags"
+          role="listbox"
         >
-          <fieldset
-            class="tags"
+          <span
+            class="visually-hidden"
+            id="sortLabel"
           >
-            <legend
-              class="visually-hidden"
-              id="sortLabel"
-            >
-              Sort projects by tags
-            </legend>
-            <label
-              for="tag-vue"
-            >
-              <input
-                aria-labelledby="sortLabel tag-vue"
-                aria-selected="false"
-                class="visually-hidden"
-                id="tag-vue"
-                name="tag"
-                type="checkbox"
-                value="vue"
-              />
-              <span
-                class="tag"
-              >
-                vue
-              </span>
-            </label>
-            <label
-              for="tag-typescript"
-            >
-              <input
-                aria-labelledby="sortLabel tag-typescript"
-                aria-selected="false"
-                class="visually-hidden"
-                id="tag-typescript"
-                name="tag"
-                type="checkbox"
-                value="typescript"
-              />
-              <span
-                class="tag"
-              >
-                typescript
-              </span>
-            </label>
-            <label
-              for="tag-react"
-            >
-              <input
-                aria-labelledby="sortLabel tag-react"
-                aria-selected="false"
-                class="visually-hidden"
-                id="tag-react"
-                name="tag"
-                type="checkbox"
-                value="react"
-              />
-              <span
-                class="tag"
-              >
-                react
-              </span>
-            </label>
-          </fieldset>
-        </form>
+            Sort projects by tag
+          </span>
+          <button
+            aria-labelledby="sortLabel tag-vue"
+            aria-selected="false"
+            class="tag"
+            id="tag-vue"
+            role="option"
+            type="button"
+          >
+            vue
+          </button>
+          <button
+            aria-labelledby="sortLabel tag-typescript"
+            aria-selected="false"
+            class="tag"
+            id="tag-typescript"
+            role="option"
+            type="button"
+          >
+            typescript
+          </button>
+          <button
+            aria-labelledby="sortLabel tag-react"
+            aria-selected="false"
+            class="tag"
+            id="tag-react"
+            role="option"
+            type="button"
+          >
+            react
+          </button>
+        </div>
         <ul
           class="projects"
         >
@@ -167,74 +140,47 @@ Object {
     <div
       class="container"
     >
-      <form
-        id="selectTags"
+      <div
+        class="tags"
+        role="listbox"
       >
-        <fieldset
-          class="tags"
+        <span
+          class="visually-hidden"
+          id="sortLabel"
         >
-          <legend
-            class="visually-hidden"
-            id="sortLabel"
-          >
-            Sort projects by tags
-          </legend>
-          <label
-            for="tag-vue"
-          >
-            <input
-              aria-labelledby="sortLabel tag-vue"
-              aria-selected="false"
-              class="visually-hidden"
-              id="tag-vue"
-              name="tag"
-              type="checkbox"
-              value="vue"
-            />
-            <span
-              class="tag"
-            >
-              vue
-            </span>
-          </label>
-          <label
-            for="tag-typescript"
-          >
-            <input
-              aria-labelledby="sortLabel tag-typescript"
-              aria-selected="false"
-              class="visually-hidden"
-              id="tag-typescript"
-              name="tag"
-              type="checkbox"
-              value="typescript"
-            />
-            <span
-              class="tag"
-            >
-              typescript
-            </span>
-          </label>
-          <label
-            for="tag-react"
-          >
-            <input
-              aria-labelledby="sortLabel tag-react"
-              aria-selected="false"
-              class="visually-hidden"
-              id="tag-react"
-              name="tag"
-              type="checkbox"
-              value="react"
-            />
-            <span
-              class="tag"
-            >
-              react
-            </span>
-          </label>
-        </fieldset>
-      </form>
+          Sort projects by tag
+        </span>
+        <button
+          aria-labelledby="sortLabel tag-vue"
+          aria-selected="false"
+          class="tag"
+          id="tag-vue"
+          role="option"
+          type="button"
+        >
+          vue
+        </button>
+        <button
+          aria-labelledby="sortLabel tag-typescript"
+          aria-selected="false"
+          class="tag"
+          id="tag-typescript"
+          role="option"
+          type="button"
+        >
+          typescript
+        </button>
+        <button
+          aria-labelledby="sortLabel tag-react"
+          aria-selected="false"
+          class="tag"
+          id="tag-react"
+          role="option"
+          type="button"
+        >
+          react
+        </button>
+      </div>
       <ul
         class="projects"
       >
