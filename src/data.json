@@ -153,7 +153,9 @@
         "sort": "Sort projects by tag",
         "go_repo": "Go to repository",
         "go_demo": "Live demo",
-        "go_github": "Open github"
+        "go_github": "Open github",
+        "errorTitle": "Projects not found",
+        "errorSubtitle": "Perhaps you should check for github?"
       },
       "contacts": {
         "description": "Developed & Designed",
@@ -318,7 +320,9 @@
         "sort": "Сортировать проекты по тегу",
         "go_repo": "Открыть репозиторий",
         "go_demo": "Демо",
-        "go_github": "Открыть гитхаб"
+        "go_github": "Открыть гитхаб",
+        "errorTitle": "Проекты не найдены",
+        "errorSubtitle": "Возможно стоит проверить на Github?"
       },
       "contacts": {
         "description": "Разработка & Дизайн",

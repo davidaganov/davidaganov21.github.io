@@ -6,7 +6,7 @@ import { Repos } from "./Repos"
 const data = [
   {
     id: "1",
-    name: "First repos",
+    name: "First",
     description: "Lorem ipsum",
     homepage: "demo",
     html_url: "repo",
@@ -14,7 +14,7 @@ const data = [
   },
   {
     id: "2",
-    name: "Second repos",
+    name: "Second",
     description: "Dolor sit",
     homepage: "",
     html_url: "repo",
@@ -32,19 +32,35 @@ describe("Repos component", () => {
     expect(screen.getAllByRole("heading")).toHaveLength(data.length)
   })
 
+  it("Repos renders without data", () => {
+    render(<Repos />)
+
+    expect(screen.queryByRole("option")).toBeNull()
+    expect(screen.queryByRole("heading")).toBeNull()
+    expect(screen.getByText(/projects not found/i)).toBeInTheDocument()
+  })
+
   it("Sorting repositories is working", () => {
     render(<Repos repos={data} />)
 
-    expect(screen.getByText(/first/gi)).toBeInTheDocument()
-    expect(screen.getByText(/second/gi)).toBeInTheDocument()
+    expect(screen.getByText(/first/i)).toBeInTheDocument()
+    expect(screen.getByText(/second/i)).toBeInTheDocument()
 
-    userEvent.click(screen.getByRole("option", { name: /react/gi }))
+    userEvent.click(screen.getByRole("option", { name: /sort projects by tag react/i }))
 
-    expect(screen.queryByText(/first/gi)).toBeNull()
-    expect(screen.queryByText(/second/gi)).toBeInTheDocument()
+    expect(screen.queryByText(/first/i)).toBeNull()
+    expect(screen.queryByText(/second/i)).toBeInTheDocument()
   })
 
   it("Repos snapshot", () => {
-    expect(render(<Repos repos={data} />)).toMatchSnapshot()
+    const repos = render(<Repos repos={data} />)
+
+    expect(repos).toMatchSnapshot()
+  })
+
+  it("Repos snapshot without data", () => {
+    const repos = render(<Repos />)
+
+    expect(repos).toMatchSnapshot()
   })
 })

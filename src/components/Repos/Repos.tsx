@@ -14,17 +14,21 @@ export const Repos = ({ repos }: ReposProps): JSX.Element => {
   const { t } = useTranslation()
 
   useEffect(() => {
-    setSortRepos(repos.filter((item) => item.topics.some((i) => [selectTag].includes(i))))
+    if (repos) {
+      setSortRepos(repos.filter((item) => item.topics.some((i) => [selectTag].includes(i))))
+    }
   }, [selectTag])
 
   const renderTags = () => {
     const topics: string[] = []
 
-    repos.map((item) => {
-      item.topics.map((tag) => {
-        if (!topics.includes(tag)) topics.push(tag)
+    if (repos) {
+      repos.map((item) => {
+        item.topics.map((tag) => {
+          if (!topics.includes(tag)) topics.push(tag)
+        })
       })
-    })
+    }
 
     const tags = topics.map((tag) => (
       <button
@@ -43,43 +47,58 @@ export const Repos = ({ repos }: ReposProps): JSX.Element => {
       </button>
     ))
 
-    return (
-      <div
-        className={styles.tags}
-        role="listbox"
-      >
-        <span
-          className="visually-hidden"
-          id="sortLabel"
+    if (tags.length !== 0) {
+      return (
+        <div
+          className={styles.tags}
+          role="listbox"
         >
-          {t("projects.sort")}
-        </span>
-        {tags}
-      </div>
-    )
+          <span
+            className="visually-hidden"
+            id="sortLabel"
+          >
+            {t("projects.sort")}
+          </span>
+          {tags}
+        </div>
+      )
+    }
   }
 
   const renderItems = () => {
-    const arr = sortRepos.length === 0 ? repos : sortRepos
-    const items = arr.slice(0, 6).map((item) => {
-      return (
-        <Card
-          key={item.id}
-          card={item}
-        />
-      )
-    })
+    const arr = sortRepos.length === 0 && repos ? repos : sortRepos
+    if (repos) {
+      const items = arr.slice(0, 6).map((item) => {
+        return (
+          <Card
+            key={item.id}
+            card={item}
+          />
+        )
+      })
 
-    return <ul className={styles.projects}>{items}</ul>
+      return <ul className={styles.projects}>{items}</ul>
+    }
+  }
+
+  const renderError = () => {
+    return (
+      <>
+        <p className={styles.empty}>{t("projects.errorTitle")}</p>
+        <p className={styles.emptySubtitle}>{t("projects.errorSubtitle")}</p>
+      </>
+    )
   }
 
   const tags = renderTags()
   const projects = renderItems()
+  const error = projects === undefined ? renderError() : null
 
   return (
     <div className={styles.container}>
       {tags}
       {projects}
+      {error}
     </div>
   )
 }

@@ -3,5 +3,5 @@ import { RepoProps } from "../../interfaces"
 
 export interface ReposProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLLIElement>, HTMLLIElement> {
-  repos: RepoProps[]
+  repos?: RepoProps[]
 }
