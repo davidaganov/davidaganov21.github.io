@@ -1,5 +1,4 @@
 export interface navLink {
-  tag: "a" | "route" | "hashlink"
   link: string
   title: string
 }

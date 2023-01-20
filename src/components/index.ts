@@ -1,7 +1,10 @@
 export * from "./About/About"
 export * from "./Skills/Skills"
 export * from "./Projects/Projects"
-export * from "./ErrorMessage/ErrorMessage"
+
+export * from "./Header/Header"
+export * from "./Navbar/Navbar"
+export * from "./Footer/Footer"
 
 export * from "./LanguageSwitcher/LanguageSwitcher"
 export * from "./DownloadResume/DownloadResume"

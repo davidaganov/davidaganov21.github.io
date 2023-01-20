@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { HeaderProps } from "./Header.props"
-import { Navbar } from "../"
-import { Button } from "../../components/"
+import { Navbar, Button } from "../"
 import styles from "./Header.module.sass"
 import cn from "classnames"
 

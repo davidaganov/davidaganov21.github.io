@@ -1,13 +1,12 @@
 import { useTranslation } from "react-i18next"
-import { Header, Footer } from "../layout"
-import { About, Skills, Projects } from "../components"
+import { About, Skills, Projects, Header, Footer } from "./components"
 
-export default function Main() {
+export const App = () => {
   const { t } = useTranslation()
 
   return (
     <div className="wrapper">
-      <Header list={t("navbar.home", { returnObjects: true })} />
+      <Header list={t("navbar.links", { returnObjects: true })} />
       <main>
         <div className="main-wrapper">
           <About />

@@ -1,6 +1,6 @@
 import cn from "classnames"
 import styles from "./Footer.module.sass"
-import { Social } from "../../components/"
+import { Social } from "../"
 import { useTranslation } from "react-i18next"
 
 export const Footer = (): JSX.Element => {

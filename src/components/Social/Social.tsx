@@ -1,8 +1,8 @@
 import { SocialProps } from "./Social.props"
 import styles from "./Social.module.sass"
 import cn from "classnames"
-import { ReactComponent as GithubIcon } from "./icon/github.svg"
-import { ReactComponent as LinkedinIcon } from "./icon/linkedin.svg"
+import { ReactComponent as GithubIcon } from "./icons/github.svg"
+import { ReactComponent as LinkedinIcon } from "./icons/linkedin.svg"
 import { useTranslation } from "react-i18next"
 
 export const Social = ({ className, ...props }: SocialProps): JSX.Element => {
