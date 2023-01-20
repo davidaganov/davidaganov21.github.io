@@ -1,8 +1,8 @@
-const config = {
-  verbose: true,
+module.exports = {
+  clearMocks: true,
   setupFiles: ["<rootDir>/src/setupTests.ts"],
   collectCoverage: true,
-  collectCoverageFrom: ["src/**/*.tsx", "!**/node_modules/**"]
+  collectCoverageFrom: ["<rootDir>/src/**/*.tsx", "!**/node_modules/**"],
+  testPathIgnorePatterns: ["\\\\node_modules\\\\"],
+  coveragePathIgnorePatterns: ["<rootDir>/src/**/*.props.{ts}", "<rootDir>/src/interfaces/index.ts"]
 }
-
-module.exports = config

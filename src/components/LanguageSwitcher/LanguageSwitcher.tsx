@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import i18next from "i18next"
 import styles from "./LanguageSwitcher.module.sass"
+import cn from "classnames"
 
 export const LanguageSwitcher = (): JSX.Element => {
   const { i18n, t } = useTranslation()
@@ -30,22 +31,21 @@ export const LanguageSwitcher = (): JSX.Element => {
     return languagesList.map((item) => {
       const { lang, aria } = item
       return (
-        <label
-          htmlFor={`lang-${lang}`}
+        <button
           key={lang}
+          id={`lang-${lang}`}
+          className={cn(styles.btn, {
+            [styles.btnActive]: i18n.language === lang
+          })}
+          type="button"
+          aria-label={aria}
+          aria-selected={i18n.language === lang}
+          aria-labelledby={`selectLang lang-${lang}`}
+          onClick={() => changeLanguage(lang)}
+          role="option"
         >
-          <input
-            className="visually-hidden"
-            type="checkbox"
-            name="lang"
-            id={`lang-${lang}`}
-            value={lang}
-            checked={i18n.language === lang}
-            aria-label={aria}
-            onChange={() => changeLanguage(lang)}
-          />
-          <span className={styles.btn}>{lang}</span>
-        </label>
+          {lang}
+        </button>
       )
     })
   }
@@ -53,11 +53,17 @@ export const LanguageSwitcher = (): JSX.Element => {
   const languages = renderLanguages()
 
   return (
-    <form className={styles.form}>
-      <fieldset className={styles.switcher}>
-        <legend className="visually-hidden">{t("navbar.selectLang.title")}</legend>
-        {languages}
-      </fieldset>
-    </form>
+    <div
+      className={styles.switcher}
+      role="listbox"
+    >
+      <span
+        className="visually-hidden"
+        id="selectLang"
+      >
+        {t("navbar.selectLang.title")}
+      </span>
+      {languages}
+    </div>
   )
 }

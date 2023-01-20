@@ -90,9 +90,9 @@
           "en": "English"
         },
         "links": [
-          { "tag": "hashlink", "link": "#about", "title": "About" },
-          { "tag": "hashlink", "link": "#skills", "title": "Skills" },
-          { "tag": "hashlink", "link": "#projects", "title": "Projects" }
+          { "link": "#about", "title": "About" },
+          { "link": "#skills", "title": "Skills" },
+          { "link": "#projects", "title": "Projects" }
         ]
       },
       "about": {
@@ -252,9 +252,9 @@
           "en": "Английский"
         },
         "links": [
-          { "tag": "hashlink", "link": "#about", "title": "Обо мне" },
-          { "tag": "hashlink", "link": "#skills", "title": "Скиллы" },
-          { "tag": "hashlink", "link": "#projects", "title": "Проекты" }
+          { "link": "#about", "title": "Обо мне" },
+          { "link": "#skills", "title": "Скиллы" },
+          { "link": "#projects", "title": "Проекты" }
         ]
       },
       "about": {

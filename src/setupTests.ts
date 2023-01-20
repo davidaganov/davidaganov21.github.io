@@ -1,3 +1,4 @@
+import "@testing-library/jest-dom"
 import i18n from "./services/i18n"
 
 i18n.init()

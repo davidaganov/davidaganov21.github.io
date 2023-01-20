@@ -9,7 +9,7 @@ import { LanguageSwitcher } from ".."
 import { ReactComponent as BurgerIcon } from "./icons/burger.svg"
 import { ReactComponent as CloseIcon } from "./icons/close.svg"
 
-export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => {
+export const Navbar = ({ list, ...props }: NavbarProps): JSX.Element => {
   const [opened, setOpened] = useState<boolean>(false)
 
   useEffect(() => {
@@ -87,16 +87,12 @@ export const Navbar = ({ single, list, ...props }: NavbarProps): JSX.Element => 
 
   const menu = buildMenu()
 
-  if (single) {
-    return (
-      <header
-        className={styles.header}
-        {...props}
-      >
-        <div className={cn(styles.inner, "inner")}>{menu}</div>
-      </header>
-    )
-  } else {
-    return <>{menu}</>
-  }
+  return (
+    <header
+      className={styles.header}
+      {...props}
+    >
+      <div className={cn(styles.inner, "inner")}>{menu}</div>
+    </header>
+  )
 }

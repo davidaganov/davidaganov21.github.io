@@ -1,16 +1,10 @@
-.form
-  @media (max-width: 768px)
-    z-index: 1
-
 .switcher
   display: flex
   gap: .6rem
+  z-index: 1
   @media (max-width: 768px)
     justify-content: flex-end
     margin-top: 5rem
-  input:focus-visible ~ .btn
-    background-color: var(--color-accent)
-    color: var(--color-white)
 
 .btn
   display: block
@@ -18,12 +12,26 @@
   color: var(--color-accent)
   transition: all 0.3s
   cursor: pointer
+  &:not(.btnActive)
+    &:hover
+      transform: translateY(-.15rem)
+      box-shadow: .2rem .2rem 0 .01rem var(--color-accent)
+    &:focus-visible
+      background-color: var(--color-accent)
+      color: var(--color-white)
+      box-shadow: .2rem .2rem 0 .01rem var(--color-white)
+  &:focus-visible
+    transform: translateY(-.15rem)
+
   @media (min-width: 769px)
     font: 400 1rem/1.5rem var(--second-font)
     padding: .5rem 1rem
   @media (max-width: 768px)
     font: 400 1.2rem/1.7rem var(--second-font)
     padding: 1rem 3rem
-  &:hover
-    transform: translateY(-.15rem)
-    box-shadow: .2rem .2rem 0 .01rem var(--color-accent)
+
+.btnActive
+  background-color: var(--color-accent)
+  color: var(--color-white)
+  &:focus-visible
+    box-shadow: .2rem .2rem 0 .01rem var(--color-white)
