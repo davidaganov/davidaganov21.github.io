@@ -13,13 +13,13 @@ Object {
           class="visually-hidden"
           id="selectLang"
         >
-          Select language
+          Выбрать язык
         </span>
         <button
-          aria-label="English"
+          aria-label="Английский"
           aria-labelledby="selectLang lang-en"
-          aria-selected="true"
-          class="btn btnActive"
+          aria-selected="false"
+          class="btn"
           id="lang-en"
           role="option"
           type="button"
@@ -27,10 +27,10 @@ Object {
           en
         </button>
         <button
-          aria-label="Russian"
+          aria-label="Русский"
           aria-labelledby="selectLang lang-ru"
-          aria-selected="false"
-          class="btn"
+          aria-selected="true"
+          class="btn btnActive"
           id="lang-ru"
           role="option"
           type="button"
@@ -49,13 +49,13 @@ Object {
         class="visually-hidden"
         id="selectLang"
       >
-        Select language
+        Выбрать язык
       </span>
       <button
-        aria-label="English"
+        aria-label="Английский"
         aria-labelledby="selectLang lang-en"
-        aria-selected="true"
-        class="btn btnActive"
+        aria-selected="false"
+        class="btn"
         id="lang-en"
         role="option"
         type="button"
@@ -63,10 +63,10 @@ Object {
         en
       </button>
       <button
-        aria-label="Russian"
+        aria-label="Русский"
         aria-labelledby="selectLang lang-ru"
-        aria-selected="false"
-        class="btn"
+        aria-selected="true"
+        class="btn btnActive"
         id="lang-ru"
         role="option"
         type="button"
