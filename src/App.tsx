@@ -3,7 +3,6 @@ import { About, Skills, Projects, Header, Footer } from "./components"
 
 export const App = () => {
   const { t } = useTranslation()
-
   return (
     <div className="wrapper">
       <Header list={t("navbar.links", { returnObjects: true })} />

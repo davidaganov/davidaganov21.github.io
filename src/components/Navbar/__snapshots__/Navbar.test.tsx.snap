@@ -3,7 +3,9 @@
 exports[`Navbar component Navbar snapshot 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": <body
+    class=""
+  >
     <div>
       <header
         class="header"

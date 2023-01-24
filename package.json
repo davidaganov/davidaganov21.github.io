@@ -90,7 +90,9 @@
     "collectCoverageFrom": [
       "./src/**/*.(tsx|ts)",
       "!**/node_modules/**",
+      "!./src/index.tsx",
       "!./src/**/?(*.)+(props|d).ts",
+      "!./src/components/DownloadResume/**",
       "!./src/components/Resume/**",
       "!./src/components/index.ts",
       "!./src/interfaces/**"

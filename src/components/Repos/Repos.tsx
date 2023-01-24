@@ -20,14 +20,12 @@ export const Repos = ({ repos }: ReposProps): JSX.Element => {
   }, [selectTag])
 
   const renderTags = () => {
-    const topics: string[] = []
+    let topics: string[] = []
 
     if (repos) {
-      repos.map((item) => {
-        item.topics.map((tag) => {
-          if (!topics.includes(tag)) topics.push(tag)
-        })
-      })
+      topics = [
+        ...new Set(repos.reduce((topics, repo) => [...topics, ...repo.topics], [] as string[]))
+      ]
     }
 
     const tags = topics.map((tag) => (

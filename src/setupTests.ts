@@ -10,3 +10,12 @@ jest.mock("@react-pdf/renderer", () => {
     StyleSheet: { create: jest.fn(() => null) }
   }
 })
+
+const randomUUID = () => {
+  let value = 0
+  return () => value++
+}
+
+jest.mock("uuid", () => {
+  return { v4: randomUUID() }
+})
