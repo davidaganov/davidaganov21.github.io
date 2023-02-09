@@ -7,7 +7,7 @@ import cn from "classnames"
 import { Card } from ".."
 import { RepoProps } from "../../interfaces"
 
-export const Repos = ({ repos }: ReposProps): JSX.Element => {
+export const Repos = ({ repos }: ReposProps) => {
   const [selectTag, setSelectTag] = useState<string>("")
   const [sortRepos, setSortRepos] = useState<RepoProps[]>([])
 

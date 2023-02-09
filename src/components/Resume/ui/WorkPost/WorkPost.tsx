@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
   }
 })
 
-const Title = ({ children }: TitleProps): JSX.Element => {
+const Title = ({ children }: TitleProps) => {
   return <Text style={styles.title}>{children}</Text>
 }
 
-const WorkPlace = ({ children, url }: WorkPlaceProps): JSX.Element => {
+const WorkPlace = ({ children, url }: WorkPlaceProps) => {
   if (url) {
     return (
       <Link src={url}>

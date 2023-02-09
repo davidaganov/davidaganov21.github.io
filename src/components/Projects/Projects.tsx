@@ -6,7 +6,7 @@ import useGithubService from "../../services/githubService"
 import { RepoProps } from "../../interfaces"
 import { Title, Button, Repos } from ".."
 
-export const Projects = (): JSX.Element => {
+export const Projects = () => {
   const [reposList, setReposList] = useState<RepoProps[]>([])
   const [reposLoading, setReposLoading] = useState(false)
 

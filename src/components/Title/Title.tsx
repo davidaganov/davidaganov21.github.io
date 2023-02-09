@@ -9,7 +9,7 @@ export const Title = ({
   number,
   direction = "ltr",
   ...props
-}: TitleProps): JSX.Element => {
+}: TitleProps) => {
   const renderNumber = () => {
     return number ? <span aria-hidden="true">0{number}.</span> : null
   }

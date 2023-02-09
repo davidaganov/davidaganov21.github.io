@@ -20,7 +20,7 @@ export interface SkillProps {
   tag: string[]
 }
 
-export const Skills = (): JSX.Element => {
+export const Skills = () => {
   const { t } = useTranslation()
 
   const setIcon = (title: string) => {

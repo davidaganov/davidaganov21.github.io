@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const SocialMedia = ({ name, profileUrl, ...props }: SocialMediaProps): JSX.Element => {
+export const SocialMedia = ({ name, profileUrl, ...props }: SocialMediaProps) => {
   const username = `@${profileUrl.split("/").splice(-1)}`
 
   return (

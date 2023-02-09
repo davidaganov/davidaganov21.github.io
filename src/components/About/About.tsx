@@ -3,7 +3,7 @@ import styles from "./About.module.sass"
 
 import { Title, DownloadResume } from "../"
 
-export const About = (): JSX.Element => {
+export const About = () => {
   const { t } = useTranslation()
 
   const renderItems = () => {

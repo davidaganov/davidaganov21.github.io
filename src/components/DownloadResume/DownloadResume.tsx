@@ -4,7 +4,7 @@ import styles from "./DownloadResume.module.sass"
 
 import { Resume } from "../Resume/Resume"
 
-export const DownloadResume = (): JSX.Element => {
+export const DownloadResume = () => {
   const { t } = useTranslation()
 
   return (

@@ -4,7 +4,8 @@ import i18next from "i18next"
 import styles from "./LanguageSwitcher.module.sass"
 import cn from "classnames"
 
-export const LanguageSwitcher = (): JSX.Element => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const LanguageSwitcher = ({ focus, close }: any) => {
   const { i18n, t } = useTranslation()
   const languagesList = [
     { lang: "en", aria: t("navbar.selectLang.en") },
@@ -28,8 +29,7 @@ export const LanguageSwitcher = (): JSX.Element => {
   }
 
   const renderLanguages = () => {
-    return languagesList.map((item) => {
-      const { lang, aria } = item
+    return languagesList.map(({ lang, aria }, i) => {
       return (
         <button
           key={lang}
@@ -42,7 +42,9 @@ export const LanguageSwitcher = (): JSX.Element => {
           aria-selected={i18n.language === lang}
           aria-labelledby={`selectLang lang-${lang}`}
           onClick={() => changeLanguage(lang)}
+          tabIndex={focus ? 0 : -1}
           role="option"
+          onBlur={() => (languagesList.length === i + 1 ? close() : null)}
         >
           {lang}
         </button>

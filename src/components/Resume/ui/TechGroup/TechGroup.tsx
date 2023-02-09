@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const TechGroup = ({ title, tags }: TechGroupProps): JSX.Element => {
+export const TechGroup = ({ title, tags }: TechGroupProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>

@@ -4,7 +4,7 @@ import { Navbar, Button } from "../"
 import styles from "./Header.module.sass"
 import cn from "classnames"
 
-export const Header = ({ list, ...props }: HeaderProps): JSX.Element => {
+export const Header = ({ list, ...props }: HeaderProps) => {
   const { t } = useTranslation()
 
   return (

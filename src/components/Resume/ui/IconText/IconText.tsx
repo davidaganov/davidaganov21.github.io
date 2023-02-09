@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const IconText = ({ style, text, iconName }: IconTextProps): JSX.Element => {
+export const IconText = ({ style, text, iconName }: IconTextProps) => {
   return (
     <View style={[styles.container, style]}>
       <Icon

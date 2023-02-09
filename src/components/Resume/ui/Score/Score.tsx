@@ -6,7 +6,7 @@ export interface ScoreProps {
   rank: number
 }
 
-export const Score = ({ id, rank }: ScoreProps): JSX.Element => {
+export const Score = ({ id, rank }: ScoreProps) => {
   return (
     <View style={{ flexDirection: "row" }}>
       {Array.from({ length: 5 }).map((_, index) => (

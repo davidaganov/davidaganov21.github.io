@@ -16,7 +16,7 @@ export function formatDate(dateString: string, format = "LL/yyyy") {
   return dateFnsFormat(dateFnsParse(dateString, formatString, referenceDate), format)
 }
 
-export const DateRange = ({ startAt, endAt, current, style }: DateRangeProps): JSX.Element => {
+export const DateRange = ({ startAt, endAt, current, style }: DateRangeProps) => {
   const dateRangeText = [formatDate(startAt), endAt ? formatDate(endAt) : current].join(" - ")
 
   return (

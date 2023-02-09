@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const Section = ({ title, children }: SectionProps): JSX.Element => {
+export const Section = ({ title, children }: SectionProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>

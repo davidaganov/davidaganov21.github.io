@@ -42,14 +42,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const Heading = ({
-  name,
-  job,
-  phone,
-  email,
-  website,
-  location
-}: HeadingProps): JSX.Element => {
+export const Heading = ({ name, job, phone, email, website, location }: HeadingProps) => {
   return (
     <View style={styles.container}>
       <View style={{ margin: 1 }}>

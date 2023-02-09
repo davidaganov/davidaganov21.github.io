@@ -3,7 +3,7 @@ import styles from "./Footer.module.sass"
 import { Social } from "../"
 import { useTranslation } from "react-i18next"
 
-export const Footer = (): JSX.Element => {
+export const Footer = () => {
   const { t } = useTranslation()
 
   return (

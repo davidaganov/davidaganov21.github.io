@@ -5,7 +5,7 @@ import { ReactComponent as GithubIcon } from "./icons/github.svg"
 import { ReactComponent as LinkedinIcon } from "./icons/linkedin.svg"
 import { useTranslation } from "react-i18next"
 
-export const Social = ({ className, ...props }: SocialProps): JSX.Element => {
+export const Social = ({ className, ...props }: SocialProps) => {
   const { t } = useTranslation()
   const github_aria = t("contacts.github")
   const linkedin_aria = t("contacts.linkedin")

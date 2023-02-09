@@ -3,7 +3,7 @@ import { CardProps } from "./Card.props"
 import styles from "./Card.module.sass"
 import cn from "classnames"
 
-export const Card = ({ card, className }: CardProps): JSX.Element => {
+export const Card = ({ card, className }: CardProps) => {
   const { name, description, html_url, topics, homepage } = card
   const clearName = name.replace(/[.\-/\\\s]/g, " ")
 
