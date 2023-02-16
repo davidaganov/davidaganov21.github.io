@@ -17,7 +17,7 @@ export const Social = ({ className, ...props }: SocialProps) => {
     >
       <li className={styles.item}>
         <a
-          href="https://github.com/davidaganov21"
+          href="https://github.com/davidaganov"
           className={styles.link}
           aria-label={github_aria}
           target="_blank"

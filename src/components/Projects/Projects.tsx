@@ -46,7 +46,7 @@ export const Projects = () => {
 
   const showMore = !error ? (
     <Button
-      href="https://github.com/davidaganov21?tab=repositories"
+      href="https://github.com/davidaganov?tab=repositories"
       target="_blank"
       rel="noreferrer"
       className={styles.btn}

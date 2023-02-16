@@ -57,7 +57,7 @@ export const Resume = () => {
   }
   const social = {
     telegram: "https://t.me/davidaganov",
-    github: "https://github.com/davidaganov21",
+    github: "https://github.com/davidaganov",
     linkedin: "https://www.linkedin.com/in/david-aganov"
   }
 
