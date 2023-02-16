@@ -4,7 +4,7 @@ import { RepoProps } from "../interfaces"
 const useGithubService = () => {
   const { loading, request, error, clearError } = useHttp()
 
-  const _apiBase = "https://api.github.com/users/davidaganov21"
+  const _apiBase = "https://api.github.com/users/davidaganov"
 
   const getRepos = async () => {
     const res = await request(`${_apiBase}/repos`)
@@ -24,7 +24,7 @@ const useGithubService = () => {
           homepage
         }
       })
-      .filter((item) => item.name !== "davidaganov21.github.io")
+      .filter((item) => item.name !== "davidaganov.github.io")
       .filter((item) => item.description)
       .filter((item) => item.topics.length !== 0)
   }
