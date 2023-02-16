@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3ccb9e46.css",
-    "main.js": "/static/js/main.f4053f2b.js",
+    "main.js": "/static/js/main.35cea940.js",
     "static/media/Barcade-Brawl.ttf": "/static/media/Barcade-Brawl.73895ecd83170778cce0.ttf",
     "static/media/avatar.png": "/static/media/avatar.2db46975cfbfe9115f8a.png",
     "static/media/ua-brand-Bold.ttf": "/static/media/ua-brand-Bold.a02d6efaeade2323b233.ttf",
@@ -16,10 +16,10 @@
     "static/media/burger.svg": "/static/media/burger.21797a96af3ae80de2c46d085c1a3203.svg",
     "static/media/close.svg": "/static/media/close.f75a22568d3eb06071fad4f1b60b8ba0.svg",
     "main.3ccb9e46.css.map": "/static/css/main.3ccb9e46.css.map",
-    "main.f4053f2b.js.map": "/static/js/main.f4053f2b.js.map"
+    "main.35cea940.js.map": "/static/js/main.35cea940.js.map"
   },
   "entrypoints": [
     "static/css/main.3ccb9e46.css",
-    "static/js/main.f4053f2b.js"
+    "static/js/main.35cea940.js"
   ]
 }
