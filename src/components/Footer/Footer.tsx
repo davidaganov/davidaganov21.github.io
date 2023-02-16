@@ -14,7 +14,7 @@ export const Footer = () => {
     >
       <div className={cn(styles.inner, "inner")}>
         <a
-          href="https://github.com/davidaganov21/davidaganov21.github.io"
+          href="https://github.com/davidaganov/davidaganov.github.io"
           className={cn(styles.author, "inline-link inline-link--white")}
           target="_blank"
           rel="noreferrer"

@@ -14,7 +14,7 @@
     "typescript",
     "sass"
   ],
-  "repository": "https://github.com/davidaganov21/davidaganov21.github.io",
+  "repository": "https://github.com/davidaganov/davidaganov.github.io",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "echo 'aganov.dev' > ./build/CNAME && gh-pages -b master -d build",
