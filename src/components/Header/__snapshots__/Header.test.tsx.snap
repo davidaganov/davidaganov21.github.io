@@ -56,6 +56,7 @@ Object {
                     <a
                       class="link inline-link inline-link--white"
                       href="#test"
+                      tabindex="0"
                     >
                       Test
                     </a>
@@ -71,6 +72,7 @@ Object {
                     <a
                       class="link inline-link inline-link--white"
                       href="#link"
+                      tabindex="0"
                     >
                       Link
                     </a>
@@ -93,6 +95,7 @@ Object {
                     class="btn btnActive"
                     id="lang-en"
                     role="option"
+                    tabindex="0"
                     type="button"
                   >
                     en
@@ -104,6 +107,7 @@ Object {
                     class="btn"
                     id="lang-ru"
                     role="option"
+                    tabindex="0"
                     type="button"
                   >
                     ru
@@ -146,24 +150,7 @@ Object {
             <p
               class="description"
             >
-              I’m frontend developer. I like to learn new technologies and try new things in every possible way. At the moment I’m working in mobile games studio 
-              <a
-                aria-label="The company I work for is SAB Games"
-                class="inline-link"
-                href="https://www.linkedin.com/company/sabgames/mycompany/"
-              >
-                <svg
-                  class="link-icon"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.73a1.76 1.76 0 0 1 0-3.53c.97 0 1.75.8 1.75 1.77S7.47 6.73 6.5 6.73zM20 19h-3v-5.6c0-3.37-4-3.12-4 0V19h-3V8h3v1.76a3.8 3.8 0 0 1 7 2.48V19z"
-                  />
-                </svg>
-                SAB Games
-              </a>
+              I’m frontend developer. I like to learn new technologies and try new things in every possible way.
             </p>
             <a
               class="btn btn"
@@ -228,6 +215,7 @@ Object {
                   <a
                     class="link inline-link inline-link--white"
                     href="#test"
+                    tabindex="0"
                   >
                     Test
                   </a>
@@ -243,6 +231,7 @@ Object {
                   <a
                     class="link inline-link inline-link--white"
                     href="#link"
+                    tabindex="0"
                   >
                     Link
                   </a>
@@ -265,6 +254,7 @@ Object {
                   class="btn btnActive"
                   id="lang-en"
                   role="option"
+                  tabindex="0"
                   type="button"
                 >
                   en
@@ -276,6 +266,7 @@ Object {
                   class="btn"
                   id="lang-ru"
                   role="option"
+                  tabindex="0"
                   type="button"
                 >
                   ru
@@ -318,24 +309,7 @@ Object {
           <p
             class="description"
           >
-            I’m frontend developer. I like to learn new technologies and try new things in every possible way. At the moment I’m working in mobile games studio 
-            <a
-              aria-label="The company I work for is SAB Games"
-              class="inline-link"
-              href="https://www.linkedin.com/company/sabgames/mycompany/"
-            >
-              <svg
-                class="link-icon"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.73a1.76 1.76 0 0 1 0-3.53c.97 0 1.75.8 1.75 1.77S7.47 6.73 6.5 6.73zM20 19h-3v-5.6c0-3.37-4-3.12-4 0V19h-3V8h3v1.76a3.8 3.8 0 0 1 7 2.48V19z"
-                />
-              </svg>
-              SAB Games
-            </a>
+            I’m frontend developer. I like to learn new technologies and try new things in every possible way.
           </p>
           <a
             class="btn btn"

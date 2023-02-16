@@ -80,7 +80,7 @@
         "name": "David Aganov",
         "subtitle": "Hello, my name is",
         "slogan": "I build things for the web",
-        "description": "I’m frontend developer. I like to learn new technologies and try new things in every possible way. At the moment I’m working in mobile games studio",
+        "description": "I’m frontend developer. I like to learn new technologies and try new things in every possible way.",
         "contact": "Contact me"
       },
       "navbar": {
@@ -242,7 +242,7 @@
         "name": "Давид Аганов",
         "subtitle": "Привет, меня зовут",
         "slogan": "Я создаю что-то в интернете",
-        "description": "Я фронтенд-разработчик. Мне нравится изучать технологии и постоянно пробовать что-то новое. На данный момент я работаю в студии мобильных игр",
+        "description": "Я фронтенд-разработчик. Мне нравится изучать технологии и постоянно пробовать что-то новое.",
         "contact": "Связаться со мной"
       },
       "navbar": {

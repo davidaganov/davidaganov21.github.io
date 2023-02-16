@@ -22,6 +22,7 @@ Object {
           class="btn"
           id="lang-en"
           role="option"
+          tabindex="-1"
           type="button"
         >
           en
@@ -33,6 +34,7 @@ Object {
           class="btn btnActive"
           id="lang-ru"
           role="option"
+          tabindex="-1"
           type="button"
         >
           ru
@@ -58,6 +60,7 @@ Object {
         class="btn"
         id="lang-en"
         role="option"
+        tabindex="-1"
         type="button"
       >
         en
@@ -69,6 +72,7 @@ Object {
         class="btn btnActive"
         id="lang-ru"
         role="option"
+        tabindex="-1"
         type="button"
       >
         ru
