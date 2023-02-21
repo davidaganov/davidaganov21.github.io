@@ -11,7 +11,14 @@ export const Card = ({ card, className }: CardProps) => {
 
   const renderTags = () => {
     const items = topics.map((tag, i) => {
-      return <li key={i}>{tag}</li>
+      return (
+        <li
+          key={i}
+          lang="en"
+        >
+          {tag}
+        </li>
+      )
     })
 
     return <ul className={styles.tags}>{items}</ul>
@@ -28,6 +35,12 @@ export const Card = ({ card, className }: CardProps) => {
           aria-label={`${t("projects.go_demo")} ${clearName}`}
         >
           {t("projects.go_demo")}
+          <span
+            lang="en"
+            className="visually-hidden"
+          >
+            {clearName}
+          </span>
         </a>
       )
     }
@@ -38,17 +51,32 @@ export const Card = ({ card, className }: CardProps) => {
 
   return (
     <li className={cn(styles.project, className)}>
-      <h3 className={styles.title}>{clearName}</h3>
-      <p className={styles.description}>{description}</p>
+      <h3
+        className={styles.title}
+        lang="en"
+      >
+        {clearName}
+      </h3>
+      <p
+        className={styles.description}
+        lang="en"
+      >
+        {description}
+      </p>
       <div className={styles.bottom}>
         <a
           href={html_url}
           className={cn(styles.link, "inline-link")}
           target="_blank"
           rel="noreferrer"
-          aria-label={`${t("projects.go_repo")} ${clearName}`}
         >
           {t("projects.go_repo")}
+          <span
+            lang="en"
+            className="visually-hidden"
+          >
+            {clearName}
+          </span>
         </a>
         {demo}
         {tags}

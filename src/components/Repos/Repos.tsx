@@ -38,6 +38,7 @@ export const Repos = ({ repos }: ReposProps) => {
         })}
         aria-selected={tag === selectTag}
         aria-labelledby={`sortLabel tag-${tag}`}
+        lang="en"
         onClick={() => setSelectTag(tag === selectTag ? "" : tag)}
         role="option"
       >
