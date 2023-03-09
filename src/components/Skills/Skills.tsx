@@ -106,7 +106,6 @@ export const Skills = () => {
     >
       <div className="inner">
         <Title
-          number={2}
           link="#skills"
           title={t("skills.title")}
           direction="rtl"

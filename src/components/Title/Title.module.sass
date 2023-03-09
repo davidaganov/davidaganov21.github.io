@@ -30,20 +30,29 @@
   h2
     display: inline-block
 
-  span
+.ltr
+  padding-left: 6rem
+  &::before
+    left: 0
+  h2::before
+    margin-right: 2rem
+    content: "0" counter(section-counter) "."
     color: var(--color-accent)
     @media (min-width: 576px)
       font: normal 1.8rem/2.3rem var(--second-font)
     @media (max-width: 575px)
       font: normal 1.5rem/2rem var(--second-font)
 
-.ltr
-  padding-left: 6rem
-  &::before
-    left: 0
-
 .rtl
   padding-right: 6rem
   text-align: right
   &::before
     right: 0
+  h2::after
+    margin-left: 2rem
+    content: "0" counter(section-counter) "."
+    color: var(--color-accent)
+    @media (min-width: 576px)
+      font: normal 1.8rem/2.3rem var(--second-font)
+    @media (max-width: 575px)
+      font: normal 1.5rem/2rem var(--second-font)

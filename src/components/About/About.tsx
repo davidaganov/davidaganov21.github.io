@@ -29,7 +29,6 @@ export const About = () => {
     >
       <div className="inner">
         <Title
-          number={1}
           link="#about"
           title={t("about.title")}
         />

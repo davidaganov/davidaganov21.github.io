@@ -62,7 +62,6 @@ export const Projects = () => {
     >
       <div className="inner">
         <Title
-          number={3}
           link="#projects"
           title={t("projects.title")}
         />
