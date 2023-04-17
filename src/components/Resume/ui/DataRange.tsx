@@ -1,6 +1,6 @@
 import dateFnsFormat from "date-fns/format"
 import dateFnsParse from "date-fns/parse"
-import { IconText } from "../IconText/IconText"
+import { IconText } from "./IconText"
 
 export interface DateRangeProps {
   style: object

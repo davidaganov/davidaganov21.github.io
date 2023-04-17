@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet } from "@react-pdf/renderer"
 
-export interface TechGroupProps {
+export interface SkillGroupProps {
   title: string
   tags: string[]
 }
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const TechGroup = ({ title, tags }: TechGroupProps) => {
+export const SkillGroup = ({ title, tags }: SkillGroupProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>

@@ -1,5 +1,5 @@
 import { View } from "@react-pdf/renderer"
-import { Icon } from "../"
+import { Icon } from "."
 
 export interface ScoreProps {
   id: string

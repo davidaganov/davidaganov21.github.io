@@ -21,10 +21,7 @@ export const Header = ({ list, ...props }: HeaderProps) => {
           <div className={cn(styles.blob, styles.third)}></div>
 
           <p className={styles.subtitle}>{t("header.subtitle")}</p>
-          <h1 className={styles.title}>
-            <strong>{t("header.name")}</strong>
-            {t("header.slogan")}
-          </h1>
+          <h1 className={styles.title}>{t("header.name")}</h1>
           <p className={styles.description}>{t("header.description")}</p>
           <Button
             href="#footer"

@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid"
 import { useTranslation } from "react-i18next"
 import Collapsible from "react-collapsible"
 import styles from "./Skills.module.sass"
@@ -17,7 +16,7 @@ export interface SkillsProps {
 export interface SkillProps {
   id: string
   title: string
-  tag: string[]
+  tags: string[]
 }
 
 export const Skills = () => {
@@ -39,11 +38,7 @@ export const Skills = () => {
   const list = Object.values(t("skills.data", { returnObjects: true }))
 
   const buildSkills = () => {
-    const skills = list.map((item) => {
-      return { ...item, id: uuidv4() }
-    })
-
-    const categories = skills.map(({ id, title, list }) => {
+    const categories = list.map(({ id, title, list }) => {
       if (list.length > 0) {
         return (
           <Collapsible
@@ -71,21 +66,21 @@ export const Skills = () => {
   }
 
   const buildItems = (list: SkillProps[]) => {
-    return list.map(({ id, title, tag }) => {
+    return list.map(({ id, title, tags }) => {
       return (
         <li
           className={styles.content}
           key={id}
         >
           <p className={styles.title}>{title}</p>
-          <ul className={styles.listNested}>{buildTags(tag)}</ul>
+          <ul className={styles.listNested}>{buildTags(tags)}</ul>
         </li>
       )
     })
   }
 
-  const buildTags = (tag: string[]) => {
-    return tag.map((skill) => {
+  const buildTags = (tags: string[]) => {
+    return tags.map((skill) => {
       return (
         <li
           className={styles.listNestedItem}

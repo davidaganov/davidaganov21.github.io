@@ -1,8 +1,31 @@
 import { Page, View, Text, Document, StyleSheet } from "@react-pdf/renderer"
 import { useTranslation } from "react-i18next"
 
-import { Heading, Section, WorkPost, TechGroup, Language, SocialMedia } from "./ui"
+import { Heading, Section, WorkPost, SkillGroup, Language, SocialMedia } from "./ui"
 import "./ui/fonts"
+
+export interface HeaderProps {
+  name: string
+  job: string
+  phone: string
+  email: string
+  website: string
+  location: string
+}
+
+interface TitlesProps {
+  jobs: string
+  about: string
+  skills: string
+  languages: string
+  social: string
+}
+
+interface ListItem {
+  id: number
+  title: string
+  tags: string[]
+}
 
 const styles = StyleSheet.create({
   page: {
@@ -22,7 +45,10 @@ const styles = StyleSheet.create({
     width: "40%"
   },
   about: {
-    marginBottom: 12,
+    gap: 10,
+    marginBottom: 12
+  },
+  aboutText: {
     fontFamily: "ua-brand",
     fontSize: 10,
     color: "#0a192f"
@@ -34,72 +60,70 @@ export const Resume = () => {
 
   const name = t("resume.header.name")
   const job = t("resume.header.job")
-  const about = t("resume.about")
+  const aboutText = Object.values(t("resume.about", { returnObjects: true }))
 
   const jobsList = Object.values(t("resume.jobs", { returnObjects: true }))
-  const techList = Object.values(t("resume.tech", { returnObjects: true }))
+  const skillsList = Object.values(t("skills.data", { returnObjects: true }))
   const langList = Object.values(t("resume.languages", { returnObjects: true }))
 
-  const titles = {
-    jobs: t("resume.titles.jobs"),
-    about: t("resume.titles.about"),
-    technologies: t("resume.titles.technologies"),
-    languages: t("resume.titles.languages"),
-    social: t("resume.titles.social")
-  }
-  const header = {
-    name: t("resume.header.name"),
-    job: t("resume.header.job"),
-    phone: t("resume.header.phone"),
-    email: t("resume.header.email"),
-    website: t("resume.header.website"),
-    location: t("resume.header.location")
-  }
+  const titles: TitlesProps = t("resume.titles", { returnObjects: true })
+  const header: HeaderProps = t("resume.header", { returnObjects: true })
+
   const social = {
     telegram: "https://t.me/davidaganov",
     github: "https://github.com/davidaganov",
     linkedin: "https://www.linkedin.com/in/david-aganov"
   }
 
+  const buildAbout = () => {
+    return aboutText.map((item) => (
+      <Text
+        key={item}
+        style={styles.aboutText}
+      >
+        {item}
+      </Text>
+    ))
+  }
+
   const buildJobsList = () => {
     return jobsList.map((job) => (
       <WorkPost
         key={job.id}
-        title={job.title}
-        companyName={job.company}
-        companyUrl={job.companyUrl}
-        location={job.location}
-        startAt={job.startAt}
-        endAt={job.endAt}
-        current={job.current}
-        description={job.description}
+        data={job}
       />
     ))
   }
 
-  const buildTechnologies = () => {
-    return techList.map((techGroup) => (
-      <TechGroup
-        key={techGroup.id}
-        title={techGroup.title}
-        tags={techGroup.tags}
-      />
-    ))
+  const buildSkills = () => {
+    return skillsList.map((skillGroup) => {
+      skillGroup.list = skillGroup.list.reduce(
+        (acc: string[], { tags }: ListItem) => acc.concat(tags),
+        []
+      )
+
+      return (
+        <SkillGroup
+          key={skillGroup.id}
+          title={skillGroup.title}
+          tags={skillGroup.list}
+        />
+      )
+    })
   }
 
   const buildLanguages = () => {
     return langList.map((lang) => (
       <Language
         key={lang.id}
-        name={lang.name}
-        scoreLabel={lang.scoreLabel}
-        score={lang.score}
+        data={lang}
       />
     ))
   }
 
+  const about = buildAbout()
   const jobs = buildJobsList()
-  const technologies = buildTechnologies()
+  const skills = buildSkills()
   const languages = buildLanguages()
 
   return (
@@ -112,20 +136,13 @@ export const Resume = () => {
         size="A4"
         style={styles.page}
       >
-        <Heading
-          name={header.name}
-          job={header.job}
-          phone={header.phone}
-          email={header.email}
-          website={header.website}
-          location={header.location}
-        />
+        <Heading data={header} />
 
         <View style={styles.row}>
           <View style={styles.leftColumn}>
             <Section title={titles.jobs}>{jobs}</Section>
             <Section title={titles.about}>
-              <Text style={styles.about}>{about}</Text>
+              <View style={styles.about}>{about}</View>
             </Section>
             <Section title={titles.social}>
               <View style={{ flexDirection: "row" }}>
@@ -148,7 +165,7 @@ export const Resume = () => {
             </Section>
           </View>
           <View style={styles.rightColumn}>
-            <Section title={titles.technologies}>{technologies}</Section>
+            <Section title={titles.skills}>{skills}</Section>
             <Section title={titles.languages}>{languages}</Section>
           </View>
         </View>

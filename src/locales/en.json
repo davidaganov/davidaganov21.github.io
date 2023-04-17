@@ -1,0 +1,150 @@
+{
+  "translation": {
+    "resume": {
+      "titles": {
+        "jobs": "Work Experience",
+        "about": "About me",
+        "skills": "Skills",
+        "languages": "Languages",
+        "social": "Social"
+      },
+      "header": {
+        "name": "David Aganov",
+        "job": "Frontend Developer",
+        "phone": "+998331576723",
+        "email": "davidaganov21@gmail.com",
+        "website": "https://aganov.dev",
+        "location": "Uzbekistan, Tashkent"
+      },
+      "jobs": [
+        {
+          "id": 1,
+          "title": "Frontend Developer",
+          "company": "SAB Games",
+          "companyUrl": "https://www.linkedin.com/company/sabgames/mycompany/",
+          "location": "Tashkent",
+          "startAt": "2021-05-17",
+          "endAt": "2023-04-01",
+          "list": [
+            "Development of the frontend part of a large online store using the Nuxt framework",
+            "Support of company projects (Nuxt, Vue)",
+            "Creating layouts on Wordpress",
+            "Creating multiple landing pages (over 20+)"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Frontend Developer",
+          "company": "Freelance",
+          "location": "Remote",
+          "startAt": "2019-09-01",
+          "endAt": "2021-05-17",
+          "description": "After college, I took up the study of web development, created websites for my friends, was fond of 3D modeling and from time to time I managed to take small orders."
+        }
+      ],
+      "about": [
+        "I am a frontend developer with two years of commercial experience. My attention is always focused on details such as accessibility, responsiveness, and product optimization. I have extensive knowledge in HTML, CSS, and TS/JS, as well as experience with various frameworks and libraries such as Nuxt, Vue.js, and React.",
+        "In addition to my core skills, I have significant experience working with Figma and Photoshop. I also have commercial experience in developing layouts for Wordpress."
+      ],
+      "languages": [
+        {
+          "id": 1,
+          "name": "Russian",
+          "scoreLabel": "Native",
+          "score": 5
+        },
+        {
+          "id": 2,
+          "name": "English",
+          "scoreLabel": "Basic",
+          "score": 2
+        }
+      ]
+    },
+    "header": {
+      "name": "David Aganov",
+      "subtitle": "Hello, my name is",
+      "description": "I’m frontend developer. I like to learn new technologies and try new things in every possible way.",
+      "contact": "Contact me"
+    },
+    "navbar": {
+      "selectLang": {
+        "title": "Select language",
+        "ru": "Russian",
+        "en": "English"
+      },
+      "links": [
+        { "link": "#about", "title": "About" },
+        { "link": "#skills", "title": "Skills" },
+        { "link": "#projects", "title": "Projects" }
+      ]
+    },
+    "about": {
+      "title": "About me",
+      "description": [
+        "I have been interested in web development since 2016 when I started learning it through free online courses and YouTube videos. Since then, I have been constantly learning and improving my skills.",
+        "Finally, I was lucky enough to turn my hobby into a career and become a frontend developer at a company that develops mobile games and other projects. Here, I work on developing products using the <strong>Nuxt.js</strong framework and creating landing pages.",
+        "During the year and a half I have spent at this company, I have gained a lot of new knowledge and skills. Also, I underwent training in courses on <strong>React</strong> and <strong>React Native</strong> development, which helped me expand my toolset.",
+        "I believe that continuous learning is a key factor in the development of a web developer, and I continue to work diligently to expand my knowledge and skills in this field."
+      ],
+      "download": "Download CV",
+      "loading": "Loading..."
+    },
+    "skills": {
+      "title": "My Skills",
+      "data": [
+        {
+          "id": 1,
+          "title": "HTML",
+          "list": [
+            { "id": 1, "title": "Template Engine", "tags": ["PUG"] },
+            { "id": 2, "title": "Other", "tags": ["HTML5"] }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "CSS",
+          "list": [
+            { "id": 1, "title": "Preprocessors", "tags": ["SASS/SCSS", "Less"] },
+            { "id": 2, "title": "Frameworks", "tags": ["Bootstrap", "Tailwind"] },
+            { "id": 3, "title": "Other", "tags": ["CSS3"] }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "JavaScript",
+          "list": [
+            { "id": 1, "title": "Frameworks", "tags": ["Nuxt.js", "Vue.js", "Next.js"] },
+            { "id": 2, "title": "Library", "tags": ["React", "React Native", "JQuery"] },
+            { "id": 3, "title": "Other", "tags": ["JavaScript", "TypeScript"] }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Other",
+          "list": [
+            { "id": 1, "title": "CMS", "tags": ["Wordpress"] },
+            { "id": 2, "title": "Design", "tags": ["Figma", "Adobe Photoshop"] },
+            { "id": 3, "title": "3D", "tags": ["Blender", "Maya"] },
+            { "id": 4, "title": "OS", "tags": ["Windows", "Mac OS"] }
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "sort": "Sort projects by tag",
+      "go_repo": "Go to repository",
+      "go_demo": "Live demo",
+      "go_github": "Open github",
+      "errorTitle": "Projects not found",
+      "errorSubtitle": "Perhaps you should check for github?"
+    },
+    "contacts": {
+      "description": "Developed & Designed",
+      "author": "by David Aganov",
+      "github": "Go to Github profile",
+      "linkedin": "Go to Linkedin profile"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet } from "@react-pdf/renderer"
-import { Icon, IconName } from "../"
+import { Icon, IconName } from "."
 
 export interface IconTextProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

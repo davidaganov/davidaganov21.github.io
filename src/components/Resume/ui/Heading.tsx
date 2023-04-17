@@ -1,14 +1,10 @@
 import { StyleSheet, Link, View, Text } from "@react-pdf/renderer"
 
-import { IconText } from "../IconText/IconText"
+import { IconText } from "./IconText"
+import { HeaderProps } from "../Resume"
 
 interface HeadingProps {
-  name: string
-  job: string
-  phone: string
-  email: string
-  website: string
-  location: string
+  data: HeaderProps
 }
 
 const styles = StyleSheet.create({
@@ -42,7 +38,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const Heading = ({ name, job, phone, email, website, location }: HeadingProps) => {
+export const Heading = ({ data: { name, job, phone, email, website, location } }: HeadingProps) => {
   return (
     <View style={styles.container}>
       <View style={{ margin: 1 }}>

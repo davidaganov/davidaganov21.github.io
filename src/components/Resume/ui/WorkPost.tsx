@@ -1,20 +1,23 @@
 import { Text, View, StyleSheet, Link } from "@react-pdf/renderer"
 
-import { IconText, DateRange } from "../"
+import { IconText, DateRange } from "."
 
 export interface TitleProps {
   children: string
 }
 
 export interface WorkPostProps {
-  companyName: string
-  companyUrl?: string
-  startAt: string
-  endAt?: string
-  current?: string
-  title: string
-  location: string
-  description?: string
+  data: {
+    companyName: string
+    companyUrl?: string
+    startAt: string
+    endAt?: string
+    current?: string
+    title: string
+    location: string
+    description?: string
+    list?: string[]
+  }
 }
 
 export interface WorkPlaceProps {
@@ -41,15 +44,31 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#995aa4"
   },
-  description: {
+  about: {
     marginTop: 8,
-    marginBottom: 15,
+    marginBottom: 15
+  },
+  description: {
     fontSize: 10,
     fontFamily: "ua-brand",
     color: "#0a192f"
   },
-  content: {
-    marginTop: 10
+  list: {
+    flexDirection: "row"
+  },
+  mark: {
+    marginTop: 4,
+    marginRight: 6,
+    fontSize: 10,
+    fontFamily: "ua-brand",
+    color: "#0a192f"
+  },
+  item: {
+    maxWidth: "90%",
+    marginTop: 4,
+    fontSize: 10,
+    fontFamily: "ua-brand",
+    color: "#0a192f"
   }
 })
 
@@ -70,15 +89,28 @@ const WorkPlace = ({ children, url }: WorkPlaceProps) => {
 }
 
 export const WorkPost = ({
-  title,
-  companyName,
-  companyUrl,
-  location,
-  startAt,
-  endAt,
-  current,
-  description
+  data: { title, companyName, companyUrl, location, startAt, endAt, current, description, list }
 }: WorkPostProps) => {
+  const buildAbout = () => {
+    if (description && description.length > 0) {
+      return <Text style={styles.description}>{description}</Text>
+    } else if (list && list.length > 0) {
+      return list.map((item, index) => (
+        <View
+          key={index}
+          style={styles.list}
+        >
+          <Text style={styles.mark}>•</Text>
+          <Text style={styles.item}>{item}</Text>
+        </View>
+      ))
+    } else {
+      return null
+    }
+  }
+
+  const about = buildAbout()
+
   return (
     <View>
       <Title>{title}</Title>
@@ -95,7 +127,7 @@ export const WorkPost = ({
           iconName="location"
         />
       </View>
-      {description && <Text style={styles.description}>{description}</Text>}
+      <View style={styles.about}>{about}</View>
     </View>
   )
 }
