@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ce6b355.css",
-    "main.js": "/static/js/main.94f85168.js",
+    "main.css": "/static/css/main.cbc558bb.css",
+    "main.js": "/static/js/main.df3bf9a4.js",
     "static/media/Barcade-Brawl.ttf": "/static/media/Barcade-Brawl.73895ecd83170778cce0.ttf",
     "static/media/avatar.png": "/static/media/avatar.2db46975cfbfe9115f8a.png",
     "static/media/ua-brand-Bold.ttf": "/static/media/ua-brand-Bold.a02d6efaeade2323b233.ttf",
     "static/media/ua-brand.ttf": "/static/media/ua-brand.bb72e528dddddb8680cb.ttf",
     "index.html": "/index.html",
-    "static/media/github.svg": "/static/media/github.407cb21c4040e9823345c5e860de4e34.svg",
-    "static/media/linkedin.svg": "/static/media/linkedin.af41967d17036467c6926220c912f4a7.svg",
-    "static/media/other.svg": "/static/media/other.c6bc131167b5f8bc1847f2fc3a95026c.svg",
-    "static/media/js.svg": "/static/media/js.8a2e45fb7182224f55682d856ade1e65.svg",
-    "static/media/css.svg": "/static/media/css.787bcf094079c3d32f87c102b06f9011.svg",
-    "static/media/html.svg": "/static/media/html.26e5b14bc4873b272c70f51c2a676d74.svg",
-    "static/media/burger.svg": "/static/media/burger.21797a96af3ae80de2c46d085c1a3203.svg",
-    "static/media/close.svg": "/static/media/close.f75a22568d3eb06071fad4f1b60b8ba0.svg",
-    "main.6ce6b355.css.map": "/static/css/main.6ce6b355.css.map",
-    "main.94f85168.js.map": "/static/js/main.94f85168.js.map"
+    "static/media/github.svg": "/static/media/github.e6dbcde12b4ae2b2c0e0402af20e004e.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.59c0feb154c39b80d807b0e16938c505.svg",
+    "static/media/other.svg": "/static/media/other.daf75b9e0d91fc7aab85c571bc658dae.svg",
+    "static/media/js.svg": "/static/media/js.338491f4a210af373c79e6834340563b.svg",
+    "static/media/css.svg": "/static/media/css.220df071179babcdd6b02fc25b9397b1.svg",
+    "static/media/html.svg": "/static/media/html.3ca3aab573aa76dc4b167ae5aa6b766d.svg",
+    "static/media/burger.svg": "/static/media/burger.3c971dee90978758f03f087dd5e72cd9.svg",
+    "static/media/close.svg": "/static/media/close.2ee5d1acb345aaa59152c58ca807f203.svg",
+    "main.cbc558bb.css.map": "/static/css/main.cbc558bb.css.map",
+    "main.df3bf9a4.js.map": "/static/js/main.df3bf9a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ce6b355.css",
-    "static/js/main.94f85168.js"
+    "static/css/main.cbc558bb.css",
+    "static/js/main.df3bf9a4.js"
   ]
 }
