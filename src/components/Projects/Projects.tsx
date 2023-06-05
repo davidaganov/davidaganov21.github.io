@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import styles from "./Projects.module.sass"
+import cn from "classnames"
 
 import useGithubService from "../../services/githubService"
-import { RepoProps } from "../../interfaces"
-import { Title, Button, Repos } from ".."
+import { ReposProps } from "../../interfaces"
+import { Title, ProjectsList, Button } from ".."
 
 export const Projects = () => {
-  const [reposList, setReposList] = useState<RepoProps[]>([])
+  const [projectsList, setProjectsList] = useState<ReposProps[]>([])
   const [reposLoading, setReposLoading] = useState(false)
 
   const { loading, error, getRepos } = useGithubService()
@@ -19,17 +20,17 @@ export const Projects = () => {
 
   const onRequest = (initial: boolean) => {
     initial ? setReposLoading(false) : setReposLoading(true)
-    getRepos().then(onReposLoaded)
+    getRepos({ topics: ["site"] }).then(onReposLoaded)
   }
 
-  const onReposLoaded = (newRepos: RepoProps[]) => {
-    setReposList(newRepos)
+  const onReposLoaded = (newRepos: ReposProps[]) => {
+    setProjectsList(newRepos)
     setReposLoading(false)
   }
 
   const CardSkeleton = () => {
     const cards = []
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 2; i++) {
       cards.push(
         <li
           key={i}
@@ -38,41 +39,44 @@ export const Projects = () => {
       )
     }
 
-    return <ul className={styles.projects}>{cards}</ul>
+    return <ul className={styles.list}>{cards}</ul>
   }
 
-  const errorMessage = error ? <h3 className={styles.error}>Repositories not found</h3> : null
+  const errorMessage = error ? <h3 className={styles.error}>Projects not found</h3> : null
   const spinner = loading && !reposLoading ? <CardSkeleton /> : null
-
-  const showMore = !error ? (
-    <Button
-      href="https://github.com/davidaganov?tab=repositories"
-      target="_blank"
-      rel="noreferrer"
-      className={styles.btn}
-    >
-      {t("projects.go_github")}
-    </Button>
-  ) : null
 
   return (
     <section
-      className={styles.work}
+      className={styles.projects}
       id="projects"
     >
       <div className="inner">
-        <Title
-          link="#projects"
-          title={t("projects.title")}
-        />
+        <div className={styles.top}>
+          <Title
+            link="#projects"
+            title={t("projects.title")}
+          />
+          <div className={styles.control}>
+            <Button
+              type="button"
+              className={cn("projects-btn-prev", styles.arrow, styles.prev)}
+            >
+              &lt;
+            </Button>
+            <Button
+              type="button"
+              className={cn("projects-btn-next", styles.arrow, styles.next)}
+            >
+              &gt;
+            </Button>
+          </div>
+        </div>
 
         <div className={styles.body}>
           {errorMessage}
           {spinner}
 
-          <Repos repos={reposList} />
-
-          {showMore}
+          <ProjectsList projectsList={projectsList} />
         </div>
       </div>
     </section>

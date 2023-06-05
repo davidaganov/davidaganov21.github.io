@@ -1,5 +1,22 @@
-.container
+.work
+  @media (min-width: 1000px)
+    margin-top: 8rem
+    padding-top: 3rem
+  @media (max-width: 999px)
+    margin-top: 5rem
+    padding-top: 1.5rem
+
+.body
+  display: flex
+  flex-direction: column
+  align-items: center
   width: 100%
+  margin-top: 4rem
+
+.title
+  margin-top: 2rem
+  font: bold 2.4rem var(--main-font)
+  color: var(--color-white)
 
 .projects
   display: grid
@@ -9,47 +26,32 @@
   @media (min-width: 769px)
     grid-template-columns: repeat(2, 1fr)
 
-.tags
-  display: flex
-  flex-wrap: wrap
-  gap: 1rem 1.5rem
-  width: 100%
-  margin-bottom: 2.5rem
+.error
+  margin: 4rem 0 2rem
+  font: normal 3rem var(--main-font)
+  color: var(--color-white)
 
-.tag
-  display: block
-  padding: .7rem 1rem
-  text-transform: capitalize
-  border-style: solid
-  border-width: .2rem
-  color: var(--color-white-500)
-  font: normal 1rem var(--second-font)
-  transition: all .2s
-  cursor: pointer
-  &:hover
-    border-color: var(--color-white)
-    color: var(--color-white)
-  &:focus-visible
-    color: var(--color-accent)
-  &.tagActive
-    border-color: var(--color-accent)
-    color: var(--color-accent)
-    @media (min-width: 576px)
-      &:hover
-        border-color: tomato
-        color: tomato
-      &:focus-visible
-        color: tomato
-        border-color: tomato
+.btn
+  margin-top: 4rem
 
-.empty
-  margin-top: 3rem
-  text-align: center
-  font: normal 2rem var(--second-font)
-  color: var(--color-white-700)
-
-.emptySubtitle
-  margin-top: 2rem
-  text-align: center
-  font: normal 2rem var(--main-font)
-  color: var(--color-white-700)
+.skeleton
+  position: relative
+  height: 23rem
+  margin: 1rem
+  border: .1rem solid var(--color-accent)
+  box-shadow: .1rem .1rem 0 .1rem var(--color-accent)
+  background-color: #0c1e38
+  overflow: hidden
+  &::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(90deg, #0c1e38 0, var(--color-accent-300) 14rem, #0c1e38 18rem)
+    background-size: cover
+    animation: shine-lines 1.5s infinite linear
+    @keyframes shine-lines
+      0%
+        left: -50%
+      100%
+        left: 100%

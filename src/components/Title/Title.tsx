@@ -1,11 +1,16 @@
+import { Link } from "react-router-dom"
 import { TitleProps } from "./Title.props"
 import styles from "./Title.module.sass"
 import cn from "classnames"
 
 export const Title = ({ title, className, link, direction = "ltr", ...props }: TitleProps) => {
-  // const renderNumber = () => {
-  //   return number ? <span aria-hidden="true">0{number}.</span> : null
-  // }
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href)
+    } catch (err) {
+      console.error("Failed to copy: ", err)
+    }
+  }
 
   return (
     <div
@@ -14,15 +19,24 @@ export const Title = ({ title, className, link, direction = "ltr", ...props }: T
         [styles.ltr]: direction === "ltr"
       })}
       {...props}
+      onClick={() => copyLink()}
     >
-      {direction === "ltr" && <h2>{title}</h2>}
-      <a
-        href={link}
-        aria-label={title}
-      >
-        #
-      </a>
-      {direction === "rtl" && <h2>{title}</h2>}
+      {direction === "ltr" && (
+        <Link
+          className={styles.link}
+          to={link}
+        >
+          <h2>{title}</h2>
+        </Link>
+      )}
+      {direction === "rtl" && (
+        <Link
+          className={styles.link}
+          to={link}
+        >
+          <h2>{title}</h2>
+        </Link>
+      )}
     </div>
   )
 }

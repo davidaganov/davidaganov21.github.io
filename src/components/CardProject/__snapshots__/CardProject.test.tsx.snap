@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card component Card snapshot 1`] = `
+exports[`CardRepo component CardRepo snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

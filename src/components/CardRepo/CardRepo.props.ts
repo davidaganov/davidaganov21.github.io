@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react"
-import { RepoProps } from "../../interfaces"
+import { ReposProps } from "../../interfaces"
 
-export interface ReposProps
+export interface CardRepoProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLLIElement>, HTMLLIElement> {
-  repos?: RepoProps[]
+  card: ReposProps
 }

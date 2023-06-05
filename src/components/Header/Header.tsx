@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next"
 import { HeaderProps } from "./Header.props"
-import { Navbar, Button } from "../"
+import { Button } from "../"
 import styles from "./Header.module.sass"
 import cn from "classnames"
 
-export const Header = ({ list, ...props }: HeaderProps) => {
+export const Header = ({ ...props }: HeaderProps) => {
   const { t } = useTranslation()
 
   return (
@@ -13,8 +13,6 @@ export const Header = ({ list, ...props }: HeaderProps) => {
       {...props}
     >
       <div className={cn(styles.inner, "inner")}>
-        <Navbar list={list} />
-
         <div className={styles.content}>
           <div className={cn(styles.blob, styles.first)}></div>
           <div className={cn(styles.blob, styles.second)}></div>

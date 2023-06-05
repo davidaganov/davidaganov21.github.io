@@ -23,14 +23,16 @@
     width: 85%
     height: 100%
     padding: 1.5rem 2rem
+    right: 0
     background-color: var(--color-black)
     border-left: 1rem solid var(--color-accent)
     transition: all .4s
     z-index: 2
     &:not(.opened)
-      right: -100%
+      visibility: hidden
+      transform: translateX(100%)
     &.opened
-      right: 0
+      transform: translateX(0)
 
 .burger, .close
   @media (min-width: 769px)

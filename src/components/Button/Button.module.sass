@@ -5,13 +5,17 @@
   transition: all 0.3s
   cursor: pointer
 
-  &:hover
-    transform: translateY(-.15rem)
-    box-shadow: .2rem .2rem 0 .01rem var(--color-accent)
+  &:not(&:disabled)
+    &:hover
+      transform: translateY(-.15rem)
+      box-shadow: .2rem .2rem 0 .01rem var(--color-accent)
 
-  &:focus-visible
-    background-color: var(--color-accent)
-    color: var(--color-white)
+    &:focus-visible
+      background-color: var(--color-accent)
+      color: var(--color-white)
+  &:disabled
+    cursor: not-allowed
+    opacity: .5
 
   @media (min-width: 576px)
     padding: 1.5rem 6.5rem

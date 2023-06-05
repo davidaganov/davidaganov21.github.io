@@ -72,12 +72,7 @@
         "title": "Select language",
         "ru": "Russian",
         "en": "English"
-      },
-      "links": [
-        { "link": "#about", "title": "About" },
-        { "link": "#skills", "title": "Skills" },
-        { "link": "#projects", "title": "Projects" }
-      ]
+      }
     },
     "about": {
       "title": "About me",
@@ -133,11 +128,36 @@
     },
     "projects": {
       "title": "Projects",
-      "sort": "Sort projects by tag",
+      "go_repo": "Go to repository",
+      "go_more": "Read more",
+      "go_site": "Site",
+      "go_github": "Open github",
+      "errorTitle": "Project not found",
+      "errorSubtitle": "Perhaps you should check for github?",
+      "comforty": {
+        "short_description": "Online store for the sale of furniture",
+        "description": [
+          "In this project, I explored the use of the Composition API and TypeScript in Vue.",
+          "One of the interesting tasks was to integrate Firebase as an API and create pagination and product filtering functionality using queries to Firebase."
+        ],
+        "listTitle": "Technologies used"
+      },
+      "landing-interio": {
+        "short_description": "Landing interior design companie",
+        "description": [
+          "Landing created using React and TypeScript. On this project I practiced writing unit tests in Jest.",
+          "I decided to write the carousel component myself and came up with animations for menus and buttons."
+        ],
+        "listTitle": "Technologies used"
+      }
+    },
+    "repositories": {
+      "title": "Repositories",
+      "sort": "Sort repositories by tag",
       "go_repo": "Go to repository",
       "go_demo": "Live demo",
       "go_github": "Open github",
-      "errorTitle": "Projects not found",
+      "errorTitle": "Repositories not found",
       "errorSubtitle": "Perhaps you should check for github?"
     },
     "contacts": {

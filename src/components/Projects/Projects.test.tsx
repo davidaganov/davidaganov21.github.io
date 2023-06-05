@@ -9,8 +9,8 @@ describe("Projects component", () => {
   })
 
   it("Projects snapshot", () => {
-    const projects = render(<Projects />)
+    const sites = render(<Projects />)
 
-    expect(projects).toMatchSnapshot()
+    expect(sites).toMatchSnapshot()
   })
 })

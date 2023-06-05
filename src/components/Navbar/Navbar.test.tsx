@@ -3,8 +3,8 @@ import userEvent from "@testing-library/user-event"
 import { Navbar } from "./Navbar"
 
 const data = [
-  { link: "#test", title: "Test" },
-  { link: "#link", title: "Link" }
+  { link: "#test", title: { en: "Test", ru: "Тест" } },
+  { link: "#link", title: { en: "Link", ru: "Ссылка" } }
 ]
 
 describe("Navbar component", () => {

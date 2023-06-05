@@ -1,11 +1,11 @@
-import { useEffect } from "react"
+import { useEffect, KeyboardEvent } from "react"
 import { useTranslation } from "react-i18next"
 import i18next from "i18next"
 import styles from "./LanguageSwitcher.module.sass"
 import cn from "classnames"
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const LanguageSwitcher = ({ focus, close }: any) => {
+export const LanguageSwitcher = ({ close }: any) => {
   const { i18n, t } = useTranslation()
   const languagesList = [
     { lang: "en", aria: t("navbar.selectLang.en") },
@@ -28,6 +28,10 @@ export const LanguageSwitcher = ({ focus, close }: any) => {
     i18n.changeLanguage(lang)
   }
 
+  const closeNavbar = (e: KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "Tab" && !e.shiftKey) close()
+  }
+
   const renderLanguages = () => {
     return languagesList.map(({ lang, aria }, i) => {
       return (
@@ -42,9 +46,8 @@ export const LanguageSwitcher = ({ focus, close }: any) => {
           aria-selected={i18n.language === lang}
           aria-labelledby={`selectLang lang-${lang}`}
           onClick={() => changeLanguage(lang)}
-          tabIndex={focus ? 0 : -1}
           role="option"
-          onBlur={() => (languagesList.length === i + 1 ? close() : null)}
+          onKeyDown={(e) => (languagesList.length === i + 1 ? closeNavbar(e) : null)}
         >
           {lang}
         </button>

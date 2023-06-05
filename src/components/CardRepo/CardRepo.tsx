@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next"
-import { CardProps } from "./Card.props"
-import styles from "./Card.module.sass"
+import { CardRepoProps } from "./CardRepo.props"
+import styles from "./CardRepo.module.sass"
 import cn from "classnames"
 
-export const Card = ({ card, className }: CardProps) => {
+export const CardRepo = ({ card, className }: CardRepoProps) => {
   const { name, description, html_url, topics, homepage } = card
   const clearName = name.replace(/[.\-/\\\s]/g, " ")
 
@@ -32,9 +32,9 @@ export const Card = ({ card, className }: CardProps) => {
           className={cn(styles.link, styles["link--live"], "inline-link")}
           target="_blank"
           rel="noreferrer"
-          aria-label={`${t("projects.go_demo")} ${clearName}`}
+          aria-label={`${t("repositories.go_demo")} ${clearName}`}
         >
-          {t("projects.go_demo")}
+          {t("repositories.go_demo")}
           <span
             lang="en"
             className="visually-hidden"
@@ -50,7 +50,7 @@ export const Card = ({ card, className }: CardProps) => {
   const demo = renderDemo()
 
   return (
-    <li className={cn(styles.project, className)}>
+    <li className={cn(styles.card, className)}>
       <h3
         className={styles.title}
         lang="en"
@@ -70,7 +70,7 @@ export const Card = ({ card, className }: CardProps) => {
           target="_blank"
           rel="noreferrer"
         >
-          {t("projects.go_repo")}
+          {t("repositories.go_repo")}
           <span
             lang="en"
             className="visually-hidden"

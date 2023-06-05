@@ -1,103 +1,81 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { ReposProps } from "./Repos.props"
 import styles from "./Repos.module.sass"
-import cn from "classnames"
 
-import { Card } from ".."
-import { RepoProps } from "../../interfaces"
+import useGithubService from "../../services/githubService"
+import { ReposProps } from "../../interfaces"
+import { Title, Button, ReposList } from ".."
 
-export const Repos = ({ repos }: ReposProps) => {
-  const [selectTag, setSelectTag] = useState<string>("")
-  const [sortRepos, setSortRepos] = useState<RepoProps[]>([])
+export const Repos = () => {
+  const [reposList, setReposList] = useState<ReposProps[]>([])
+  const [reposLoading, setReposLoading] = useState(false)
 
+  const { loading, error, getRepos } = useGithubService()
   const { t } = useTranslation()
 
   useEffect(() => {
-    if (repos) {
-      setSortRepos(repos.filter((item) => item.topics.some((i) => [selectTag].includes(i))))
-    }
-  }, [selectTag])
+    onRequest(true)
+  }, [])
 
-  const renderTags = () => {
-    let topics: string[] = []
+  const onRequest = (initial: boolean) => {
+    initial ? setReposLoading(false) : setReposLoading(true)
+    getRepos({ ignoreTopics: ["site"] }).then(onReposLoaded)
+  }
 
-    if (repos) {
-      topics = [
-        ...new Set(repos.reduce((topics, repo) => [...topics, ...repo.topics], [] as string[]))
-      ]
-    }
+  const onReposLoaded = (newRepos: ReposProps[]) => {
+    setReposList(newRepos)
+    setReposLoading(false)
+  }
 
-    const tags = topics.map((tag) => (
-      <button
-        key={tag}
-        id={`tag-${tag}`}
-        type="button"
-        className={cn(styles.tag, {
-          [styles.tagActive]: tag === selectTag
-        })}
-        aria-selected={tag === selectTag}
-        aria-labelledby={`sortLabel tag-${tag}`}
-        lang="en"
-        onClick={() => setSelectTag(tag === selectTag ? "" : tag)}
-        role="option"
-      >
-        {tag}
-      </button>
-    ))
-
-    if (tags.length !== 0) {
-      return (
-        <div
-          className={styles.tags}
-          role="listbox"
-        >
-          <span
-            className="visually-hidden"
-            id="sortLabel"
-          >
-            {t("projects.sort")}
-          </span>
-          {tags}
-        </div>
+  const CardSkeleton = () => {
+    const cards = []
+    for (let i = 0; i < 6; i++) {
+      cards.push(
+        <li
+          key={i}
+          className={styles.skeleton}
+        />
       )
     }
+
+    return <ul className={styles.repositories}>{cards}</ul>
   }
 
-  const renderItems = () => {
-    const arr = sortRepos.length === 0 && repos ? repos : sortRepos
-    if (repos) {
-      const items = arr.slice(0, 6).map((item) => {
-        return (
-          <Card
-            key={item.id}
-            card={item}
-          />
-        )
-      })
+  const errorMessage = error ? <h3 className={styles.error}>Repos not found</h3> : null
+  const spinner = loading && !reposLoading ? <CardSkeleton /> : null
 
-      return <ul className={styles.projects}>{items}</ul>
-    }
-  }
-
-  const renderError = () => {
-    return (
-      <>
-        <p className={styles.empty}>{t("projects.errorTitle")}</p>
-        <p className={styles.emptySubtitle}>{t("projects.errorSubtitle")}</p>
-      </>
-    )
-  }
-
-  const tags = renderTags()
-  const projects = renderItems()
-  const error = projects === undefined ? renderError() : null
+  const showMore = !error ? (
+    <Button
+      href="https://github.com/davidaganov?tab=repositories"
+      target="_blank"
+      rel="noreferrer"
+      className={styles.btn}
+    >
+      {t("repositories.go_github")}
+    </Button>
+  ) : null
 
   return (
-    <div className={styles.container}>
-      {tags}
-      {projects}
-      {error}
-    </div>
+    <section
+      className={styles.work}
+      id="repositories"
+    >
+      <div className="inner">
+        <Title
+          link="#repositories"
+          title={t("repositories.title")}
+          direction="rtl"
+        />
+
+        <div className={styles.body}>
+          {errorMessage}
+          {spinner}
+
+          <ReposList repos={reposList} />
+
+          {showMore}
+        </div>
+      </div>
+    </section>
   )
 }

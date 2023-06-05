@@ -1,4 +1,6 @@
 import { useEffect, useState, useRef } from "react"
+import { useTranslation } from "react-i18next"
+import { Link } from "react-router-dom"
 import { NavbarProps } from "./Navbar.props"
 import styles from "./Navbar.module.sass"
 import cn from "classnames"
@@ -11,27 +13,13 @@ import { ReactComponent as CloseIcon } from "./icons/close.svg"
 
 export const Navbar = ({ list, ...props }: NavbarProps) => {
   const [opened, setOpened] = useState<boolean>(false)
-  const [desktop, setDesktop] = useState<boolean>(false)
   const closeRef = useRef<HTMLButtonElement | null>(null)
+
+  const { i18n } = useTranslation()
 
   useEffect(() => {
     opened ? document.body.classList.add("no-scroll") : document.body.classList.remove("no-scroll")
   }, [opened])
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 1020) {
-        setDesktop(true)
-      } else {
-        setDesktop(false)
-      }
-    }
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
 
   const openMenu = () => {
     closeRef.current && closeRef.current.focus()
@@ -44,14 +32,13 @@ export const Navbar = ({ list, ...props }: NavbarProps) => {
 
   const buildLink = ({ title, link }: navLink) => {
     return (
-      <a
-        href={link}
+      <Link
+        to={link}
         className={cn(styles.link, "inline-link inline-link--white")}
-        tabIndex={opened || desktop ? 0 : -1}
         onClick={() => setOpened(false)}
       >
-        {title}
-      </a>
+        {i18n.language === "en" ? title.en : title.ru}
+      </Link>
     )
   }
 
@@ -76,7 +63,6 @@ export const Navbar = ({ list, ...props }: NavbarProps) => {
           className={styles.burger}
           type="button"
           onClick={() => openMenu()}
-          tabIndex={opened ? -1 : 0}
           aria-label="Open navbar"
           aria-expanded={opened}
         >
@@ -93,17 +79,14 @@ export const Navbar = ({ list, ...props }: NavbarProps) => {
             className={styles.close}
             type="button"
             aria-label="Close navbar"
-            onClick={() => setOpened(false)}
-            tabIndex={opened ? 0 : -1}
             ref={closeRef}
+            onClick={() => setOpened(false)}
+            onKeyDown={(e) => (e.key === "Tab" && e.shiftKey ? setOpened(false) : null)}
           >
             <CloseIcon />
           </button>
           <ul className={styles.menu}>{items}</ul>
-          <LanguageSwitcher
-            focus={opened || desktop ? true : false}
-            close={closeMenu}
-          />
+          <LanguageSwitcher close={closeMenu} />
         </nav>
         <button
           className={cn(styles.backdrop, {

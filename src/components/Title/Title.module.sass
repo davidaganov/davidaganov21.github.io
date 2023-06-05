@@ -1,6 +1,43 @@
 .title
   position: relative
+  display: flex
+  align-items: center
   color: var(--color-white)
+  cursor: pointer
+  &:hover a
+    opacity: 1
+
+.link
+  display: block
+  margin: 0 1rem
+  font: inherit
+  font-weight: normal
+  text-transform: uppercase
+  color: var(--color-white)
+  @media (min-width: 576px)
+    font: bold 2.5rem/3rem var(--second-font)
+  @media (max-width: 575px)
+    font: bold 1.7rem/2.2rem var(--second-font)
+  &:focus-visible
+    color: var(--color-accent)
+    opacity: 1
+
+h2
+  display: inline-block
+
+.ltr
+  padding-left: 6rem
+  &:hover::after
+    opacity: 1
+  &::after
+    content: "#"
+    color: var(--color-white-700)
+    opacity: 0
+    transition: opacity .1s
+    @media (min-width: 576px)
+      font: normal 1.8rem/2.3rem var(--second-font)
+    @media (max-width: 575px)
+      font: normal 1.5rem/2rem var(--second-font)
   &::before
     position: absolute
     display: block
@@ -8,32 +45,8 @@
     width: 5rem
     height: .2rem
     bottom: 1rem
-    background-color: var(--color-accent)
-  &:hover a
-    opacity: 1
-
-  a
-    margin: 0 1rem
-    font: inherit
-    font-weight: normal
-    text-transform: uppercase
-    color: var(--color-white-700)
-    opacity: 0
-    @media (min-width: 576px)
-      font: bold 2.5rem/3rem var(--second-font)
-    @media (max-width: 575px)
-      font: bold 1.7rem/2.2rem var(--second-font)
-    &:focus-visible
-      color: var(--color-accent)
-      opacity: 1
-
-  h2
-    display: inline-block
-
-.ltr
-  padding-left: 6rem
-  &::before
     left: 0
+    background-color: var(--color-accent)
   h2::before
     margin-right: 2rem
     content: "0" counter(section-counter) "."
@@ -44,10 +57,29 @@
       font: normal 1.5rem/2rem var(--second-font)
 
 .rtl
+  justify-content: flex-end
   padding-right: 6rem
   text-align: right
+  &:hover::before
+    opacity: 1
   &::before
+    content: "#"
+    color: var(--color-white-700)
+    opacity: 0
+    transition: opacity .2s
+    @media (min-width: 576px)
+      font: normal 1.8rem/2.3rem var(--second-font)
+    @media (max-width: 575px)
+      font: normal 1.5rem/2rem var(--second-font)
+  &::after
+    position: absolute
+    display: block
+    content: ""
+    width: 5rem
+    height: .2rem
+    bottom: 1rem
     right: 0
+    background-color: var(--color-accent)
   h2::after
     margin-left: 2rem
     content: "0" counter(section-counter) "."
