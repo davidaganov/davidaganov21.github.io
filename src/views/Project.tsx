@@ -1,10 +1,12 @@
-import { ScrollToHashElement, Navbar, Project, Footer } from "../components"
+import { useParams } from "react-router-dom"
+import { ScrollToHashElement, Navbar, Project, Projects, Footer } from "../components"
 
 export const ProjectView = () => {
-  const path = /\/([^/]+)$/.exec(window.location.hash)
+  const { name } = useParams()
+
   const list = [
     { link: "/", title: { en: "Home", ru: "Главная" } },
-    { link: `/${path?.[1]}/#project`, title: { en: "Project", ru: "Проект" } }
+    { link: `/${name}/#projects`, title: { en: "Projects", ru: "Проекты" } }
   ]
 
   return (
@@ -14,6 +16,7 @@ export const ProjectView = () => {
       <main>
         <div className="main-wrapper">
           <Project />
+          <Projects title={false} />
         </div>
       </main>
       <Footer />

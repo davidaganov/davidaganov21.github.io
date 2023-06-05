@@ -25,7 +25,7 @@ export const HomeView = () => {
         <div className="main-wrapper">
           <About />
           <Skills />
-          <Projects />
+          <Projects title={true} />
           <Repos />
         </div>
       </main>

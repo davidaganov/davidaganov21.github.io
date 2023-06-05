@@ -7,7 +7,7 @@ import useGithubService from "../../services/githubService"
 import { ReposProps } from "../../interfaces"
 import { Title, ProjectsList, Button } from ".."
 
-export const Projects = () => {
+export const Projects = ({ title }: { title: boolean }) => {
   const [projectsList, setProjectsList] = useState<ReposProps[]>([])
   const [reposLoading, setReposLoading] = useState(false)
 
@@ -50,11 +50,14 @@ export const Projects = () => {
       className={styles.projects}
       id="projects"
     >
-      <div className={cn(styles.inner, "inner")}>
-        <Title
-          link="#projects"
-          title={t("projects.title")}
-        />
+      <div className={cn(styles.inner, !title ? styles.carousel : null, "inner")}>
+        {title ? (
+          <Title
+            link="#projects"
+            title={t("projects.title")}
+          />
+        ) : null}
+
         <div className={styles.control}>
           <Button
             type="button"
