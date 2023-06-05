@@ -50,26 +50,24 @@ export const Projects = () => {
       className={styles.projects}
       id="projects"
     >
-      <div className="inner">
-        <div className={styles.top}>
-          <Title
-            link="#projects"
-            title={t("projects.title")}
-          />
-          <div className={styles.control}>
-            <Button
-              type="button"
-              className={cn("projects-btn-prev", styles.arrow, styles.prev)}
-            >
-              &lt;
-            </Button>
-            <Button
-              type="button"
-              className={cn("projects-btn-next", styles.arrow, styles.next)}
-            >
-              &gt;
-            </Button>
-          </div>
+      <div className={cn(styles.inner, "inner")}>
+        <Title
+          link="#projects"
+          title={t("projects.title")}
+        />
+        <div className={styles.control}>
+          <Button
+            type="button"
+            className={cn("projects-btn-prev", styles.arrow, styles.prev)}
+          >
+            &lt;
+          </Button>
+          <Button
+            type="button"
+            className={cn("projects-btn-next", styles.arrow, styles.next)}
+          >
+            &gt;
+          </Button>
         </div>
 
         <div className={styles.body}>

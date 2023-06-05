@@ -2,14 +2,15 @@
   display: flex
   flex-direction: column
   height: 100%
-  margin-right: .5rem
   padding: 2.5rem 2rem
   border: .2rem solid var(--color-accent)
   transition: all .2s
-  &:hover
-    box-shadow: .35rem 0 0 .05rem var(--color-accent)
-    .image
-      opacity: 0
+  @media (min-width: 769px)
+    margin-right: .5rem
+    &:hover
+      box-shadow: .35rem 0 0 .05rem var(--color-accent)
+      .image
+        opacity: 0
 
 .title
   text-transform: capitalize
@@ -60,6 +61,8 @@
   object-position: center
   border-radius: inherit
   transition: opacity .2s
+  @media (max-width: 768px)
+    opacity: 0
 
 .bottom
   padding-top: 1rem

@@ -20,7 +20,6 @@
   @media (max-width: 768px)
     position: fixed
     flex-direction: column
-    width: 85%
     height: 100%
     padding: 1.5rem 2rem
     right: 0
@@ -33,6 +32,10 @@
       transform: translateX(100%)
     &.opened
       transform: translateX(0)
+  @media (max-width: 768px) and (min-width: 376px)
+    width: 85%
+  @media (max-width: 375px)
+    width: 100%
 
 .burger, .close
   @media (min-width: 769px)
@@ -101,8 +104,10 @@
       font-size: .01rem
 
 .link
-  @media (max-width: 768px)
+  @media (max-width: 768px) and (min-width: 376px)
     font: 400 2.8rem var(--main-font)
+  @media (max-width: 375px)
+    font: 400 2.4rem var(--main-font)
 
 .backdrop
   @media (min-width: 769px)
