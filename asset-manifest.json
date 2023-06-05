@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bcd6637e.css",
-    "main.js": "/static/js/main.81d1b837.js",
+    "main.css": "/static/css/main.42423443.css",
+    "main.js": "/static/js/main.ef7c17e7.js",
     "static/media/Barcade-Brawl.ttf": "/static/media/Barcade-Brawl.73895ecd83170778cce0.ttf",
     "static/media/avatar.png": "/static/media/avatar.2db46975cfbfe9115f8a.png",
     "static/media/ua-brand-Bold.ttf": "/static/media/ua-brand-Bold.a02d6efaeade2323b233.ttf",
@@ -19,11 +19,11 @@
     "static/media/html.svg": "/static/media/html.3ca3aab573aa76dc4b167ae5aa6b766d.svg",
     "static/media/burger.svg": "/static/media/burger.3c971dee90978758f03f087dd5e72cd9.svg",
     "static/media/close.svg": "/static/media/close.2ee5d1acb345aaa59152c58ca807f203.svg",
-    "main.bcd6637e.css.map": "/static/css/main.bcd6637e.css.map",
-    "main.81d1b837.js.map": "/static/js/main.81d1b837.js.map"
+    "main.42423443.css.map": "/static/css/main.42423443.css.map",
+    "main.ef7c17e7.js.map": "/static/js/main.ef7c17e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcd6637e.css",
-    "static/js/main.81d1b837.js"
+    "static/css/main.42423443.css",
+    "static/js/main.ef7c17e7.js"
   ]
 }
