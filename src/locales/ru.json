@@ -6,14 +6,14 @@
         "about": "Обо мне",
         "skills": "Навыки",
         "languages": "Знание языков",
-        "social": "Социальные сети"
+        "social": "Контакты"
       },
       "header": {
         "name": "Давид Аганов",
-        "job": "Фронтэнд разработчик",
+        "job": "Фронтэнд разработчик (Vue.js)",
         "phone": "+998331576723",
         "email": "davidaganov21@gmail.com",
-        "website": "https://aganov.dev",
+        "website": "aganov.dev",
         "location": "Узбекистан, Ташкент"
       },
       "jobs": [
@@ -32,34 +32,22 @@
             "Создание макетов на Wordpress",
             "Создание множества лэндингов (больше 20+)"
           ]
-        },
-        {
-          "id": 2,
-          "title": "Фронтэнд разработчик",
-          "company": "Фриланс",
-          "location": "Удалённо",
-          "startAt": "2019-09-01",
-          "endAt": "2021-05-17",
-          "description": "После колледжа я плотно взялся за изучение веб-разработки, создавал сайты своим друзьям, увлекался 3D-моделированием и время от времени получалось брать небольшие заказы.",
-          "list": []
         }
       ],
       "about": [
-        "Я фронтенд разработчик с двухлетним коммерческим опытом работы. Мое внимание всегда уделено деталям, таким как доступность, адаптивность и оптимизация продуктов. Имею глубокие знания в HTML, CSS и TS/JS, а также опыт работы с различными фреймворками и библиотеками, такими как Nuxt, Vue.js и React.",
+        "Я фронтенд разработчик с двухлетним коммерческим опытом работы. Имею глубокие знания в HTML, CSS и TS/JS, а также опыт работы с различными фреймворками и библиотеками, такими как Nuxt, Vue 2 / 3 Composition API и React.",
         "Помимо основных навыков у меня большой опыт работы с Figma и Photoshop. Так же есть коммерческий опыт разработки макетов для Wordpress."
       ],
       "languages": [
         {
           "id": 1,
           "name": "Русский",
-          "scoreLabel": "Родной",
-          "score": 5
+          "scoreLabel": "Родной"
         },
         {
           "id": 2,
           "name": "Английский",
-          "scoreLabel": "Базовый",
-          "score": 2
+          "scoreLabel": "Базовый"
         }
       ]
     },
@@ -92,28 +80,28 @@
       "data": [
         {
           "id": 1,
-          "title": "HTML",
+          "title": "JavaScript",
           "list": [
-            { "id": 1, "title": "Шаблонизаторы", "tags": ["PUG"] },
-            { "id": 2, "title": "Другое", "tags": ["HTML5"] }
+            { "id": 1, "title": "Фреймворки", "tags": ["Nuxt 2", "Vue 2 / 3"] },
+            { "id": 2, "title": "Библиотеки", "tags": ["React"] },
+            { "id": 3, "title": "Другое", "tags": ["JavaScript", "TypeScript"] }
           ]
         },
         {
           "id": 2,
-          "title": "CSS",
+          "title": "HTML",
           "list": [
-            { "id": 1, "title": "Препроцессоры", "tags": ["SASS/SCSS", "Less"] },
-            { "id": 2, "title": "Фреймворки", "tags": ["Bootstrap", "Tailwind"] },
-            { "id": 3, "title": "Другое", "tags": ["CSS3"] }
+            { "id": 1, "title": "Шаблонизаторы", "tags": ["PUG"] },
+            { "id": 2, "title": "Другое", "tags": ["HTML"] }
           ]
         },
         {
           "id": 3,
-          "title": "JavaScript",
+          "title": "CSS",
           "list": [
-            { "id": 1, "title": "Фреймворки", "tags": ["Nuxt.js", "Vue.js", "Next.js"] },
-            { "id": 2, "title": "Библиотеки", "tags": ["React", "React Native", "JQuery"] },
-            { "id": 3, "title": "Другое", "tags": ["JavaScript", "TypeScript"] }
+            { "id": 1, "title": "Препроцессоры", "tags": ["SCSS/SASS", "Less"] },
+            { "id": 2, "title": "Фреймворки", "tags": ["Bootstrap", "Tailwind"] },
+            { "id": 3, "title": "Другое", "tags": ["CSS"] }
           ]
         },
         {
@@ -122,8 +110,7 @@
           "list": [
             { "id": 1, "title": "CMS", "tags": ["Wordpress"] },
             { "id": 2, "title": "Дизайн", "tags": ["Figma", "Adobe Photoshop"] },
-            { "id": 3, "title": "3D", "tags": ["Blender", "Maya"] },
-            { "id": 4, "title": "OС", "tags": ["Windows", "Mac OS"] }
+            { "id": 3, "title": "OС", "tags": ["Windows", "Mac OS"] }
           ]
         }
       ]

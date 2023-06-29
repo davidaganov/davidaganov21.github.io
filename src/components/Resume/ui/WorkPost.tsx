@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 7,
     fontFamily: "Barcade-Brawl",
     fontWeight: "bold",
-    color: "#995aa4"
+    color: "#213e73"
   },
   about: {
     marginTop: 8,

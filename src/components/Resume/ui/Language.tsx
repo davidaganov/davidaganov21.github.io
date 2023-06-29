@@ -1,11 +1,9 @@
 import { View, Text, StyleSheet } from "@react-pdf/renderer"
-import { Score } from "."
 
 export interface LanguageProps {
   data: {
     name: string
     scoreLabel: string
-    score: number
   }
 }
 
@@ -16,7 +14,7 @@ const styles = StyleSheet.create({
     marginBottom: 12
   },
   name: {
-    fontSize: 12,
+    fontSize: 10,
     fontFamily: "ua-brand"
   },
   dots: {
@@ -31,21 +29,17 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
     marginRight: 5,
     fontFamily: "ua-brand",
-    fontSize: 12,
+    fontSize: 10,
     color: "#0a192f"
   }
 })
 
-export function Language({ data: { name, scoreLabel, score } }: LanguageProps) {
+export function Language({ data: { name, scoreLabel } }: LanguageProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.name}>{name}</Text>
       <View style={styles.dots} />
       <Text style={styles.scoreLabel}>{scoreLabel}</Text>
-      <Score
-        id="language"
-        rank={score}
-      />
     </View>
   )
 }

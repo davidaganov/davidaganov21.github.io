@@ -1,7 +1,7 @@
-import { Page, View, Text, Document, StyleSheet } from "@react-pdf/renderer"
+import { Page, View, Text, Link, Document, StyleSheet } from "@react-pdf/renderer"
 import { useTranslation } from "react-i18next"
 
-import { Heading, Section, WorkPost, SkillGroup, Language, SocialMedia } from "./ui"
+import { Heading, Section, WorkPost, SkillGroup, Language } from "./ui"
 import "./ui/fonts"
 
 export interface HeaderProps {
@@ -38,11 +38,11 @@ const styles = StyleSheet.create({
   leftColumn: {
     flexGrow: 1,
     marginRight: 20,
-    width: "55%"
+    width: "40%"
   },
   rightColumn: {
     flexGrow: 1,
-    width: "40%"
+    width: "55%"
   },
   about: {
     gap: 10,
@@ -51,6 +51,12 @@ const styles = StyleSheet.create({
   aboutText: {
     fontFamily: "ua-brand",
     fontSize: 10,
+    color: "#0a192f"
+  },
+  link: {
+    fontFamily: "ua-brand",
+    fontSize: 10,
+    textDecoration: "none",
     color: "#0a192f"
   }
 })
@@ -140,33 +146,36 @@ export const Resume = () => {
 
         <View style={styles.row}>
           <View style={styles.leftColumn}>
-            <Section title={titles.jobs}>{jobs}</Section>
-            <Section title={titles.about}>
-              <View style={styles.about}>{about}</View>
-            </Section>
+            <Section title={titles.skills}>{skills}</Section>
+            <Section title={titles.languages}>{languages}</Section>
             <Section title={titles.social}>
-              <View style={{ flexDirection: "row" }}>
-                <SocialMedia
-                  name="Telegram"
-                  profileUrl={social.telegram}
-                  style={{ flex: 1 }}
-                />
-                <SocialMedia
-                  name="Github"
-                  profileUrl={social.github}
-                  style={{ flex: 1 }}
-                />
-                <SocialMedia
-                  name="LinkedIn"
-                  profileUrl={social.linkedin}
-                  style={{ flex: 1 }}
-                />
+              <View>
+                <Link
+                  src={social.telegram}
+                  style={styles.link}
+                >
+                  <Text>Telegram</Text>
+                </Link>
+                <Link
+                  src={social.github}
+                  style={styles.link}
+                >
+                  <Text>Github</Text>
+                </Link>
+                <Link
+                  src={social.linkedin}
+                  style={styles.link}
+                >
+                  <Text>LinkedIn</Text>
+                </Link>
               </View>
             </Section>
           </View>
           <View style={styles.rightColumn}>
-            <Section title={titles.skills}>{skills}</Section>
-            <Section title={titles.languages}>{languages}</Section>
+            <Section title={titles.jobs}>{jobs}</Section>
+            <Section title={titles.about}>
+              <View style={styles.about}>{about}</View>
+            </Section>
           </View>
         </View>
       </Page>

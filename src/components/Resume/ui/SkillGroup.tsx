@@ -10,24 +10,23 @@ const styles = StyleSheet.create({
     marginBottom: 8
   },
   title: {
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: "ua-brand",
     fontWeight: "bold",
-    marginBottom: 6,
+    marginBottom: 4,
     color: "#0a192f"
   },
   tag: {
-    fontSize: 6,
-    fontFamily: "Barcade-Brawl",
-    color: "#995aa4"
+    fontSize: 8,
+    fontFamily: "ua-brand",
+    fontWeight: "bold",
+    color: "#35465e"
   },
   tagContainer: {
-    borderStyle: "solid",
-    borderColor: "#995aa4",
-    borderWidth: 2,
-    padding: 4,
-    marginRight: 6,
-    marginBottom: 6
+    backgroundColor: "#d1d7e4",
+    padding: 3,
+    marginRight: 4,
+    marginBottom: 4
   },
   tagsContainer: {
     flexDirection: "row",
@@ -36,19 +35,27 @@ const styles = StyleSheet.create({
 })
 
 export const SkillGroup = ({ title, tags }: SkillGroupProps) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
-      <View style={styles.tagsContainer}>
-        {tags.map((tag) => (
-          <View
-            key={tag}
-            style={styles.tagContainer}
-          >
-            <Text style={styles.tag}>{tag}</Text>
+  const buildGroupSkills = () => {
+    if (title !== "Разное" && title !== "Other") {
+      return (
+        <View style={styles.container}>
+          <Text style={styles.title}>{title}</Text>
+          <View style={styles.tagsContainer}>
+            {tags.map((tag) => (
+              <View
+                key={tag}
+                style={styles.tagContainer}
+              >
+                <Text style={styles.tag}>{tag}</Text>
+              </View>
+            ))}
           </View>
-        ))}
-      </View>
-    </View>
-  )
+        </View>
+      )
+    }
+  }
+
+  const groupSkills = buildGroupSkills()
+
+  return <>{groupSkills}</>
 }

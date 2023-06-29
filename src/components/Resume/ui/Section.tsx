@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     fontFamily: "ua-brand",
     fontWeight: "bold",
-    color: "#995aa4"
+    color: "#213e73"
   },
   separator: {
     height: 2,
     marginTop: 1,
     marginBottom: 12,
-    backgroundColor: "#995aa4"
+    backgroundColor: "#213e73"
   }
 })
 
