@@ -12,7 +12,7 @@ export const About = () => {
       return (
         <p
           key={i}
-          dangerouslySetInnerHTML={{ __html: t(`about.description.${i}`) }}
+          dangerouslySetInnerHTML={{ __html: t(`about.description.${i}`) as string }}
         />
       )
     })
