@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.42423443.css",
-    "main.js": "/static/js/main.ef7c17e7.js",
+    "main.css": "/static/css/main.d109fda0.css",
+    "main.js": "/static/js/main.75bd6607.js",
     "static/media/Barcade-Brawl.ttf": "/static/media/Barcade-Brawl.73895ecd83170778cce0.ttf",
     "static/media/avatar.png": "/static/media/avatar.2db46975cfbfe9115f8a.png",
     "static/media/ua-brand-Bold.ttf": "/static/media/ua-brand-Bold.a02d6efaeade2323b233.ttf",
     "static/media/ua-brand.ttf": "/static/media/ua-brand.bb72e528dddddb8680cb.ttf",
     "static/media/landing-interio-cover.jpg": "/static/media/landing-interio-cover.d8d12b961b705b102569.jpg",
     "static/media/comforty-cover.jpg": "/static/media/comforty-cover.52f7d15a5a4490a19510.jpg",
+    "static/media/photo.jpg": "/static/media/photo.8d621787cf02468fcb90.jpg",
     "static/media/comforty-filter.jpg": "/static/media/comforty-filter.bd969e90c87029bbc07a.jpg",
     "static/media/landing-interio-filter.jpg": "/static/media/landing-interio-filter.6b3d02ed84f23d366c90.jpg",
     "index.html": "/index.html",
@@ -19,11 +20,11 @@
     "static/media/html.svg": "/static/media/html.3ca3aab573aa76dc4b167ae5aa6b766d.svg",
     "static/media/burger.svg": "/static/media/burger.3c971dee90978758f03f087dd5e72cd9.svg",
     "static/media/close.svg": "/static/media/close.2ee5d1acb345aaa59152c58ca807f203.svg",
-    "main.42423443.css.map": "/static/css/main.42423443.css.map",
-    "main.ef7c17e7.js.map": "/static/js/main.ef7c17e7.js.map"
+    "main.d109fda0.css.map": "/static/css/main.d109fda0.css.map",
+    "main.75bd6607.js.map": "/static/js/main.75bd6607.js.map"
   },
   "entrypoints": [
-    "static/css/main.42423443.css",
-    "static/js/main.ef7c17e7.js"
+    "static/css/main.d109fda0.css",
+    "static/js/main.75bd6607.js"
   ]
 }
