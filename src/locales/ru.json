@@ -20,7 +20,40 @@
         {
           "id": 1,
           "title": "Фронтэнд разработчик",
-          "company": "SAB Games",
+          "companyName": "Softlex",
+          "companyUrl": "https://www.linkedin.com/company/llc-softlex/mycompany/",
+          "location": "Новороссийск",
+          "startAt": "2023-07-17",
+          "endAt": "2023-10-01",
+          "description": "",
+          "list": [],
+          "projects": [
+            {
+              "id": 1,
+              "title": "Проект WAQF",
+              "url": "https://digiwaqf.pro",
+              "tech": ["next", "typescript", "html", "scss"],
+              "description": "WAQF - краудфандинг платформа",
+              "duties": ["Рефакторинг кода", "Реализация нового функционала"]
+            },
+            {
+              "id": 2,
+              "title": "Проект JetUnity",
+              "url": "https://jetunity.com",
+              "tech": ["nuxt 2", "pug", "styl", "scss"],
+              "description": "JetUnity - организация частных авиаперелетов",
+              "duties": [
+                "Рефакторинг кода",
+                "Миграция на современные технологии",
+                "Реализация нового функционала"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Фронтэнд разработчик",
+          "companyName": "SAB Games",
           "companyUrl": "https://www.linkedin.com/company/sabgames/mycompany/",
           "location": "Ташкент",
           "startAt": "2021-05-17",
