@@ -1,41 +1,40 @@
-.header
+.navbar
   min-height: 6.8rem
+  &__container
+    top: 0
+    display: flex
+    @media (max-width: 1599px) and (min-width: 769px)
+      padding: 0 2rem
+    @media (min-width: 769px)
+      position: absolute
+      align-items: center
+      justify-content: space-between
+      gap: 1.5rem
+      width: 100%
+      margin: 2rem 0
+      left: 0
+    @media (max-width: 768px)
+      position: fixed
+      flex-direction: column
+      height: 100%
+      padding: 1.5rem 2rem
+      right: 0
+      background-color: var(--color-black)
+      border-left: 1rem solid var(--color-accent)
+      transition: all .4s
+      z-index: 2
+      &:not(.opened)
+        visibility: hidden
+        transform: translateX(100%)
+      &.opened
+        transform: translateX(0)
+    @media (max-width: 768px) and (min-width: 376px)
+      width: 85%
+    @media (max-width: 375px)
+      width: 100%
 
 .inner
   position: relative
-
-.navbar
-  top: 0
-  display: flex
-  @media (max-width: 1599px) and (min-width: 769px)
-    padding: 0 2rem
-  @media (min-width: 769px)
-    position: absolute
-    align-items: center
-    justify-content: space-between
-    gap: 1.5rem
-    width: 100%
-    margin: 2rem 0
-    left: 0
-  @media (max-width: 768px)
-    position: fixed
-    flex-direction: column
-    height: 100%
-    padding: 1.5rem 2rem
-    right: 0
-    background-color: var(--color-black)
-    border-left: 1rem solid var(--color-accent)
-    transition: all .4s
-    z-index: 2
-    &:not(.opened)
-      visibility: hidden
-      transform: translateX(100%)
-    &.opened
-      transform: translateX(0)
-  @media (max-width: 768px) and (min-width: 376px)
-    width: 85%
-  @media (max-width: 375px)
-    width: 100%
 
 .burger, .close
   @media (min-width: 769px)

@@ -69,7 +69,7 @@ export const Navbar = ({ list, ...props }: NavbarProps) => {
           <BurgerIcon />
         </button>
         <nav
-          className={cn(styles.navbar, {
+          className={cn(styles.navbar__container, {
             [styles.opened]: opened
           })}
           role="navigation"
@@ -104,11 +104,11 @@ export const Navbar = ({ list, ...props }: NavbarProps) => {
   const menu = buildMenu()
 
   return (
-    <header
-      className={styles.header}
+    <div
+      className={styles.navbar}
       {...props}
     >
       <div className={cn(styles.inner, "inner")}>{menu}</div>
-    </header>
+    </div>
   )
 }
