@@ -9,11 +9,22 @@ import { Title, ProjectsList, Button } from ".."
 export const Projects = ({ title }: { title: boolean }) => {
   const [projectsList, setProjectsList] = useState<RepoProps[]>([])
 
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
-    setProjectsList(t("projects.list", { returnObjects: true }))
+    setData()
   }, [])
+
+  useEffect(() => {
+    i18n.on("languageChanged", setData)
+    return () => {
+      i18n.off("languageChanged", setData)
+    }
+  }, [i18n])
+
+  const setData = () => {
+    setProjectsList(t("projects.list", { returnObjects: true }))
+  }
 
   return (
     <section
