@@ -5,17 +5,16 @@ import { useTranslation } from "react-i18next"
 import styles from "./Project.module.sass"
 import cn from "classnames"
 
-import useGithubService from "../../services/githubService"
 import { RepoProps } from "../../interfaces"
 
 export const Project = () => {
   const [project, setProject] = useState<RepoProps>()
 
   const { name } = useParams()
-  const { error, getRepo } = useGithubService()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
-  const clearName = project?.name.replace(/[.\-/\\\s]/g, " ")
+  const projectId = name?.replace(/^project-/, "") || ""
+  const clearName = projectId.replace(/[.\-/\\\s]/g, " ")
   const date = new Date(project?.created_at || "").toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
@@ -23,22 +22,25 @@ export const Project = () => {
   })
 
   useEffect(() => {
-    onRequest()
+    setData()
   }, [name])
 
-  const onRequest = async () => {
-    getRepo({ name: name?.replace(/^project-/, "") || "" }).then(onReposLoaded)
-  }
+  useEffect(() => {
+    i18n.on("languageChanged", setData)
+    return () => {
+      i18n.off("languageChanged", setData)
+    }
+  }, [i18n])
 
-  const onReposLoaded = (repo: RepoProps) => {
-    setProject(repo)
+  const setData = () => {
+    const data: RepoProps[] = t("projects.list", { returnObjects: true })
+    const project = data.find((item: RepoProps) => item.name === projectId)
+    setProject(project)
   }
 
   const renderDescription = () => {
-    const list = t(`projects.${project?.name}.description`, { returnObjects: true })
-
-    if (Array.isArray(list)) {
-      const items = list.map((item: string) => (
+    if (project?.description) {
+      const items = project?.description.map((item: string) => (
         <p
           className={styles.descriptionItem}
           key={item}
@@ -47,7 +49,39 @@ export const Project = () => {
         </p>
       ))
 
-      return <div className={styles.description}>{items}</div>
+      return (
+        <>
+          {project?.description.length > 0 ? (
+            <div className={styles.description}>{items}</div>
+          ) : (
+            <div className={styles.description}>
+              <p className={styles.descriptionItem}>{project?.short_description}</p>
+            </div>
+          )}
+        </>
+      )
+    } else {
+      return null
+    }
+  }
+
+  const renderDuties = () => {
+    if (project?.duties) {
+      const items = project?.duties.map((item: string) => (
+        <li
+          className={styles.dutiesItem}
+          key={item}
+        >
+          {item}
+        </li>
+      ))
+
+      return (
+        <div className={styles.duties}>
+          <p className={styles.dutiesTitle}>{t(`projects.dutiesTitle`)}:</p>
+          <ul className={styles.dutiesList}>{items}</ul>
+        </div>
+      )
     } else {
       return null
     }
@@ -85,11 +119,63 @@ export const Project = () => {
 
     return (
       <div className={styles.about}>
-        <p className={styles.aboutTitle}>{t(`projects.${project?.name}.listTitle`)}:</p>
+        <p className={styles.aboutTitle}>{t(`projects.techListTitle`)}:</p>
         {list}
       </div>
     )
   }
+
+  const renderLinks = () => {
+    if (project?.html_url || project?.homepage) {
+      return (
+        <div className={styles.links}>
+          <p className={styles.linksTitle}>{t("projects.linksTitle")}:</p>
+          <div className={styles.linksBlock}>
+            {project?.html_url && (
+              <a
+                href={project.html_url}
+                className="inline-link inline-link--white"
+              >
+                {t("projects.go_repo")}
+                <span
+                  lang="en"
+                  className="visually-hidden"
+                >
+                  {clearName}
+                </span>
+              </a>
+            )}
+
+            {project?.html_url && project?.homepage && <span className={styles.separator}>|</span>}
+
+            {project?.homepage && (
+              <a
+                href={project.homepage}
+                className={cn(styles.link, styles["link--live"], "inline-link inline-link--white")}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("projects.go_site")}
+                <span
+                  lang="en"
+                  className="visually-hidden"
+                >
+                  {clearName}
+                </span>
+              </a>
+            )}
+          </div>
+        </div>
+      )
+    } else {
+      return null
+    }
+  }
+
+  const description = renderDescription()
+  const duties = renderDuties()
+  const list = renderList()
+  const links = renderLinks()
 
   const Project = () => {
     if (project) {
@@ -97,16 +183,16 @@ export const Project = () => {
         <>
           <div className={styles.user}>
             <a
-              href={project.owner.github}
+              href="https://github.com/davidaganov"
               className={styles.left}
             >
               <img
-                src={project.owner.avatar}
+                src="https://avatars.githubusercontent.com/u/84830129?v=4"
                 className={styles.avatar}
                 width="40"
                 height="40"
               />
-              <p className={styles.login}>@{project.owner.login}</p>
+              <p className={styles.login}>@davidaganov</p>
             </a>
 
             <time
@@ -121,45 +207,14 @@ export const Project = () => {
             <h2 className={styles.title}>{clearName}</h2>
 
             {description}
-
-            <div className={styles.links}>
-              <a
-                href={project.html_url}
-                className="inline-link"
-              >
-                {t("projects.go_repo")}
-                <span
-                  lang="en"
-                  className="visually-hidden"
-                >
-                  {clearName}
-                </span>
-              </a>
-
-              <span className={styles.separator}>|</span>
-
-              <a
-                href={project.homepage}
-                className={cn(styles.link, styles["link--live"], "inline-link")}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t("projects.go_site")}
-                <span
-                  lang="en"
-                  className="visually-hidden"
-                >
-                  {clearName}
-                </span>
-              </a>
-            </div>
-
+            {duties}
+            {links}
             {list}
 
             <img
               className={styles.image}
-              src={require(`../../assets/images/${project.name}-cover.jpg`)}
-              alt={`${t(`projects.${project.name}.description`)}`}
+              src={require(`../../assets/images/${projectId}-cover.jpg`)}
+              alt={project?.short_description}
               width="300"
               height="187"
             />
@@ -171,11 +226,6 @@ export const Project = () => {
     }
   }
 
-  const description = renderDescription()
-  const list = renderList()
-
-  const errorMessage = error ? <h3 className={styles.error}>Project not found</h3> : null
-
   return (
     <section
       className={styles.project}
@@ -183,8 +233,6 @@ export const Project = () => {
     >
       <div className="inner">
         <Project />
-
-        <div className={styles.body}>{errorMessage}</div>
       </div>
     </section>
   )

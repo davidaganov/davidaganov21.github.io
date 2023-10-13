@@ -5,7 +5,7 @@ import styles from "./CardProject.module.sass"
 import cn from "classnames"
 
 export const CardProject = ({ card, className }: CardProjectProps) => {
-  const { name, topics, homepage } = card
+  const { name, short_description, topics, homepage } = card
   const clearName = name.replace(/[.\-/\\\s]/g, " ")
 
   const { t } = useTranslation()
@@ -42,7 +42,7 @@ export const CardProject = ({ card, className }: CardProjectProps) => {
 
     return (
       <div className={styles.about}>
-        <p className={styles.aboutTitle}>{t(`projects.${name}.listTitle`)}:</p>
+        <p className={styles.aboutTitle}>{t(`projects.techListTitle`)}:</p>
         {list}
       </div>
     )
@@ -82,7 +82,7 @@ export const CardProject = ({ card, className }: CardProjectProps) => {
         <img
           className={styles.image}
           src={require(`../../assets/images/${name}-filter.jpg`)}
-          alt={`${t(`projects.${name}.short_description`)}`}
+          alt={short_description}
           width="300"
           height="187"
         />
@@ -98,7 +98,7 @@ export const CardProject = ({ card, className }: CardProjectProps) => {
         className={styles.description}
         lang="en"
       >
-        {t(`projects.${name}.short_description`)}
+        {short_description}
       </p>
 
       {list}

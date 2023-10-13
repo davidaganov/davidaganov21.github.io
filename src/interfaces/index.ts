@@ -14,12 +14,14 @@ export interface ReposProps {
 }
 
 export interface RepoProps {
-  created_at: string
   name: string
+  description?: string[]
+  duties?: string[]
+  short_description: string
+  created_at: string
   html_url: string
   homepage: string
   topics: string[]
-  owner: Record<string, string>
 }
 
 export interface Topics {
@@ -30,5 +32,3 @@ export interface Topics {
 export interface GithubReposResponse extends Topics {
   items: ReposProps[]
 }
-
-export type GithubRepoResponse = RepoProps

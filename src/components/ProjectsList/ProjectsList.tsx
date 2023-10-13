@@ -15,7 +15,7 @@ export const ProjectsList = ({ projectsList }: ProjectsListProps) => {
       const items = projectsList.map((item) => {
         return (
           <SwiperSlide
-            key={item.id}
+            key={item.name}
             style={{ height: "auto" }}
           >
             <CardProject card={item} />

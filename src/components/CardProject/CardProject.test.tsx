@@ -2,12 +2,13 @@ import { render, screen } from "@testing-library/react"
 import { CardProject } from "./CardProject"
 
 const data = {
-  id: "1",
   name: "Test",
-  description: "Description project",
+  description: ["Description project"],
+  short_description: "Test short description",
+  created_at: "2023-08-15",
   html_url: "repo",
-  topics: ["first", "second"],
-  homepage: "demo"
+  homepage: "demo",
+  topics: ["first", "second"]
 }
 
 describe("CardProject component", () => {

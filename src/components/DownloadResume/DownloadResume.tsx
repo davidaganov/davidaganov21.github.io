@@ -6,11 +6,12 @@ import { Resume } from "../Resume/Resume"
 
 export const DownloadResume = () => {
   const { t } = useTranslation()
+  const date = new Date().toLocaleDateString("ru-RU").split(".").reverse().join("-")
 
   return (
     <PDFDownloadLink
       document={<Resume />}
-      fileName="resume.pdf"
+      fileName={`CV_DavidAganov_${date}.pdf`}
       className={styles.btn}
     >
       {({ loading }) => (loading ? <>{t("about.loading")}</> : <>{t("about.download")}</>)}

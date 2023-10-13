@@ -67,7 +67,7 @@
         }
       ],
       "about": [
-        "I am a frontend developer with two years of commercial experience. I have extensive knowledge in HTML, CSS, and TS/JS, as well as experience with various frameworks and libraries such as Nuxt, Vue 2 / 3 Composition API and React.",
+        "I am a frontend developer with two years of commercial experience. I have extensive knowledge in HTML, CSS, and TS/JS, as well as experience with various frameworks and libraries such as Nuxt 2, Vue 2 / 3 Composition API and React.",
         "In addition to my core skills, I have significant experience working with Figma and Photoshop. I also have commercial experience in developing layouts for Wordpress."
       ],
       "languages": [
@@ -79,7 +79,7 @@
         {
           "id": 2,
           "name": "English",
-          "scoreLabel": "Basic"
+          "scoreLabel": "A2"
         }
       ]
     },
@@ -98,12 +98,6 @@
     },
     "about": {
       "title": "About me",
-      "description": [
-        "I have been interested in web development since 2016 when I started learning it through free online courses and YouTube videos. Since then, I have been constantly learning and improving my skills.",
-        "Finally, I was lucky enough to turn my hobby into a career and become a frontend developer at a company that develops mobile games and other projects. Here, I work on developing products using the <strong>Nuxt.js</strong framework and creating landing pages.",
-        "During the year and a half I have spent at this company, I have gained a lot of new knowledge and skills. Also, I underwent training in courses on <strong>React</strong> and <strong>React Native</strong> development, which helped me expand my toolset.",
-        "I believe that continuous learning is a key factor in the development of a web developer, and I continue to work diligently to expand my knowledge and skills in this field."
-      ],
       "download": "Download CV",
       "loading": "Loading..."
     },
@@ -153,24 +147,61 @@
       "go_more": "Read more",
       "go_site": "Site",
       "go_github": "Open github",
-      "errorTitle": "Project not found",
-      "errorSubtitle": "Perhaps you should check for github?",
-      "comforty": {
-        "short_description": "Online store for the sale of furniture",
-        "description": [
-          "In this project, I explored the use of the Composition API and TypeScript in Vue.",
-          "One of the interesting tasks was to integrate Firebase as an API and create pagination and product filtering functionality using queries to Firebase."
-        ],
-        "listTitle": "Technologies used"
-      },
-      "landing-interio": {
-        "short_description": "Landing interior design companie",
-        "description": [
-          "Landing created using React and TypeScript. On this project I practiced writing unit tests in Jest.",
-          "I decided to write the carousel component myself and came up with animations for menus and buttons."
-        ],
-        "listTitle": "Technologies used"
-      }
+      "errorTitle": "Projects not found",
+      "errorSubtitle": "Perhaps you should check for Github?",
+      "techListTitle": "Technologies used",
+      "dutiesTitle": "Responsibilities on the project",
+      "linksTitle": "Project links",
+      "list": [
+        {
+          "created_at": "2023-08-15",
+          "name": "waqf",
+          "short_description": "Crowdfunding platform",
+          "description": [],
+          "duties": ["Code refactoring", "Implementation of new features"],
+          "html_url": "",
+          "homepage": "",
+          "topics": ["typescript", "next", "scss"]
+        },
+        {
+          "created_at": "2023-09-00",
+          "name": "jetunity",
+          "short_description": "Organization of private air travel",
+          "description": [],
+          "duties": [
+            "Code refactoring",
+            "Migration to modern technologies",
+            "Implementation of new features"
+          ],
+          "html_url": "",
+          "homepage": "",
+          "topics": ["nuxt 2 / 3", "pug", "styl", "scss"]
+        },
+        {
+          "created_at": "2023-02-27",
+          "name": "comforty",
+          "short_description": "Online store for the sale of furniture",
+          "description": [
+            "In this project, I explored the use of the Composition API and TypeScript in Vue.",
+            "One of the interesting tasks was to integrate Firebase as an API and create pagination and product filtering functionality using queries to Firebase."
+          ],
+          "html_url": "https://aganov.dev/comforty/",
+          "homepage": "https://github.com/davidaganov/comforty",
+          "topics": ["storybook", "typescript", "vue", "scss"]
+        },
+        {
+          "created_at": "2023-01-30",
+          "name": "landing-interio",
+          "short_description": "Landing interior design companie",
+          "description": [
+            "Landing created using React and TypeScript. On this project I practiced writing unit tests in Jest.",
+            "I decided to write the carousel component myself and came up with animations for menus and buttons."
+          ],
+          "html_url": "https://aganov.dev/landing-interio/",
+          "homepage": "https://github.com/davidaganov/landing-interio",
+          "topics": ["react", "typescript", "jest", "scss"]
+        }
+      ]
     },
     "repositories": {
       "title": "Repositories",

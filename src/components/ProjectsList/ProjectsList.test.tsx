@@ -4,19 +4,21 @@ import { ProjectsList } from "./ProjectsList"
 
 const data = [
   {
-    id: "1",
     name: "First",
-    description: "Lorem ipsum",
-    homepage: "demo",
+    description: ["Lorem ipsum"],
+    short_description: "Test short description",
+    created_at: "2023-08-15",
     html_url: "repo",
+    homepage: "demo",
     topics: ["vue", "typescript"]
   },
   {
-    id: "2",
     name: "Second",
-    description: "Dolor sit",
-    homepage: "",
+    description: ["Dolor sit"],
+    short_description: "Test short description",
+    created_at: "2023-09-13",
     html_url: "repo",
+    homepage: "",
     topics: ["react"]
   }
 ]

@@ -1,20 +1,14 @@
 import { useHttp } from "../hooks/http.hook"
-import { Topics, GithubReposResponse, GithubRepoResponse } from "../interfaces"
+import { Topics, GithubReposResponse } from "../interfaces"
 
 const useGithubService = () => {
   const { loading, request, error, clearError } = useHttp()
 
   const _apiBase = "https://api.github.com/users/davidaganov"
-  const _apiRepo = "https://api.github.com/repos/davidaganov"
 
   const getRepos = async ({ topics, ignoreTopics }: Topics) => {
     const res = await request(`${_apiBase}/repos`)
     return _transformProjects({ items: res, topics, ignoreTopics })
-  }
-
-  const getRepo = async ({ name }: { name: string }) => {
-    const res = await request(`${_apiRepo}/${name}`)
-    return _transformProject({ repo: res })
   }
 
   const _transformProjects = ({ items, topics, ignoreTopics }: GithubReposResponse) => {
@@ -48,24 +42,7 @@ const useGithubService = () => {
     return filteredItems
   }
 
-  const _transformProject = ({ repo }: { repo: GithubRepoResponse }) => {
-    const { created_at, name, html_url, homepage, topics, owner } = repo
-
-    return {
-      created_at,
-      name,
-      html_url,
-      homepage,
-      topics,
-      owner: {
-        avatar: owner.avatar_url,
-        login: owner.login,
-        github: owner.html_url
-      }
-    }
-  }
-
-  return { loading, error, clearError, getRepos, getRepo }
+  return { loading, error, clearError, getRepos }
 }
 
 export default useGithubService

@@ -7,12 +7,12 @@ export const About = () => {
   const { t } = useTranslation()
 
   const renderItems = () => {
-    const descripton = Object.keys(t("about.description", { returnObjects: true }))
+    const descripton = Object.keys(t("resume.about", { returnObjects: true }))
     const items = descripton.map((i) => {
       return (
         <p
           key={i}
-          dangerouslySetInnerHTML={{ __html: t(`about.description.${i}`) as string }}
+          dangerouslySetInnerHTML={{ __html: t(`resume.about.${i}`) as string }}
         />
       )
     })
