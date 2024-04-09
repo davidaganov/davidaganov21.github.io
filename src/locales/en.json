@@ -20,6 +20,20 @@
         {
           "id": 1,
           "title": "Frontend Developer",
+          "companyName": "Freelance",
+          "location": "Russia",
+          "startAt": "2023-11-01",
+          "current": "Present time",
+          "description": "",
+          "list": [
+            "Developing projects on Nuxt 3",
+            "Refactoring/migrating projects to Vue 3",
+            "Writing a chat between client/specialist using websocket with media file transfer"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Frontend Developer",
           "companyName": "Softlex",
           "companyUrl": "https://www.linkedin.com/company/llc-softlex/mycompany/",
           "location": "Novorossiysk",
@@ -51,7 +65,7 @@
           ]
         },
         {
-          "id": 2,
+          "id": 3,
           "title": "Frontend Developer",
           "companyName": "SAB Games",
           "companyUrl": "https://www.linkedin.com/company/sabgames/mycompany/",
@@ -67,8 +81,8 @@
         }
       ],
       "about": [
-        "I am a frontend developer with two years of commercial experience. I have extensive knowledge in HTML, CSS, and TS/JS, as well as experience with various frameworks and libraries such as Nuxt 2, Vue 2 / 3 Composition API and React.",
-        "In addition to my core skills, I have significant experience working with Figma and Photoshop. I also have commercial experience in developing layouts for Wordpress."
+        "Current stack: Nuxt 3, Vue 3, JavaScript/TypeScript, SCSS, and Tailwind.",
+        "I am an experienced frontend developer with more than three years of commercial development experience. I possess advanced knowledge of HTML, CSS, and JavaScript/TypeScript. I have significant experience working with modern technologies and frameworks, including Nuxt, Vue, React."
       ],
       "languages": [
         {
@@ -108,9 +122,9 @@
           "id": 1,
           "title": "JavaScript",
           "list": [
-            { "id": 1, "title": "Frameworks", "tags": ["Nuxt 2", "Vue 2 / 3"] },
-            { "id": 2, "title": "Library", "tags": ["React"] },
-            { "id": 3, "title": "Other", "tags": ["JavaScript", "TypeScript"] }
+            { "id": 1, "title": "Frameworks", "tags": ["Nuxt 2 / 3", "Vue 2 / 3", "React"] },
+            { "id": 2, "title": "Library", "tags": ["Storybook, Jest"] },
+            { "id": 3, "title": "Other", "tags": ["Websocket", "JavaScript", "TypeScript"] }
           ]
         },
         {
@@ -125,8 +139,8 @@
           "id": 3,
           "title": "CSS",
           "list": [
-            { "id": 1, "title": "Preprocessors", "tags": ["SCSS/SASS", "Less"] },
-            { "id": 2, "title": "Frameworks", "tags": ["Bootstrap", "Tailwind"] },
+            { "id": 1, "title": "Preprocessors", "tags": ["SCSS/SASS", "Less", "STYL"] },
+            { "id": 2, "title": "Frameworks", "tags": ["Tailwind"] },
             { "id": 3, "title": "Other", "tags": ["CSS"] }
           ]
         },
@@ -217,6 +231,11 @@
       "author": "by David Aganov",
       "github": "Go to Github profile",
       "linkedin": "Go to Linkedin profile"
-    }
+    },
+
+    "year_singular": "year",
+    "year_many": "years",
+    "month_singular": "month",
+    "month_many": "months"
   }
 }

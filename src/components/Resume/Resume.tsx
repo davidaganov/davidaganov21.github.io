@@ -1,6 +1,8 @@
 import { Page, View, Text, Link, Document, StyleSheet } from "@react-pdf/renderer"
 import { useTranslation } from "react-i18next"
 
+import { getPluralForm } from "../../hooks/pluralForm"
+
 import { Heading, Section, WorkPost, SkillGroup, Language } from "./ui"
 import "./ui/fonts"
 
@@ -25,6 +27,29 @@ interface ListItem {
   id: number
   title: string
   tags: string[]
+}
+
+interface WorkProject {
+  id: number
+  title: string
+  url: string
+  tech: string[]
+  description: string
+  duties?: string[]
+}
+
+interface Job {
+  id: number
+  title: string
+  companyName: string
+  companyUrl?: string
+  description: string
+  list?: string[]
+  projects?: WorkProject[]
+  location: string
+  startAt: string
+  endAt?: string
+  current?: string
 }
 
 const styles = StyleSheet.create({
@@ -74,6 +99,33 @@ export const Resume = () => {
 
   const titles: TitlesProps = t("resume.titles", { returnObjects: true })
   const header: HeaderProps = t("resume.header", { returnObjects: true })
+
+  const calculateTotalExperience = (jobs: Job[]) => {
+    console.log(jobs)
+    let totalMonths = 0
+    jobs.forEach((job: Job) => {
+      const startDate = new Date(job.startAt)
+      const endDate = job.endAt ? new Date(job.endAt) : new Date()
+      let diffInMonths =
+        (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+        endDate.getMonth() -
+        startDate.getMonth()
+      totalMonths += diffInMonths
+    })
+
+    let years = Math.floor(totalMonths / 12)
+    let months = totalMonths % 12
+    let result = ""
+
+    if (years > 0) {
+      result += `${years} ${getPluralForm(years, "year_singular", "year_few", "year_many")} `
+    }
+    if (months > 0) {
+      result += `${months} ${getPluralForm(months, "month_singular", "month_few", "month_many")}`
+    }
+
+    return result.trim()
+  }
 
   const social = {
     telegram: "https://t.me/davidaganov",
@@ -170,11 +222,13 @@ export const Resume = () => {
                 </Link>
               </View>
             </Section>
-          </View>
-          <View style={styles.rightColumn}>
-            <Section title={titles.jobs}>{jobs}</Section>
             <Section title={titles.about}>
               <View style={styles.about}>{about}</View>
+            </Section>
+          </View>
+          <View style={styles.rightColumn}>
+            <Section title={`${titles.jobs} - ${calculateTotalExperience(jobsList)}`}>
+              {jobs}
             </Section>
           </View>
         </View>

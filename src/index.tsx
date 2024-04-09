@@ -2,7 +2,7 @@ import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { createHashRouter, RouterProvider } from "react-router-dom"
 
-import { HomeView, ProjectView } from "./views"
+import { HomeView, ProjectView, ResumeView } from "./views"
 
 import "./services/i18n"
 import "./assets/styles/main.sass"
@@ -16,6 +16,10 @@ const router = createHashRouter([
   {
     path: "/:name",
     element: <ProjectView />
+  },
+  {
+    path: "/resume",
+    element: <ResumeView />
   }
 ])
 

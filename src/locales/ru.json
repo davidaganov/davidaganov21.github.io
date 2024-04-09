@@ -20,6 +20,20 @@
         {
           "id": 1,
           "title": "Фронтэнд разработчик",
+          "companyName": "Фриланс",
+          "location": "Россия",
+          "startAt": "2023-11-01",
+          "current": "Наст. время",
+          "description": "",
+          "list": [
+            "Разработка проектов на Nuxt 3",
+            "Рефакторинг/миграция проектов на Vue 3",
+            "Написание чата между клиентом/специалистом с использованием websocket с отправкой медиа-файлов"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Фронтэнд разработчик",
           "companyName": "Softlex",
           "companyUrl": "https://www.linkedin.com/company/llc-softlex/mycompany/",
           "location": "Новороссийск",
@@ -51,7 +65,7 @@
           ]
         },
         {
-          "id": 2,
+          "id": 3,
           "title": "Фронтэнд разработчик",
           "companyName": "SAB Games",
           "companyUrl": "https://www.linkedin.com/company/sabgames/mycompany/",
@@ -68,8 +82,8 @@
         }
       ],
       "about": [
-        "Я фронтенд разработчик с двухлетним коммерческим опытом работы. Имею глубокие знания в HTML, CSS и TS/JS, а также опыт работы с различными фреймворками и библиотеками, такими как Nuxt 2, Vue 2 / 3 Composition API и React.",
-        "Помимо основных навыков у меня большой опыт работы с Figma и Photoshop. Так же есть коммерческий опыт разработки макетов для Wordpress."
+        "Текущий стек: Nuxt 3, Vue 3, JavaScript/TypeScript, SCSS и Tailwind.",
+        "Я - опытный фронтенд-разработчик с более чем трехлетним опытом коммерческой разработки. Обладаю продвинутыми знаниями HTML, CSS и JavaScript/TypeScript. Имею значительный опыт работы с современными технологиями и фреймворками, включая Nuxt, Vue, React."
       ],
       "languages": [
         {
@@ -109,8 +123,9 @@
           "id": 1,
           "title": "JavaScript",
           "list": [
-            { "id": 1, "title": "Фреймворки", "tags": ["Nuxt 2", "Vue 2 / 3", "React"] },
-            { "id": 2, "title": "Другое", "tags": ["JavaScript", "TypeScript"] }
+            { "id": 1, "title": "Фреймворки", "tags": ["Nuxt 2 / 3", "Vue 2 / 3", "React"] },
+            { "id": 2, "title": "Библиотеки", "tags": ["Storybook", "Jest"] },
+            { "id": 3, "title": "Другое", "tags": ["Websocket", "JavaScript", "TypeScript"] }
           ]
         },
         {
@@ -126,7 +141,7 @@
           "title": "CSS",
           "list": [
             { "id": 1, "title": "Препроцессоры", "tags": ["SCSS/SASS", "Less", "STYL"] },
-            { "id": 2, "title": "Фреймворки", "tags": ["Bootstrap", "Tailwind"] },
+            { "id": 2, "title": "Фреймворки", "tags": ["Tailwind"] },
             { "id": 3, "title": "Другое", "tags": ["CSS"] }
           ]
         },
@@ -217,6 +232,13 @@
       "author": "- Давид Аганов",
       "github": "Открыть Гитхаб профиль",
       "linkedin": "Открыть Linkedin профиль"
-    }
+    },
+
+    "year_singular": "год",
+    "year_few": "года",
+    "year_many": "лет",
+    "month_singular": "месяц",
+    "month_few": "месяца",
+    "month_many": "месяцев"
   }
 }

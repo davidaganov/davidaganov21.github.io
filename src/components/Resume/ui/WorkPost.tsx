@@ -1,4 +1,5 @@
 import { Text, View, StyleSheet, Link } from "@react-pdf/renderer"
+import { getPluralForm } from "../../../hooks/pluralForm"
 
 import { IconText, DateRange } from "."
 
@@ -55,8 +56,14 @@ const styles = StyleSheet.create({
     color: "#213e73"
   },
   about: {
-    marginTop: 8,
+    marginTop: 4,
     marginBottom: 15
+  },
+  experience: {
+    marginBottom: 6,
+    fontSize: 10,
+    fontFamily: "ua-brand",
+    color: "#0a192f"
   },
   description: {
     marginBottom: 8,
@@ -151,8 +158,32 @@ export const WorkPost = ({
   }
 }: WorkPostProps) => {
   const buildAbout = () => {
+    const formatDateDifference = (startAt: string, endAt: string | undefined) => {
+      const startDate = new Date(startAt)
+      const endDate = endAt ? new Date(endAt) : new Date()
+      let diffInMonths =
+        (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+        endDate.getMonth() -
+        startDate.getMonth()
+      let years = Math.floor(diffInMonths / 12)
+      let months = diffInMonths % 12
+      let result = ""
+
+      if (years > 0) {
+        result += `${years} ${getPluralForm(years, "year_singular", "year_few", "year_many")} `
+      }
+      if (months > 0) {
+        result += `${months} ${getPluralForm(months, "month_singular", "month_few", "month_many")}`
+      }
+
+      return result.trim()
+    }
+
+    const dateDifference = formatDateDifference(startAt, endAt)
+
     return (
       <View>
+        <Text style={styles.experience}>{dateDifference}</Text>
         {description && description.length > 0 && (
           <Text style={styles.description}>{description}</Text>
         )}

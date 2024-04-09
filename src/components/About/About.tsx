@@ -7,8 +7,8 @@ export const About = () => {
   const { t } = useTranslation()
 
   const renderItems = () => {
-    const descripton = Object.keys(t("resume.about", { returnObjects: true }))
-    const items = descripton.map((i) => {
+    const description = Object.keys(t("resume.about", { returnObjects: true }))
+    const items = description.map((i) => {
       return (
         <p
           key={i}
