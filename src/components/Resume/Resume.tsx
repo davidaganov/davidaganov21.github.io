@@ -101,15 +101,13 @@ export const Resume = () => {
   const header: HeaderProps = t("resume.header", { returnObjects: true })
 
   const calculateTotalExperience = (jobs: Job[]) => {
-    console.log(jobs)
     let totalMonths = 0
     jobs.forEach((job: Job) => {
       const startDate = new Date(job.startAt)
       const endDate = job.endAt ? new Date(job.endAt) : new Date()
-      let diffInMonths =
-        (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-        endDate.getMonth() -
-        startDate.getMonth()
+      const diffInDays = Math.ceil((Number(endDate) - Number(startDate)) / (1000 * 60 * 60 * 24))
+      let diffInMonths = Math.ceil(diffInDays / 30.44)
+
       totalMonths += diffInMonths
     })
 

@@ -161,10 +161,10 @@ export const WorkPost = ({
     const formatDateDifference = (startAt: string, endAt: string | undefined) => {
       const startDate = new Date(startAt)
       const endDate = endAt ? new Date(endAt) : new Date()
-      let diffInMonths =
-        (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-        endDate.getMonth() -
-        startDate.getMonth()
+
+      const diffInDays = Math.ceil((Number(endDate) - Number(startDate)) / (1000 * 60 * 60 * 24))
+      let diffInMonths = Math.ceil(diffInDays / 30.44)
+
       let years = Math.floor(diffInMonths / 12)
       let months = diffInMonths % 12
       let result = ""
