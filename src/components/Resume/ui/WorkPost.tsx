@@ -46,12 +46,12 @@ const styles = StyleSheet.create({
   },
   metaInfoContainer: {
     flexDirection: "row",
-    marginTop: 8,
+    marginTop: 4,
     alignItems: "center"
   },
   workPlace: {
-    fontSize: 7,
-    fontFamily: "Barcade-Brawl",
+    fontSize: 12,
+    fontFamily: "ua-brand",
     fontWeight: "bold",
     color: "#213e73"
   },
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     color: "#213e73"
   },
   projectDescription: {
-    marginTop: 6,
+    marginTop: 4,
     marginBottom: 4,
     fontSize: 10,
     fontFamily: "ua-brand",
@@ -185,7 +185,9 @@ export const WorkPost = ({
       <View>
         <Text style={styles.experience}>{dateDifference}</Text>
         {description && description.length > 0 && (
-          <Text style={styles.description}>{description}</Text>
+          <View>
+            <Text style={styles.description}>{description}</Text>
+          </View>
         )}
         {list &&
           list.length > 0 &&
@@ -205,13 +207,6 @@ export const WorkPost = ({
               key={index}
               style={styles.project}
             >
-              <Link
-                src={item.url}
-                style={styles.projectLink}
-              >
-                <Text style={styles.projectTitle}>{item.title}</Text>
-              </Link>
-
               <Text style={styles.projectDescription}>{item.description}</Text>
 
               {item.duties.map((item, index) => (

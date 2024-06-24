@@ -1,11 +1,6 @@
 import { StyleSheet, Link, Image, View, Text } from "@react-pdf/renderer"
-
 import { IconText } from "./IconText"
 import { HeaderProps } from "../Resume"
-
-interface HeadingProps {
-  data: HeaderProps
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -32,16 +27,15 @@ const styles = StyleSheet.create({
     borderColor: "#213e73"
   },
   name: {
-    marginBottom: 5,
     textTransform: "uppercase",
-    fontSize: 18,
-    fontFamily: "Barcade-Brawl",
+    fontSize: 22,
+    fontFamily: "ua-brand",
     fontWeight: "bold",
     color: "#0a192f"
   },
   subTitle: {
     fontSize: 14,
-    marginTop: 6,
+    marginTop: 4,
     fontFamily: "ua-brand",
     fontWeight: "bold",
     color: "#213e73"
@@ -60,16 +54,30 @@ const styles = StyleSheet.create({
   }
 })
 
-export const Heading = ({ data: { name, job, phone, email, website, location } }: HeadingProps) => {
+export const Heading = ({
+  data: { name, job, phone, email, website, location },
+  photoStatus
+}: {
+  data: HeaderProps
+  photoStatus: boolean
+}) => {
+  const renderPhoto = () => {
+    return (
+      <View style={styles.leftColumn}>
+        <Image
+          style={styles.photo}
+          src={require("../../../assets/images/photo.jpg")}
+        />
+      </View>
+    )
+  }
+
+  const photo = renderPhoto()
+
   return (
     <View style={styles.container}>
       <View style={styles.block}>
-        <View style={styles.leftColumn}>
-          <Image
-            style={styles.photo}
-            src={require("../../../assets/images/photo.jpg")}
-          />
-        </View>
+        {photoStatus ? photo : null}
         <View style={styles.rightColumn}>
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.subTitle}>{job}</Text>

@@ -10,7 +10,7 @@
       },
       "header": {
         "name": "David Aganov",
-        "job": "Frontend Developer (Vue.js)",
+        "job": "Frontend Developer (Vue / Nuxt)",
         "phone": "+998331576723",
         "email": "davidaganov21@gmail.com",
         "website": "aganov.dev",
@@ -21,14 +21,14 @@
           "id": 1,
           "title": "Frontend Developer",
           "companyName": "Freelance",
-          "location": "Russia",
+          "location": "Worldwide",
           "startAt": "2023-11-01",
           "current": "Present time",
-          "description": "",
+          "description": "Worked with several major clients on an hourly basis, both independently and as part of teams",
           "list": [
-            "Developing projects on Nuxt 3",
-            "Refactoring/migrating projects to Vue 3",
-            "Writing a chat between client/specialist using websocket with media file transfer"
+            "Developed a freelance platform on Nuxt 3 with user chat and payment integration",
+            "Developed a service for teachers on Vue 3 with Zoom API integration for calls",
+            "Created numerous websites using Gulp/EJS"
           ]
         },
         {
@@ -38,29 +38,25 @@
           "companyUrl": "https://www.linkedin.com/company/llc-softlex/mycompany/",
           "location": "Novorossiysk",
           "startAt": "2023-07-17",
-          "endAt": "2023-10-01",
-          "description": "",
+          "endAt": "2023-11-01",
           "list": [],
           "projects": [
             {
               "id": 1,
               "title": "WAQF Project",
-              "url": "https://digiwaqf.pro",
               "tech": ["next", "typescript", "html", "scss"],
               "description": "WAQF - Crowdfunding platform",
-              "duties": ["Code refactoring", "Implementation of new functionality"]
+              "duties": [
+                "Migration of the project from React to Next.js",
+                "Implementation of new functionality"
+              ]
             },
             {
               "id": 2,
               "title": "JetUnity Project",
-              "url": "https://jetunity.com",
               "tech": ["nuxt 2", "pug", "styl", "scss"],
               "description": "JetUnity - Private aviation organization",
-              "duties": [
-                "Code refactoring",
-                "Migration to modern technologies",
-                "Implementation of new functionality"
-              ]
+              "duties": ["Migration to modern technologies", "Implementation of new functionality"]
             }
           ]
         },
@@ -71,18 +67,15 @@
           "companyUrl": "https://www.linkedin.com/company/sabgames/mycompany/",
           "location": "Tashkent",
           "startAt": "2021-05-17",
-          "endAt": "2023-04-01",
+          "endAt": "2023-05-01",
           "list": [
-            "Development of the frontend part of a large online store using the Nuxt framework",
-            "Support of company projects (Nuxt, Vue)",
-            "Creating layouts on Wordpress",
-            "Creating multiple landing pages (over 20+)"
+            "Developed large-scale websites using Nuxt 2 and TypeScript",
+            "Worked closely with design and development teams"
           ]
         }
       ],
       "about": [
-        "Current stack: Nuxt 3, Vue 3, JavaScript/TypeScript, SCSS, and Tailwind.",
-        "I am an experienced frontend developer with more than three years of commercial development experience. I possess advanced knowledge of HTML, CSS, and JavaScript/TypeScript. I have significant experience working with modern technologies and frameworks, including Nuxt, Vue, React."
+        "I have 3 years of experience in frontend development, with expertise in both freelancing and office environments. This experience allows me to quickly establish rapport with different clients and teams. I always strive to understand the client's needs and achieve high-quality results. I am committed to building long-term and mutually beneficial relationships."
       ],
       "languages": [
         {
@@ -113,7 +106,9 @@
     "about": {
       "title": "About me",
       "download": "Download CV",
-      "loading": "Loading..."
+      "loading": "Loading...",
+      "photoShow": "Show photo in CV",
+      "photoHide": "Hide photo in CV"
     },
     "skills": {
       "title": "My Skills",
@@ -123,7 +118,7 @@
           "title": "JavaScript",
           "list": [
             { "id": 1, "title": "Frameworks", "tags": ["Nuxt 2 / 3", "Vue 2 / 3", "React"] },
-            { "id": 2, "title": "Library", "tags": ["Storybook, Jest"] },
+            { "id": 2, "title": "Library", "tags": ["Storybook", "Jest", "GSAP", "i18n"] },
             { "id": 3, "title": "Other", "tags": ["Websocket", "JavaScript", "TypeScript"] }
           ]
         },
@@ -131,7 +126,7 @@
           "id": 2,
           "title": "HTML",
           "list": [
-            { "id": 1, "title": "Template Engine", "tags": ["PUG"] },
+            { "id": 1, "title": "Template Engine", "tags": ["PUG", "EJS"] },
             { "id": 2, "title": "Other", "tags": ["HTML"] }
           ]
         },
@@ -172,13 +167,17 @@
           "name": "waqf",
           "short_description": "Crowdfunding platform",
           "description": [],
-          "duties": ["Code refactoring", "Implementation of new features"],
+          "duties": [
+            "Migrated a project from React to Next.js",
+            "SEO optimization",
+            "Implementation of new features"
+          ],
           "html_url": "",
           "homepage": "",
-          "topics": ["typescript", "next", "scss"]
+          "topics": ["typescript", "react", "next", "scss"]
         },
         {
-          "created_at": "2023-09-00",
+          "created_at": "2023-09-01",
           "name": "jetunity",
           "short_description": "Organization of private air travel",
           "description": [],

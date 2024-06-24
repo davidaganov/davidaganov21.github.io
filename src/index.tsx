@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client"
 import { createHashRouter, RouterProvider } from "react-router-dom"
 
 import { HomeView, ProjectView, ResumeView } from "./views"
+import { GlobalProvider } from "./store/Context"
 
 import "./services/i18n"
 import "./assets/styles/main.sass"
@@ -27,6 +28,8 @@ const root = createRoot(document.getElementById("root") as HTMLElement)
 
 root.render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <GlobalProvider>
+      <RouterProvider router={router} />
+    </GlobalProvider>
   </StrictMode>
 )

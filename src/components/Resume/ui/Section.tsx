@@ -8,7 +8,7 @@ export interface SectionProps {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: 16
+    paddingBottom: 12
   },
   title: {
     marginBottom: 1,
@@ -30,7 +30,7 @@ export const Section = ({ title, children }: SectionProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
-      <View style={[styles.separator]} />
+      <View style={styles.separator} />
       {children}
     </View>
   )

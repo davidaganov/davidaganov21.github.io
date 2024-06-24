@@ -54,8 +54,8 @@ interface Job {
 
 const styles = StyleSheet.create({
   page: {
-    paddingTop: 48,
-    paddingHorizontal: 50
+    paddingTop: 40,
+    paddingHorizontal: 45
   },
   row: {
     flexDirection: "row"
@@ -63,11 +63,11 @@ const styles = StyleSheet.create({
   leftColumn: {
     flexGrow: 1,
     marginRight: 20,
-    width: "40%"
+    width: "38%"
   },
   rightColumn: {
     flexGrow: 1,
-    width: "55%"
+    width: "57%"
   },
   about: {
     gap: 10,
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     color: "#0a192f"
   },
   link: {
+    marginBottom: 4,
     fontFamily: "ua-brand",
     fontSize: 10,
     textDecoration: "none",
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const Resume = () => {
+export const Resume = ({ photoStatus }: { photoStatus: boolean }) => {
   const { t } = useTranslation()
 
   const name = t("resume.header.name")
@@ -192,7 +193,10 @@ export const Resume = () => {
         size="A4"
         style={styles.page}
       >
-        <Heading data={header} />
+        <Heading
+          data={header}
+          photoStatus={photoStatus}
+        />
 
         <View style={styles.row}>
           <View style={styles.leftColumn}>
